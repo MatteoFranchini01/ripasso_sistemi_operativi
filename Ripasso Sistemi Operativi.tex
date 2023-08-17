@@ -1,0 +1,583 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\author{Matteo Franchini}
+\title{Ripasso Sistemi Operativi}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{multicol}
+
+\definecolor{mioRosso}{RGB}{139,0,0}
+\definecolor{BluScuro}{RGB}{0,0,139}
+\setbeamercolor{block title}{bg=mioRosso, fg=white}
+\setbeamercolor{block title alerted}{bg=BluScuro, fg=white}
+
+% setta i pallini nell'elenco puntato
+\setbeamercolor{item}{fg=mioRosso}
+
+% Introduzione automatica all'inizio di ogni sezione
+
+\AtBeginSection[]{
+	\begin{frame}
+		\frametitle{Sommario}
+		\begin{multicols}{2}
+			\tableofcontents[currentsection, hideallsubsections]
+		\end{multicols}
+	\end{frame}
+}
+
+% Definizione del nuovo ambiente slidepersonalizzata
+\newenvironment{mainframe}{
+	\begin{frame}
+		\frametitle{\insertsubsection}
+		\framesubtitle{\insertsection}
+	}{
+	\end{frame}
+}
+
+\setlist[enumerate]{label=\arabic*.}
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setlist[itemize]{label={$\bullet$}}
+\begin{document}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}
+		\begin{multicols}{2}
+			\tableofcontents[hideallsubsections]
+		\end{multicols}
+	\end{frame}
+	
+\section{Introduzione}
+\subsection{Che cos'è un sistema operativo?}
+\begin{mainframe}
+Un programma che funge da intermediario tra l'utente di un computer e l'hardware del computer stesso\\
+{\Large \textbf{Obbiettivi del sistema operativo}}:
+\begin{itemize}
+	\item Eseguire i programmi dell'utente e facilitarne la risoluzione dei problemi
+	\item Rendere il sistema informatico comodo da usare
+	\item Utilizzare l'hardware del computer in modo efficiente
+\end{itemize}
+\end{mainframe}
+\subsection{Definizione di SO}
+\begin{mainframe}
+	Il \textbf{sistema operativo} è un allocatore di risorse:
+	\begin{itemize}
+		\item gestisce tutte le risorse
+		\item decide tra richieste in conflitto per un uso efficiente ed equo delle risorse
+	\end{itemize}
+	Il \textbf{sistema operativo è un programma di controllo}
+	\begin{itemize}
+		\item controlla l'esecuzione dei programmi per prevenire gli errori e l'uso improprio del computer
+	\end{itemize}
+\end{mainframe}
+\begin{frame}
+	Non c'è una definizione universalmente accettata
+	\begin{itemize}
+		\item con il termina sistema operativo si intende quell'insieme di programmi che provvedono alla gestione Hw e Sw di un sistema di calcolo
+		\item \textit{"Tutto ciò che viene fornite quando si ordina un SO"}
+	\end{itemize}
+	Una definizione alternativa (\textbf{Tanenbaum}):
+	\begin{quotation}
+		un sistema operativo è un programma che controlla le risorse di un calcolatore e fornisce ai suoi utenti un'interfaccia o macchina virtuale più agevole da utilizzare della macchina "nuda"
+	\end{quotation}
+	\textit{L'unico programma che è sempre in esecuzione sul computer è il \textbf{kernel (nucleo)} del SO}.\\
+	Il resto è
+	\begin{itemize}
+		\item un programma di sistema (fornite con il SO di cui costituisce una parte)
+		\item un programma applicativo
+	\end{itemize} 
+\end{frame}
+\subsection{Sistema Operativo}
+\begin{mainframe}
+	Può essere visto come:
+	\begin{enumerate}
+		\item \textbf{Allocatore di risorse Hw e Sw}:
+		\begin{itemize}
+			\item tempo di CPU, spazio di memoria, dispostivo di I/O, compilatori
+			\item Le risorse devono essere assegnate a programmi specifici secondo determinate politiche
+		\end{itemize}
+		\item \textbf{Programma di controllo}: controlla l'\textbf{esecuzione dei programmi per prevenire errori ed usi impropri del calcolatore}
+	\end{enumerate}
+\end{mainframe}
+\begin{frame}
+	Obbiettivi principali del SO:
+	\begin{itemize}
+		\item rendere più \textbf{semplice} l'uso di un sistema di elaborazione
+		\item rendere più \textbf{efficiente} l'uso delle risorse del sistem adi elaborazione
+	\end{itemize}
+	Il SO è costituito dall'insieme dei programmi (sw o fw) che \textbf{rendono praticamente utilizzabile} l'elaboratore agli utenti cercando contemporaneamente di \textbf{ottimizzarne le prestazioni}.
+	\begin{itemize}
+		\item \textbf{Visione top-down}: il sistema operativo come una macchina estesa (\textbf{astrazione})
+		\item \textbf{Visione bottom-up}: il sistema operativo come un gestore di risorse (\textbf{fornisce protezione, risoluzione dei conflitti})
+	\end{itemize}
+\end{frame}
+\subsection{Avvio dell'elaboratore}
+\begin{mainframe}
+	Vi è un \textbf{programma di bootstrap} che normalmente è memorizzato in una \textbf{memoria non volatile}, inizializza e verifica il corretto funzionamento dei componenti Hw del sistema. \textbf{Carica il kernel del SO e inizia l'esecuzione}.\\
+	Nei PC più vecchi c'era il \textbf{BIOS}, ora invece è stato sostituito con il \textbf{UEFI}.
+\end{mainframe}
+\subsection{Proprietà fondamentali di un SO}
+\begin{mainframe}
+	\begin{itemize}
+		\item \textbf{Affidabilità}
+		\item \textbf{Efficienza}
+		\item \textbf{Sicurezza}
+	\end{itemize}
+\end{mainframe}
+\subsection{Organizzazione di un elaboratore}
+\begin{mainframe}
+		Uno o più CPU si connettono mediante un \textbf{bus condiviso}, vi è l'esecuzione concorrente delle CPU e dei dispositivi che competono per i cicli di memoria
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=1 \linewidth]{../../Screen slide/Screenshot 2023-08-16 alle 21.38.15}
+		\end{figure}
+\end{mainframe}
+\subsection{Funzionamento di un elaboratore}
+\begin{mainframe}
+	\begin{itemize}
+		\item I dispositivi di I/O e la CPU possono operare simultaneamente
+		\item Ogni controller di dispositivo è responsabile di un particolare dispositivo
+		\item Ogni controllore di dispositivo ha un buffer locale
+		\item La CPU sposta i dati da/alla memoria principale a/dai buffer locali
+		\item L'I/O è dal dispositivo al buffer locale del controllore
+		\item Il controllore del dispositivo informa la CPU di aver terminato la sua operazione causando un interrupt
+	\end{itemize}
+\end{mainframe}
+\subsection{Funzioni comuni degli interrupt}
+\begin{mainframe}
+	La gestione degli interrupt deve salvare l'indirizzo dell'istruzione interrotta
+	\begin{block}{Eccezione}
+		Una \textbf{trap o eccezione} è un \textbf{interruzione generata dal Sw e causata da un errore o da una richiesta al SO da parte di un programma}
+	\end{block}
+	Un sistema operativo è guidato dagli interrupt
+\end{mainframe}
+\subsection{Gestione degli interrupt}
+\begin{mainframe}
+	Il \textbf{sistema operativo preserva lo stato della CPU memorizzando i registri e il contatore del programma}
+\end{mainframe}
+\subsection{Struttura dell'I/O}
+\begin{mainframe}
+	\begin{enumerate}
+		\item Dopo l'avvio dell'I/O, il controllo ritorna al programma utente solo al completamento dell'I/O
+		\begin{itemize}
+			\item Un'istruzione \textit{wait} mette a riposo la CPU fino al prossimo interrupt
+			\item Ciclo di attesa
+			\item È in sospeso al massimo una richiesta di I/O alla volta, nessuna elaborazione simultanea di I/O
+		\end{itemize}
+		\item Dopo l'avvio dell'I/O, il controllo torna al programma utente senza attendere il completamento dell'I/O
+		\begin{itemize}
+			\item \textbf{System call}: richiesta al SO per consentire al programma di attendere il completamento dell'I/O
+			\item La tabela di stato dei dispositivi contiene una voce in cui è indicato l'\textbf{indirizzo} e lo \textbf{stato}
+			\item Il SO \textbf{indicizza la tabella dei dispositivi di I/O} per determinare lo stato del dispositivo e modificare la voce della tabella per includere interrupt
+		\end{itemize}
+	\end{enumerate}
+\end{mainframe}
+\subsection{Funzioni specifiche di gestione}
+\begin{mainframe}
+	\begin{block}{Gestione della memoria centrale}
+		\begin{itemize}
+			\item caricare in memoria programmi e dati
+			\item evitare interferenze fra programmi diversi
+			\item assegnare la memoria in base a criteri di efficienza
+			\item minimizzare i trasferimenti tra memoria centrale e memoria di massa
+		\end{itemize}
+	\end{block}
+\end{mainframe}
+\begin{frame}
+	\begin{block}{Gestione della memoria secondaria}
+		\begin{itemize}
+			\item consentire l'accesso all'informazione in base alla sua organizzazione logica anziché fisica
+			\item controllare i diritti di accesso ai file da parte degli utenti
+			\item consentire creazione, modifica, cancellazione dei file
+		\end{itemize}
+	\end{block}
+	\begin{block}{Gestione dei dispositivi periferici}
+		\begin{itemize}
+			\item mascherare al programmatore la complessità delle operazioni di I/O
+			\item effettuare controlli sul corretto funzionamento delle operazioni
+			\item risolvere conflitti nell'utilizzo di una stessa periferica da parte di più programmi
+		\end{itemize}
+	\end{block}
+\end{frame}
+\begin{frame}
+	\begin{block}{Gestione dei processi}
+		\begin{itemize}
+			\item decidere quale programma userà il processore (\textbf{scheduling}) in base a criteri di corretto funzionamento e di efficienza
+			\item verificare che i programmi rilascino il processore entro il tempo stabilito
+		\end{itemize}
+	\end{block}
+\end{frame}
+\subsection{Funzioni di un SO}
+\begin{mainframe}
+	\begin{itemize}
+		\item definizione e gestione dell'interfaccia utente
+		\item gestione dei job
+		\item gestione delle risorse di sistema
+		\item ausili per la messa a punto dei programmi
+		\item ausuli per la gestione dei dati - file system
+	\end{itemize}
+\end{mainframe}
+\subsection{Struttura della memoria}
+\begin{mainframe}
+	\begin{block}{Memoria principale}
+		solo supporti di memoria di grandi dimensioni a cui la CPU può accedere direttamente
+	\end{block}
+	\begin{block}{Memoria secondaria}
+		estensione della memoria principale che \textbf{fornisce un'ampia capacità di memorizzazione non volatile}
+		\begin{itemize}
+			\item Dischi rigidi
+			\item A stato solido
+		\end{itemize}
+	\end{block}
+\end{mainframe}
+\subsection{Gerarchia di memoria}
+\begin{mainframe}
+	\textbf{Sistemi di storage organizzati in una gerarchia}.\\
+	\textbf{Catching}: copiare le informazioni in un sistema di archiviazione più veloce\\
+	\textbf{Driver del dispositivo}: per ogni controller di dispositivo per gestire l'I/O
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.6 \linewidth]{../../Screen slide/Screenshot 2023-08-16 alle 22.15.22}
+	\end{figure}
+\end{mainframe}
+\subsection{Caching}
+\begin{mainframe}
+	Le informazioni in uso vengono \textbf{copiate temporaneamente da una memoria più lenta a una più veloce}\\
+	La memoria più veloce (\textbf{cache}) viene contollata per prima per determinare se \textbf{le informazioni sono lì}, in caso contrario, i dati vengono copiati nella cache e utilizzati lì.\\
+	La \textbf{cache è più piccola della memoria di cui si fa il caching}, la gestione della cache è un importante problema di progettazione.
+\end{mainframe}
+\subsection{Struttura di accesso diretto alla memoria}
+\begin{mainframe}
+	\begin{block}{DMA (Direct Memory Access)}
+		Utilizzata per dispositivi di I/O ad alta velocità in grado di trasmettere informazioni a velocità prossime a quelle della memoria.\\
+		Il controller del dispositivo trasferisce blocchi di dati dalla memoria tampone direttamente alla memoria principale senza l'intervento della CPU
+	\end{block}
+\end{mainframe}
+\subsection{Funzionamento PC moderno}
+\begin{mainframe}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.7 \linewidth]{../../Screen slide/Screenshot 2023-08-17 alle 10.01.59}
+	\end{figure}
+\end{mainframe}
+\subsection{Architettura del sistema informatico}
+\begin{mainframe}
+	L'uso e l'importanza dei sistemi multiprocessore è in crescita.\\
+	I vantaggi includono:
+	\begin{enumerate}
+		\item \textbf{Aumento del throughput}
+		\item \textbf{Economia di scala}
+		\item \textbf{Maggiore affidabilità: \textit{graceful degradation o tolleranza ai guasti}}
+	\end{enumerate}
+	Ci sono \textbf{due tipi di \textbf{multiprocesso}}:
+	\begin{enumerate}
+		\item \textbf{Multiprocesso asimmetrico}: a ogni processore 
+		\item \textbf{Multiprocesso simmetrico}: ogni processore esegue tutti i compiti
+	\end{enumerate}
+\end{mainframe}
+\subsection{Architettura del multiprocessore simmetrico}
+\begin{mainframe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.9 \linewidth]{../../Screen slide/Screenshot 2023-08-17 alle 10.15.15}
+	\end{figure}
+\end{mainframe}
+\subsection{Sistemi cluster}
+\begin{mainframe}
+	Sono come i sistemi multiprocessore, ma con \textbf{più sistemi che lavorano insieme}, di solito condividono lo \textbf{storage} tramite una \textbf{rete SAN (Storage Area Network)}.
+		\begin{block}{Tipi di cluster}
+		\begin{itemize}
+			\item \textbf{Clustering asimmetrico}: prevede una macchina in modalità \textbf{hot-standby}
+			\item \textbf{Clustering simmetrico}: prevede più nodi che eseguono applicazioni, monitorandosi a vicenda
+		\end{itemize}
+		Alcuni cluster sono destinati al calcolo ad alte prestazioni (HPC), altri hanno un \textbf{gestore di lock distribuito (DLM)} per evitare operazioni in conflitto.
+	\end{block}
+	\end{mainframe}
+\subsection{Multiprogrammazione e multitasking}
+\begin{mainframe}
+	\begin{block}{Multiprogrammazione (sistema batch)}
+		\begin{itemize}
+			\item Un singolo utente non può tenere occupati CPU e dispositivi di I/O in ogni momento
+			\item La \textbf{multiprogrammazione organizza i lavori} (codice e dati) in modo che la CPU ne abbia sempre uno da eseguire
+			\item Un sottoinsieme di lavori totali nel sistema viene tenuto in memoria
+			\item Quando deve aspettare, il sistema operativo \textbf{passa a un altro lavoro}
+		\end{itemize}
+	\end{block}
+\end{mainframe}
+\begin{frame}
+	\begin{block}{Multitasking}
+		Il \textbf{timesharing} è un'estensione logica in cui la \textbf{CPU passa ai lavori con una freqeunza tale da consentire agli utenti di interagire con ciascun lavoro mentre è in esecuzione}
+		\begin{itemize}
+			\item Il tempo di risposta deve essere $<1$ secondo
+			\item Ogni utente \textbf{ha almeno un programma in esecuzione}
+			\item Se \textbf{diversi laori sono pronti per essere eseguiti contemporaneamente} abbiamo la \textbf{schedulazione della CPU}
+			\item La \textbf{memoria virtuale consente l'esecuzione di processi non completamente in memoria}
+		\end{itemize}
+	\end{block}
+\end{frame}
+\subsection{Operazioni del sistema operativo}
+\begin{mainframe}
+	\textbf{Guidato dalle interruzioni} (Hw e Sw):
+	\begin{itemize}
+		\item Interruzione hardware da parte di uno dei dispositivi
+		\item Interruzione software (eccezione o trap): errore, richiesta di servizio, altri problemi
+	\end{itemize}
+	Il funzionamento in \textbf{doppia modalità} permette al sistema operativo di proteggere se stesso e gli altri componenti del sistema: \textbf{modalità utente e modalità kernel}.\\
+	Alcune istruzioni designate come \textit{privilegiate} sono eseguibili solo in \textbf{modalità kernel}.
+\end{mainframe}
+\subsection{Transizione dalla modalità utente a quella kernel}
+\begin{mainframe}
+	C'è un \textbf{timer per prevenire il loop infinito}.\\
+	Il timer è impostato per interrompere il computer dopo un certo periodo di tempo e conserva un \textbf{contatore che viene decrementato dall'orologio fisico}.\\
+	Quando il \alert{contatore è zero viene generato un interrupt}.
+\end{mainframe}
+\subsection{Gestione del processo}
+\begin{mainframe}
+	\begin{block}{Processo}
+		Un processo è un \textbf{programma in esecuzione}. È un'unità di lavoro all'interno del sistema. Il programma è un'\textbf{entità passiva}, il processo è un'\textbf{entità attiva}.
+	\end{block}
+	Un \textbf{processo a singolo thread} ha un contatore di programma che specifica la posizione della prossima istruzione da eseguire.\\
+	Un \textbf{processo multi-thread} ha un contatore di programma per ogni thread.
+\end{mainframe}
+\subsection{Attività di gestione dei processi}
+\begin{mainframe}
+	Il sistema operativo è responsabile delle seguenti attività relative alla gestione dei processi:
+	\begin{itemize}
+		\item Creazione e cancellazione di processi utente e di sistema
+		\item Sospendere e riprendere i processi
+		\item Meccanismi di sincronizzazione dei processi
+		\item Meccanismi di comunicazione tra i processi
+		\item Meccanismi per la gestione dei deadlock
+	\end{itemize}
+\end{mainframe}
+\subsection{Gestione della memoria di massa}
+\begin{mainframe}
+	Generalmente i dischi sono utilizzati per memorizzare dati che non stanno nella memoria principale o dati che devono essere tenuti per un periodo di tempo "lungo".\\
+	Attività del sistema operativo
+	\begin{itemize}
+		\item Gestione dello spazio libero
+		\item Allocazione dello spazio di archiviazione
+		\item Pianificazione dei dischi
+	\end{itemize}
+\end{mainframe}
+\subsection{Migrazione del dato "A" da un disco ad un registro}
+\begin{mainframe}
+	Gli ambienti multitasking devono fare attenzione a utilizzare il valore più recente, indipendentemente dalla sua posizione nella gerarchia di memorizzazione.\\
+	Gli ambienti multiprocessore devono garantire la coerenza della cache in Hw, in modo che tutte le CPU abbiano il valore più recente nella loro cache
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8 \linewidth]{../../Screen slide/Screenshot 2023-08-17 alle 11.36.02}
+	\end{figure}
+\end{mainframe}
+\subsection{Sottosistema I/O}
+\begin{mainframe}
+	Uno degli scopi del sistema operativo è quello di \textbf{nascondere all'utente le peculiarità dei dispositivi Hw}.\\
+	Il sottosistema I/O è responsabile di:
+	\begin{itemize}
+		\item Gestione della memoria dell'I/O comprende il buffering, il caching in una memoria più veloce, lo spooling
+		\item Interfaccia generale dispositivo-driver
+		\item Driver per dispositivi Hw specifici
+	\end{itemize}
+\end{mainframe}
+\subsection{Protezione e sicurezza}
+\begin{mainframe}
+	\begin{block}{Protezione}
+		Qualsiasi meccanismo di controllo dell'accesso dei processi o degli utenti alle risorse definite dal SO
+	\end{block}
+	\begin{block}{Sicurezza}
+		Difesa del sistema da attacchi interni ed esterni
+	\end{block}
+\end{mainframe}
+\begin{frame}
+	I sistemi in genere distinguono innanzitutto fra gli utenti, per determinare chi può fare cosa:
+	\begin{itemize}
+		\item Le identità degli utenti (\textbf{ID utente})
+		\item L'ID utente viene poi associato a tutti i file e processi di quell'utente per determinare il controllo degli accessi
+		\item L'identificativo di gruppo (\textbf{ID di gruppo}) consente di definire un insieme di utenti e di gestire i controlli, quindi anche di associarlo a ciascun processo, file o altro
+		\item L'\textbf{escalation dei privilegi} consente all'utente di passare ad un ID effettivo con maggiori diritti
+	\end{itemize}
+\end{frame}
+\subsection{Ambienti di elaborazione - Tradizionali}
+\begin{mainframe}
+	I \textbf{portali} forniscono accesso web ai sistemi interni. I \textbf{computer in rete} sono come terminali web.\\
+	I computer mobili si collegano tramite \textbf{reti wireless}
+\end{mainframe}
+\subsection{Ambienti informatici - Mobile}
+\begin{mainframe}
+	Permette nuovi tipi di applicazioni come la realtà aumentata.\\
+	Utilizza reti wireless IEE 802.11 o reti dati cellulari per la connettività
+\end{mainframe}
+\subsection{Ambienti di elaborazione - Distribuiti}
+\begin{mainframe}
+	Collezione di \textbf{sistemi separati}, eventualmente eterogenei, collegati in rete tra loro.\\
+	La \textbf{rete} è un percorso di comunicazione, il \textbf{TCP/IP} è il più comune:
+	\begin{itemize}
+		\item Rete Locale (LAN)
+		\item Rete geografica (WAN)
+		\item Rete metropolitana (MAN)
+		\item Rete personale (PAN)
+	\end{itemize}
+\end{mainframe}
+\subsection{Ambienti informatici - Virtualizzazione}
+\begin{mainframe}
+	\begin{block}{Emulazione}
+		Utilizzata quando il tipo di CPU di origine è diverso da quello di destinazione.\\
+		Questo metodo è generalmente più lento.\\
+		Quando il linguaggio del computer non viene compilato in codice nativo siamo di fronte all'\textbf{interpretazione}
+	\end{block}
+	\begin{block}{Virtualizzazione}
+		Sistema operativo compilato in modo nativo per la CPU, che esegue sistemi operativi \textbf{guest} anch'essi compilati in codice nativo
+	\end{block}
+\end{mainframe}
+\subsection{Ambienti di elaborazione - Cloud Computing}
+\begin{mainframe}
+	Fornisce elaborazione, storage e persino applicazioni come servizio attraverso una rete.\\
+	Estensione logica della virtualizzazione perché utilizza la virtualizzazione come base per le sue funzionalità.\\
+	Alcuni tipi:
+	\begin{itemize}
+		\item \textbf{Cloud pubblico}: disponibile via internet a chiunque sia disposto a pagare
+		\item \textbf{Cloud privato}: gestito da un'azienda per uso proprio
+		\item \textbf{Cloud ibrido}: include componenti di cloud pubblico e privato
+		\item \textbf{Saas (Software as a Service)}: uno o più applicazioni disponibili via internet
+		\item \textbf{PaaS (Platform as a Service)}: stack di software pronto per l'uso di applicazioni via internet
+		\item \textbf{IaaS (Infrastructure as a Service)}: server o storage disponibili via internet
+	\end{itemize}
+\end{mainframe}
+\subsection{Aree di applicazione di un SO}
+\begin{mainframe}
+	\begin{itemize}
+		\item \textbf{Sistemi di tipo generale}
+		\item \textbf{Sistemi in tempo reale}
+		\begin{itemize}
+			\item applicazioni per il controllo di processo e di apparati fisici
+			\item applicazioni interattive, interrogazione di basi di dati, query web
+		\end{itemize}
+	\end{itemize}
+\end{mainframe}
+\subsection{Ambienti di elaborazione - Sistemi embedded in tempo reale}
+\begin{mainframe}
+	I sistemi \textbf{embedded in tempo reale} sono la forma più diffusa di computer.\\
+	Il sistema operativo in tempo reale ha vincoli temporali fissi ben definiti
+	\begin{itemize}
+		\item L'elaborazione deve essere eseguita entro i vincoli
+		\item Operazione corretta solo se i vincoli sono rispettati
+	\end{itemize} 
+\end{mainframe}
+\subsection{Sistemi operativi open source}
+\begin{mainframe}
+	Sistemi operativi resi disponibili in formato di codice sorgente piuttosto che solo binari closed-source.\\
+	Avviato dalla \textbf{Free Software Foundation (FSF)}. che ha una licenza pubblica GNU (GPL).\\
+	Esempi: GNU/LINUX
+\end{mainframe}
+\subsection{Sistemi operativi open source}
+\begin{mainframe}
+	\textbf{Sistemi aperti}
+	\begin{itemize}
+		\item Realizzati e mantenuti da comunità di sviluppatori volontari
+		\item Movimento per il software "open source"
+		\item Le applicazioni beneficiano della piena conoscenza del SO, il SO evolve nel tempo e migliora grazie alla sua trasparenza
+		\item Esempio canonico: Linux
+		\item Interfaccia utente e \textbf{look and feel} sono modificabili
+	\end{itemize}
+\end{mainframe}
+\subsection{Utenti del SO}
+\begin{mainframe}
+	\begin{itemize}
+		\item \textbf{Utenti finali del sistema}: per essi il sistema operativo è trasparente
+		\item \textbf{Programmatori applicativi}: utilizzano i servizi del SO per la realizzazione e l'esecuzione dei loro programmi
+		\item \textbf{Programmatori di sistema}: aggiornano e modificano i programmi del SO per adeguarli a nuove necessità del sistema o degli utenti applicativi
+		\item \textbf{Operatori}: controllano il funzionamento e rispondono alle richieste di intervento da parte del sistema
+		\item \textbf{Amministratore del sistema}: stabilisce le politiche di gestione el sistema e ne cura l'osservanza
+	\end{itemize}
+\end{mainframe}
+\subsection{Tipi di SO}
+\begin{mainframe}
+	\textbf{Sistemi proprietari}
+	\begin{itemize}
+		\item Progettati da costruttori al fine di sfruttare in modo ottimale le risorse di ciascun tipo di macchina
+		\item Programmi utente e applicazioni si interfacciano al SO in modo diverso tra le diverse famiglie di sistemi
+		\item IBM: OS/360 370, VM, MVS
+	\end{itemize}
+	\textbf{Sistemi standard}
+	\begin{itemize}
+		\item Progettati da aziende software o da grandi utenti per consentire lo sviluppo di applicazioni portabili su sistemi diversi
+		\item Interfaccia di programmazione con cui le applicazioni interagiscono con il SO rimane costante nelle diverse versioni
+		\item Eesempi: UNIX, MS-DOS
+	\end{itemize}
+\end{mainframe}
+\subsection{Proprietà fondamentali di un SO}
+\begin{mainframe}
+	\begin{itemize}
+		\item \textbf{Architettura}: com'è organizzato?
+		\item \textbf{Condivisione}: quali risorse vengono condivise?
+		\item \textbf{Efficienza}: come massimizzare l'utilizzo delle risorse disponibili?
+		\item \textbf{Affidabilità/tolleranza ai guasti}
+		\item \textbf{Estensibilità}
+		\item \textbf{Protezione e sicurezza}
+		\item \textbf{Conformità a standard}
+	\end{itemize}
+\end{mainframe}
+\section{Evoluzione dei sistemi operativi}
+\subsection{Stadi evolutivi  e modalità d'uso dei sistemi}
+\begin{mainframe}
+	\begin{itemize}
+		\item Sistema isolato ('50-'60): batch
+		\item Sistema centralizzato ('60-'70): remote job entry, teleprocessing. time sharing
+		\item Sistemi decentrati ('70-): minicalcolatore, controllo real-time, data logging
+		\item SIstemi distribuiti ('80-): multiprocessori, reti locali
+	\end{itemize}
+\end{mainframe}
+\subsection{Client-Server}
+\begin{mainframe}
+	I dispositivi \textbf{client} sono utilizzati dagli utenti, molti sistemi sono \textbf{server} che rispondono alle richieste di servizio dei client offrendo: servizi di calcolo o gestione (DBMS), servizi di gestione dei file (NFS), altri servizi
+\end{mainframe}
+\subsection{Sistema di elaborazione distribuito}
+\begin{mainframe}
+	È costituito da nodi tra loro collegati in ciascuno dei quali sono presenti capacità di: \textbf{elaborazione, memorizzazione, comunicazione}.\\
+	\textbf{Vantaggi}:
+	\begin{itemize}
+		\item Tolleranza al guasto: un guasto non provoca l'arresto del sistema, ma solo una riduzione delle prestazioni
+		\item Prestazioni: l'elaborazione di norma è effettuata nel posto stesso di utilizzazione, si ha un miglioramento delle prestazioni
+		\item Condivisione: la capacità di elaborazione, i programmi ed i dati esistenti nell'intero sistema sono patrimonio comune di tutti gli utenti
+	\end{itemize}
+\end{mainframe}
+\subsection{Evoluzione dei SO}
+\begin{mainframe}
+	\begin{itemize}
+		\item \textbf{Primi calcolatori}: privi di SO, problemi di complessità di operazioni, inefficienza
+		\item \textbf{Prima generazione ('50-'60)}: virtualizzazione dell'I/O, librerie di controllo dei device, problemi di debug, nasce il \textbf{sistema operativo} come stratificazione successiva di funzioni volte ad aumentare l'efficienza e la semplicità d'uso della macchina
+		\item \textbf{Seconda generazione ('60-'65)}: indipendenza tra programmi e dispositivi usati, parallelizzazione degli utenti tramite \textbf{multiprogrammazione e time sharing}
+		\item \textbf{Terza generazione ('65-'75)}: SO unico per una famiglia di elaboratori, risorse virtuali, sistemi multifunzione
+	\end{itemize}
+\end{mainframe}
+\begin{frame}
+	\begin{itemize}
+			\item \textbf{Quarta generazione ('75-'85)}: sistemi a macchine virtuali, sistemi multiprocessore e distribuiti
+	\item \textbf{Quinta generazione ('85-'95)}: elaboratori personali, reti locali, avvio di internet
+	\item \textbf{Sesta generazione ('95-'05)}: elaborazione distribuita, peer to peer, servizi online
+	\end{itemize}
+\end{frame}
+\subsection{Tecniche di gestione di un sistema di calcolo}
+\begin{mainframe}
+	\begin{block}{Monoprogrammazione}
+		Gestisce in \textbf{modo sequenziale} nel tempo i diversi programmi. L'\textbf{inizio di un programma avviene solamente dopo il completamente del programma precedente}.\\
+		\textbf{Tutte le risorse sono dedicate ad un solo programma}.\\
+		Bassa utilizzazione delle risorse
+		$$uso \ CPU = \frac{T_p}{T_t}$$
+		$T_p$ = tempo dedicato dalla CPU all'esecuzione del programma\\
+		$T_t$ = tempo totale di permanenza nel sistema del programma
+	\end{block}
+\end{mainframe}
+\begin{frame}
+	\begin{block}{Sistema mutliprogrammato}
+		Carica in memoria e gestisce \textbf{simultaneamente più programmi indipendenti}, nel senso che ciascuno di essi può iniziare o proseguire l'elaborazione prima che un altro sia terminato.\\
+		Le risorse risultano meglio utilizzate in quanto \textbf{riduono i tempi morti}
+	\end{block}
+\end{frame}
+\subsection{Gestione Batch}
+
+\end{document}

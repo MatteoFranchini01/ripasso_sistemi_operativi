@@ -1,0 +1,219 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\sectionentry {1}{Introduzione}{3}{Introduzione}{0}}
+\headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{4}{Che cos'^^c3^^a8 un sistema operativo?}}
+\headcommand {\slideentry {1}{1}{1}{4/4}{Che cos'^^c3^^a8 un sistema operativo?}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\beamer@subsectionpages {4}{4}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{5}{Definizione di SO}}
+\headcommand {\slideentry {1}{2}{1}{5/5}{Definizione di SO}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\slideentry {1}{2}{2}{6/6}{Definizione di SO}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\beamer@subsectionpages {5}{6}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{7}{Sistema Operativo}}
+\headcommand {\slideentry {1}{3}{1}{7/7}{Sistema Operativo}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\slideentry {1}{3}{2}{8/8}{Sistema Operativo}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\beamer@subsectionpages {7}{8}}
+\headcommand {\beamer@subsectionentry {0}{1}{4}{9}{Avvio dell'elaboratore}}
+\headcommand {\slideentry {1}{4}{1}{9/9}{Avvio dell'elaboratore}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\beamer@subsectionpages {9}{9}}
+\headcommand {\beamer@subsectionentry {0}{1}{5}{10}{Propriet^^c3^^a0 fondamentali di un SO}}
+\headcommand {\slideentry {1}{5}{1}{10/10}{Propriet^^c3^^a0 fondamentali di un SO}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\beamer@subsectionpages {10}{10}}
+\headcommand {\beamer@subsectionentry {0}{1}{6}{11}{Organizzazione di un elaboratore}}
+\headcommand {\slideentry {1}{6}{1}{11/11}{Organizzazione di un elaboratore}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\beamer@subsectionentry {0}{1}{7}{12}{Funzionamento di un elaboratore}}
+\headcommand {\slideentry {1}{7}{1}{12/12}{Funzionamento di un elaboratore}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\beamer@subsectionpages {12}{12}}
+\headcommand {\beamer@subsectionentry {0}{1}{8}{13}{Funzioni comuni degli interrupt}}
+\headcommand {\slideentry {1}{8}{1}{13/13}{Funzioni comuni degli interrupt}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@subsectionpages {13}{13}}
+\headcommand {\beamer@subsectionentry {0}{1}{9}{14}{Gestione degli interrupt}}
+\headcommand {\slideentry {1}{9}{1}{14/14}{Gestione degli interrupt}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\beamer@subsectionpages {14}{14}}
+\headcommand {\beamer@subsectionentry {0}{1}{10}{15}{Struttura dell'I/O}}
+\headcommand {\slideentry {1}{10}{1}{15/15}{Struttura dell'I/O}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\beamer@subsectionpages {15}{15}}
+\headcommand {\beamer@subsectionentry {0}{1}{11}{16}{Funzioni specifiche di gestione}}
+\headcommand {\slideentry {1}{11}{1}{16/16}{Funzioni specifiche di gestione}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\slideentry {1}{11}{2}{17/17}{Funzioni specifiche di gestione}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\slideentry {1}{11}{3}{18/18}{Funzioni specifiche di gestione}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\beamer@subsectionpages {16}{18}}
+\headcommand {\beamer@subsectionentry {0}{1}{12}{19}{Funzioni di un SO}}
+\headcommand {\slideentry {1}{12}{1}{19/19}{Funzioni di un SO}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\beamer@subsectionpages {19}{19}}
+\headcommand {\beamer@subsectionentry {0}{1}{13}{20}{Struttura della memoria}}
+\headcommand {\slideentry {1}{13}{1}{20/20}{Struttura della memoria}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\beamer@subsectionpages {20}{20}}
+\headcommand {\beamer@subsectionentry {0}{1}{14}{21}{Gerarchia di memoria}}
+\headcommand {\slideentry {1}{14}{1}{21/21}{Gerarchia di memoria}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\beamer@subsectionpages {21}{21}}
+\headcommand {\beamer@subsectionentry {0}{1}{15}{22}{Caching}}
+\headcommand {\slideentry {1}{15}{1}{22/22}{Caching}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\beamer@subsectionpages {22}{22}}
+\headcommand {\beamer@subsectionentry {0}{1}{16}{23}{Struttura di accesso diretto alla memoria}}
+\headcommand {\slideentry {1}{16}{1}{23/23}{Struttura di accesso diretto alla memoria}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\beamer@subsectionpages {23}{23}}
+\headcommand {\beamer@subsectionentry {0}{1}{17}{24}{Funzionamento PC moderno}}
+\headcommand {\slideentry {1}{17}{1}{24/24}{Funzionamento PC moderno}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\beamer@subsectionpages {24}{24}}
+\headcommand {\beamer@subsectionentry {0}{1}{18}{25}{Architettura del sistema informatico}}
+\headcommand {\slideentry {1}{18}{1}{25/25}{Architettura del sistema informatico}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\beamer@subsectionpages {25}{25}}
+\headcommand {\beamer@subsectionentry {0}{1}{19}{26}{Architettura del multiprocessore simmetrico}}
+\headcommand {\slideentry {1}{19}{1}{26/26}{Architettura del multiprocessore simmetrico}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\beamer@subsectionpages {26}{26}}
+\headcommand {\beamer@subsectionentry {0}{1}{20}{27}{Sistemi cluster}}
+\headcommand {\slideentry {1}{20}{1}{27/27}{Sistemi cluster}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\beamer@subsectionpages {27}{27}}
+\headcommand {\beamer@subsectionentry {0}{1}{21}{28}{Multiprogrammazione e multitasking}}
+\headcommand {\slideentry {1}{21}{1}{28/28}{Multiprogrammazione e multitasking}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\slideentry {1}{21}{2}{29/29}{Multiprogrammazione e multitasking}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\beamer@subsectionpages {28}{29}}
+\headcommand {\beamer@subsectionentry {0}{1}{22}{30}{Operazioni del sistema operativo}}
+\headcommand {\slideentry {1}{22}{1}{30/30}{Operazioni del sistema operativo}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\beamer@subsectionpages {30}{30}}
+\headcommand {\beamer@subsectionentry {0}{1}{23}{31}{Transizione dalla modalit^^c3^^a0 utente a quella kernel}}
+\headcommand {\slideentry {1}{23}{1}{31/31}{Transizione dalla modalit^^c3^^a0 utente a quella kernel}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\beamer@subsectionpages {31}{31}}
+\headcommand {\beamer@subsectionentry {0}{1}{24}{32}{Gestione del processo}}
+\headcommand {\slideentry {1}{24}{1}{32/32}{Gestione del processo}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\beamer@subsectionpages {32}{32}}
+\headcommand {\beamer@subsectionentry {0}{1}{25}{33}{Attivit^^c3^^a0 di gestione dei processi}}
+\headcommand {\slideentry {1}{25}{1}{33/33}{Attivit^^c3^^a0 di gestione dei processi}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\beamer@subsectionpages {33}{33}}
+\headcommand {\beamer@subsectionentry {0}{1}{26}{34}{Gestione della memoria di massa}}
+\headcommand {\slideentry {1}{26}{1}{34/34}{Gestione della memoria di massa}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\beamer@subsectionpages {34}{34}}
+\headcommand {\beamer@subsectionentry {0}{1}{27}{35}{Migrazione del dato "A" da un disco ad un registro}}
+\headcommand {\slideentry {1}{27}{1}{35/35}{Migrazione del dato "A" da un disco ad un registro}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\beamer@subsectionpages {35}{35}}
+\headcommand {\beamer@subsectionentry {0}{1}{28}{36}{Sottosistema I/O}}
+\headcommand {\slideentry {1}{28}{1}{36/36}{Sottosistema I/O}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\beamer@subsectionpages {36}{36}}
+\headcommand {\beamer@subsectionentry {0}{1}{29}{37}{Protezione e sicurezza}}
+\headcommand {\slideentry {1}{29}{1}{37/37}{Protezione e sicurezza}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\slideentry {1}{29}{2}{38/38}{Protezione e sicurezza}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\beamer@subsectionpages {37}{38}}
+\headcommand {\beamer@subsectionentry {0}{1}{30}{39}{Ambienti di elaborazione - Tradizionali}}
+\headcommand {\slideentry {1}{30}{1}{39/39}{Ambienti di elaborazione - Tradizionali}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\beamer@subsectionpages {39}{39}}
+\headcommand {\beamer@subsectionentry {0}{1}{31}{40}{Ambienti informatici - Mobile}}
+\headcommand {\slideentry {1}{31}{1}{40/40}{Ambienti informatici - Mobile}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\beamer@subsectionpages {40}{40}}
+\headcommand {\beamer@subsectionentry {0}{1}{32}{41}{Ambienti di elaborazione - Distribuiti}}
+\headcommand {\slideentry {1}{32}{1}{41/41}{Ambienti di elaborazione - Distribuiti}{0}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\beamer@subsectionpages {41}{41}}
+\headcommand {\beamer@subsectionentry {0}{1}{33}{42}{Ambienti informatici - Virtualizzazione}}
+\headcommand {\slideentry {1}{33}{1}{42/42}{Ambienti informatici - Virtualizzazione}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\beamer@subsectionpages {42}{42}}
+\headcommand {\beamer@subsectionentry {0}{1}{34}{43}{Ambienti di elaborazione - Cloud Computing}}
+\headcommand {\slideentry {1}{34}{1}{43/43}{Ambienti di elaborazione - Cloud Computing}{0}}
+\headcommand {\beamer@framepages {43}{43}}
+\headcommand {\beamer@subsectionpages {43}{43}}
+\headcommand {\beamer@subsectionentry {0}{1}{35}{44}{Aree di applicazione di un SO}}
+\headcommand {\slideentry {1}{35}{1}{44/44}{Aree di applicazione di un SO}{0}}
+\headcommand {\beamer@framepages {44}{44}}
+\headcommand {\beamer@subsectionpages {44}{44}}
+\headcommand {\beamer@subsectionentry {0}{1}{36}{45}{Ambienti di elaborazione - Sistemi embedded in tempo reale}}
+\headcommand {\slideentry {1}{36}{1}{45/45}{Ambienti di elaborazione - Sistemi embedded in tempo reale}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\beamer@subsectionpages {45}{45}}
+\headcommand {\beamer@subsectionentry {0}{1}{37}{46}{Sistemi operativi open source}}
+\headcommand {\slideentry {1}{37}{1}{46/46}{Sistemi operativi open source}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\beamer@subsectionpages {46}{46}}
+\headcommand {\beamer@subsectionentry {0}{1}{38}{47}{Sistemi operativi open source}}
+\headcommand {\slideentry {1}{38}{1}{47/47}{Sistemi operativi open source}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\beamer@subsectionpages {47}{47}}
+\headcommand {\beamer@subsectionentry {0}{1}{39}{48}{Utenti del SO}}
+\headcommand {\slideentry {1}{39}{1}{48/48}{Utenti del SO}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\beamer@subsectionpages {48}{48}}
+\headcommand {\beamer@subsectionentry {0}{1}{40}{49}{Tipi di SO}}
+\headcommand {\slideentry {1}{40}{1}{49/49}{Tipi di SO}{0}}
+\headcommand {\beamer@framepages {49}{49}}
+\headcommand {\beamer@subsectionpages {49}{49}}
+\headcommand {\beamer@subsectionentry {0}{1}{41}{50}{Propriet^^c3^^a0 fondamentali di un SO}}
+\headcommand {\slideentry {1}{41}{1}{50/50}{Propriet^^c3^^a0 fondamentali di un SO}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\beamer@sectionpages {3}{50}}
+\headcommand {\beamer@subsectionpages {50}{50}}
+\headcommand {\sectionentry {2}{Evoluzione dei sistemi operativi}{51}{Evoluzione dei sistemi operativi}{0}}
+\headcommand {\slideentry {2}{0}{1}{51/51}{}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\beamer@subsectionpages {51}{51}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{52}{Stadi evolutivi e modalit^^c3^^a0 d'uso dei sistemi}}
+\headcommand {\slideentry {2}{1}{1}{52/52}{Stadi evolutivi e modalit^^c3^^a0 d'uso dei sistemi}{0}}
+\headcommand {\beamer@framepages {52}{52}}
+\headcommand {\beamer@subsectionpages {52}{52}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{53}{Client-Server}}
+\headcommand {\slideentry {2}{2}{1}{53/53}{Client-Server}{0}}
+\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\beamer@subsectionpages {53}{53}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{54}{Sistema di elaborazione distribuito}}
+\headcommand {\slideentry {2}{3}{1}{54/54}{Sistema di elaborazione distribuito}{0}}
+\headcommand {\beamer@framepages {54}{54}}
+\headcommand {\beamer@subsectionpages {54}{54}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{55}{Evoluzione dei SO}}
+\headcommand {\slideentry {2}{4}{1}{55/55}{Evoluzione dei SO}{0}}
+\headcommand {\beamer@framepages {55}{55}}
+\headcommand {\slideentry {2}{4}{2}{56/56}{Evoluzione dei SO}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\beamer@subsectionpages {55}{56}}
+\headcommand {\beamer@subsectionentry {0}{2}{5}{57}{Tecniche di gestione di un sistema di calcolo}}
+\headcommand {\slideentry {2}{5}{1}{57/57}{Tecniche di gestione di un sistema di calcolo}{0}}
+\headcommand {\beamer@framepages {57}{57}}
+\headcommand {\slideentry {2}{5}{2}{58/58}{Tecniche di gestione di un sistema di calcolo}{0}}
+\headcommand {\beamer@framepages {58}{58}}
+\headcommand {\beamer@partpages {1}{58}}
+\headcommand {\beamer@subsectionpages {59}{58}}
+\headcommand {\beamer@sectionpages {51}{58}}
+\headcommand {\beamer@documentpages {58}}
+\headcommand {\gdef \inserttotalframenumber {58}}

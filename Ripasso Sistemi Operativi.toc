@@ -1,0 +1,50 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\beamer@sectionintoc {1}{Introduzione}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Che cos'^^c3^^a8 un sistema operativo?}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Definizione di SO}{5}{0}{1}
+\beamer@subsectionintoc {1}{3}{Sistema Operativo}{7}{0}{1}
+\beamer@subsectionintoc {1}{4}{Avvio dell'elaboratore}{9}{0}{1}
+\beamer@subsectionintoc {1}{5}{Propriet^^c3^^a0 fondamentali di un SO}{10}{0}{1}
+\beamer@subsectionintoc {1}{6}{Organizzazione di un elaboratore}{11}{0}{1}
+\beamer@subsectionintoc {1}{7}{Funzionamento di un elaboratore}{12}{0}{1}
+\beamer@subsectionintoc {1}{8}{Funzioni comuni degli interrupt}{13}{0}{1}
+\beamer@subsectionintoc {1}{9}{Gestione degli interrupt}{14}{0}{1}
+\beamer@subsectionintoc {1}{10}{Struttura dell'I/O}{15}{0}{1}
+\beamer@subsectionintoc {1}{11}{Funzioni specifiche di gestione}{16}{0}{1}
+\beamer@subsectionintoc {1}{12}{Funzioni di un SO}{19}{0}{1}
+\beamer@subsectionintoc {1}{13}{Struttura della memoria}{20}{0}{1}
+\beamer@subsectionintoc {1}{14}{Gerarchia di memoria}{21}{0}{1}
+\beamer@subsectionintoc {1}{15}{Caching}{22}{0}{1}
+\beamer@subsectionintoc {1}{16}{Struttura di accesso diretto alla memoria}{23}{0}{1}
+\beamer@subsectionintoc {1}{17}{Funzionamento PC moderno}{24}{0}{1}
+\beamer@subsectionintoc {1}{18}{Architettura del sistema informatico}{25}{0}{1}
+\beamer@subsectionintoc {1}{19}{Architettura del multiprocessore simmetrico}{26}{0}{1}
+\beamer@subsectionintoc {1}{20}{Sistemi cluster}{27}{0}{1}
+\beamer@subsectionintoc {1}{21}{Multiprogrammazione e multitasking}{28}{0}{1}
+\beamer@subsectionintoc {1}{22}{Operazioni del sistema operativo}{30}{0}{1}
+\beamer@subsectionintoc {1}{23}{Transizione dalla modalit^^c3^^a0 utente a quella kernel}{31}{0}{1}
+\beamer@subsectionintoc {1}{24}{Gestione del processo}{32}{0}{1}
+\beamer@subsectionintoc {1}{25}{Attivit^^c3^^a0 di gestione dei processi}{33}{0}{1}
+\beamer@subsectionintoc {1}{26}{Gestione della memoria di massa}{34}{0}{1}
+\beamer@subsectionintoc {1}{27}{Migrazione del dato "A" da un disco ad un registro}{35}{0}{1}
+\beamer@subsectionintoc {1}{28}{Sottosistema I/O}{36}{0}{1}
+\beamer@subsectionintoc {1}{29}{Protezione e sicurezza}{37}{0}{1}
+\beamer@subsectionintoc {1}{30}{Ambienti di elaborazione - Tradizionali}{39}{0}{1}
+\beamer@subsectionintoc {1}{31}{Ambienti informatici - Mobile}{40}{0}{1}
+\beamer@subsectionintoc {1}{32}{Ambienti di elaborazione - Distribuiti}{41}{0}{1}
+\beamer@subsectionintoc {1}{33}{Ambienti informatici - Virtualizzazione}{42}{0}{1}
+\beamer@subsectionintoc {1}{34}{Ambienti di elaborazione - Cloud Computing}{43}{0}{1}
+\beamer@subsectionintoc {1}{35}{Aree di applicazione di un SO}{44}{0}{1}
+\beamer@subsectionintoc {1}{36}{Ambienti di elaborazione - Sistemi embedded in tempo reale}{45}{0}{1}
+\beamer@subsectionintoc {1}{37}{Sistemi operativi open source}{46}{0}{1}
+\beamer@subsectionintoc {1}{38}{Sistemi operativi open source}{47}{0}{1}
+\beamer@subsectionintoc {1}{39}{Utenti del SO}{48}{0}{1}
+\beamer@subsectionintoc {1}{40}{Tipi di SO}{49}{0}{1}
+\beamer@subsectionintoc {1}{41}{Propriet^^c3^^a0 fondamentali di un SO}{50}{0}{1}
+\beamer@sectionintoc {2}{Evoluzione dei sistemi operativi}{51}{0}{2}
+\beamer@subsectionintoc {2}{1}{Stadi evolutivi e modalit^^c3^^a0 d'uso dei sistemi}{52}{0}{2}
+\beamer@subsectionintoc {2}{2}{Client-Server}{53}{0}{2}
+\beamer@subsectionintoc {2}{3}{Sistema di elaborazione distribuito}{54}{0}{2}
+\beamer@subsectionintoc {2}{4}{Evoluzione dei SO}{55}{0}{2}
+\beamer@subsectionintoc {2}{5}{Tecniche di gestione di un sistema di calcolo}{57}{0}{2}
