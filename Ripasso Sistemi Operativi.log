@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2023.4.4)  17 AUG 2023 19:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2023.4.4)  21 AUG 2023 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -951,6 +951,13 @@ Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \mc@col@check@num=\count350
 )
 (/Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/tools/verbatim.sty
+Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks46
+\verbatim@line=\toks47
+\verbatim@in@stream=\read4
+)
+(/Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/tex/l
 atex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count351
@@ -958,24 +965,24 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (Ripasso Sistemi Operativi.aux)
 \openout1 = `"Ripasso Sistemi Operativi.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1020,12 +1027,12 @@ ontext/base/mkii/supp-pdf.mkii
 \scratchbox=\box123
 \nofMPsegments=\count353
 \nofMParguments=\count354
-\everyMPshowfont=\toks46
+\everyMPshowfont=\toks48
 \MPscratchCnt=\count355
 \MPscratchDim=\dimen306
 \MPnumerator=\count356
 \makeMPintoPDFobject=\count357
-\everyMPtoPDFconversion=\toks47
+\everyMPtoPDFconversion=\toks49
 )
 (/Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/tex/l
 atex/epstopdf-pkg/epstopdf-base.sty
@@ -1037,69 +1044,69 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 atex/00miktex/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 43.
+Package hyperref Info: Link coloring OFF on input line 44.
  (Ripasso Sistemi Operativi.out)
 (Ripasso Sistemi Operativi.out)
 \@outlinefile=\write5
 \openout5 = `"Ripasso Sistemi Operativi.out"'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 43.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 44.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 43.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 44.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 43.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 43.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 44.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 43.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 43.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 43.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 44.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 43.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 43.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 43.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 44.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 43.
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 43.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 43.
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 44.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 43.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 43.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 44.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 43.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 44.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 43.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 43.
+(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 43.
+(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 43.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 43.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 43.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 43.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 44.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 44.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 43
+(Font)              `pureletters' in the math version `normal' on input line 44
 .
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 43
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 44
 .
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 43.
+(Font)              `pureletters' in the math version `bold' on input line 44.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 43
+(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 44
 .
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 43.
+ut line 44.
 
 (/Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/tex/l
 atex/translator/translator-basic-dictionary-English.dict
@@ -1125,8 +1132,8 @@ Dictionary: translator-numbers-dictionary, Language: English
 atex/translator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \it@ocap on input line 43.
-LaTeX Info: Redefining \it@ccap on input line 43.
+LaTeX Info: Redefining \it@ocap on input line 44.
+LaTeX Info: Redefining \it@ccap on input line 44.
 
 (Ripasso Sistemi Operativi.nav) [1
 
@@ -1137,14 +1144,14 @@ p/pdftex/pdftex.map}]
 ] (Ripasso Sistemi Operativi.toc) [3
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
 
 
 (/Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/tex/l
 atex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
 
 
 (/Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/tex/l
@@ -1152,7 +1159,7 @@ atex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 64.
+ut line 65.
 
 (/Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/tex/l
 atex/sansmathaccent/ot1mathkerncmss.fd
@@ -1173,13 +1180,13 @@ thkerncmss.
 ] [10
 
 ]
-<../../Screen slide/Screenshot 2023-08-16 alle 21.38.15.png, id=517, 1149.29375
+<../../Screen slide/Screenshot 2023-08-16 alle 21.38.15.png, id=849, 1149.29375
 pt x 407.5225pt>
 File: ../../Screen slide/Screenshot 2023-08-16 alle 21.38.15.png Graphic file (
 type png)
 <use ../../Screen slide/Screenshot 2023-08-16 alle 21.38.15.png>
 Package pdftex.def Info: ../../Screen slide/Screenshot 2023-08-16 alle 21.38.15
-.png  used on input line 138.
+.png  used on input line 139.
 (pdftex.def)             Requested size: 342.2953pt x 121.36847pt.
  [11
 
@@ -1190,7 +1197,7 @@ Package pdftex.def Info: ../../Screen slide/Screenshot 2023-08-16 alle 21.38.15
 ] [14
 
 ]
-Overfull \vbox (2.9648pt too high) detected at line 178
+Overfull \vbox (2.9648pt too high) detected at line 179
  []
 
 [15
@@ -1206,16 +1213,16 @@ Overfull \vbox (2.9648pt too high) detected at line 178
 ] [20
 
 ]
-<../../Screen slide/Screenshot 2023-08-16 alle 22.15.22.png, id=895, 743.77875p
-t x 606.265pt>
+<../../Screen slide/Screenshot 2023-08-16 alle 22.15.22.png, id=1227, 743.77875
+pt x 606.265pt>
 File: ../../Screen slide/Screenshot 2023-08-16 alle 22.15.22.png Graphic file (
 type png)
 <use ../../Screen slide/Screenshot 2023-08-16 alle 22.15.22.png>
 Package pdftex.def Info: ../../Screen slide/Screenshot 2023-08-16 alle 22.15.22
-.png  used on input line 246.
+.png  used on input line 247.
 (pdftex.def)             Requested size: 205.37926pt x 167.40332pt.
 
-Overfull \vbox (2.1763pt too high) detected at line 246
+Overfull \vbox (2.1763pt too high) detected at line 247
  []
 
 [21
@@ -1225,13 +1232,13 @@ Overfull \vbox (2.1763pt too high) detected at line 246
 ] [23
 
 ]
-<../../Screen slide/Screenshot 2023-08-17 alle 10.01.59.png, id=996, 973.6375pt
- x 614.295pt>
+<../../Screen slide/Screenshot 2023-08-17 alle 10.01.59.png, id=1328, 973.6375p
+t x 614.295pt>
 File: ../../Screen slide/Screenshot 2023-08-17 alle 10.01.59.png Graphic file (
 type png)
 <use ../../Screen slide/Screenshot 2023-08-17 alle 10.01.59.png>
 Package pdftex.def Info: ../../Screen slide/Screenshot 2023-08-17 alle 10.01.59
-.png  used on input line 266.
+.png  used on input line 267.
 (pdftex.def)             Requested size: 239.60567pt x 151.17378pt.
 
 [24
@@ -1239,13 +1246,13 @@ Package pdftex.def Info: ../../Screen slide/Screenshot 2023-08-17 alle 10.01.59
  <../../Screen slide/Screenshot 2023-08-17 alle 10.01.59.png>] [25
 
 ]
-<../../Screen slide/Screenshot 2023-08-17 alle 10.15.15.png, id=1057, 831.105pt
+<../../Screen slide/Screenshot 2023-08-17 alle 10.15.15.png, id=1389, 831.105pt
  x 424.58624pt>
 File: ../../Screen slide/Screenshot 2023-08-17 alle 10.15.15.png Graphic file (
 type png)
 <use ../../Screen slide/Screenshot 2023-08-17 alle 10.15.15.png>
 Package pdftex.def Info: ../../Screen slide/Screenshot 2023-08-17 alle 10.15.15
-.png  used on input line 288.
+.png  used on input line 289.
 (pdftex.def)             Requested size: 308.06367pt x 157.3795pt.
  [26
 
@@ -1267,13 +1274,13 @@ Package pdftex.def Info: ../../Screen slide/Screenshot 2023-08-17 alle 10.15.15
 ] [34
 
 ]
-<../../Screen slide/Screenshot 2023-08-17 alle 11.36.02.png, id=1368, 868.24374
+<../../Screen slide/Screenshot 2023-08-17 alle 11.36.02.png, id=1700, 868.24374
 pt x 174.6525pt>
 File: ../../Screen slide/Screenshot 2023-08-17 alle 11.36.02.png Graphic file (
 type png)
 <use ../../Screen slide/Screenshot 2023-08-17 alle 11.36.02.png>
 Package pdftex.def Info: ../../Screen slide/Screenshot 2023-08-17 alle 11.36.02
-.png  used on input line 375.
+.png  used on input line 376.
 (pdftex.def)             Requested size: 273.83728pt x 55.08511pt.
  [35
 
@@ -1325,6 +1332,369 @@ Package pdftex.def Info: ../../Screen slide/Screenshot 2023-08-17 alle 11.36.02
 
 ] [58
 
+] [59
+
+] [60
+
+] [61
+
+] (Ripasso Sistemi Operativi.toc) [62
+
+] [63
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 21.27.04.png,
+ id=2623, 864.22874pt x 470.75874pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 21.27.04
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 21.27.04.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-19 alle 21.27.04.png  used on input line 615.
+(pdftex.def)             Requested size: 273.83728pt x 149.15895pt.
+
+Overfull \vbox (8.39505pt too high) detected at line 615
+ []
+
+[64
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-19 alle 21.27.04.png>]
+[65
+
+]
+Overfull \vbox (3.57306pt too high) detected at line 638
+ []
+
+[66
+
+] [67
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 21.42.56.png,
+ id=2742, 1090.0725pt x 385.44pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 21.42.56
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 21.42.56.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-19 alle 21.42.56.png  used on input line 649.
+(pdftex.def)             Requested size: 273.83728pt x 96.82439pt.
+ [68
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-19 alle 21.42.56.png>] [69
+
+] (Ripasso Sistemi Operativi.toc) [70
+
+] [71
+
+] [72
+
+] [73
+
+] [74
+
+] [75
+
+]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 7
+10.
+
+(/Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/tex/l
+atex/base/t1cmtt.fd
+File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+) [76
+
+] [77
+
+] [78
+
+] [79
+
+] [80
+
+] [81
+
+] [82
+
+] [83
+
+] [84
+
+] [85
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.11.png,
+ id=3269, 770.88pt x 677.53125pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.11
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.11.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-19 alle 23.08.11.png  used on input line 816.
+(pdftex.def)             Requested size: 239.60567pt x 210.59077pt.
+
+Overfull \vbox (1.82684pt too high) detected at line 816
+ []
+
+[86
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.11.png>]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.20.png,
+ id=3300, 1080.035pt x 608.2725pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.20
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.20.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-19 alle 23.08.20.png  used on input line 823.
+(pdftex.def)             Requested size: 273.83728pt x 154.22105pt.
+
+[87
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.20.png>]
+[88
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.31.png,
+ id=3361, 1077.02374pt x 641.39626pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.31
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.31.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-19 alle 23.08.31.png  used on input line 834.
+(pdftex.def)             Requested size: 273.83728pt x 163.07921pt.
+ [89
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.31.png>]
+[90
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.41.png,
+ id=3418, 1034.86626pt x 566.115pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.41
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.41.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-19 alle 23.08.41.png  used on input line 848.
+(pdftex.def)             Requested size: 273.83728pt x 149.79517pt.
+ [91
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.41.png>]
+[92
+
+] [93
+
+] [94
+
+] [95
+
+] [96
+
+] [97
+
+] [98
+
+] [99
+
+] [100
+
+] [101
+
+]
+(Ripasso Sistemi Operativi.toc) [102
+
+] [103
+
+] [104
+
+] [105
+
+] [106
+
+] [107
+
+] [108
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-20 alle 10.34.02.png,
+ id=3948, 726.715pt x 361.35pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-20 alle 10.34.02
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-20 alle 10.34.02.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-20 alle 10.34.02.png  used on input line 954.
+(pdftex.def)             Requested size: 273.83728pt x 136.16205pt.
+
+[109
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-20 alle 10.34.02.png>]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-20 alle 10.35.40.png,
+ id=3980, 862.22125pt x 561.09625pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-20 alle 10.35.40
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-20 alle 10.35.40.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-20 alle 10.35.40.png  used on input line 963.
+(pdftex.def)             Requested size: 239.60567pt x 155.92436pt.
+
+Overfull \vbox (2.93446pt too high) detected at line 963
+ []
+
+[110
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-20 alle 10.35.40.png>]
+[111
+
+] [112
+
+] [113
+
+] [114
+
+] (Ripasso Sistemi Operativi.toc) [115
+
+] [116
+
+] [117
+
+]
+[118
+
+] [119
+
+] [120
+
+] [121
+
+] [122
+
+] [123
+
+] [124
+
+] [125
+
+] [126
+
+] [127
+
+] [128
+
+] [129
+
+]
+[130
+
+] [131
+
+] [132
+
+] [133
+
+] [134
+
+] [135
+
+] [136
+
+] [137
+
+] [138
+
+] [139
+
+] [140
+
+] [141
+
+]
+[142
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.38.02.png,
+ id=4993, 1085.05376pt x 491.8375pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.38.02
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.38.02.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-21 alle 19.38.02.png  used on input line 1286.
+(pdftex.def)             Requested size: 342.2953pt x 155.15477pt.
+ [143
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.38.02.png>]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.37.54.png,
+ id=5024, 1079.03125pt x 490.83376pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.37.54
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.37.54.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-21 alle 19.37.54.png  used on input line 1293.
+(pdftex.def)             Requested size: 342.2953pt x 155.70691pt.
+[144
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.37.54.png>]
+[145
+
+] [146
+
+] [147
+
 ]
 \tf@nav=\write6
 \openout6 = `"Ripasso Sistemi Operativi.nav"'.
@@ -1336,42 +1706,50 @@ Package pdftex.def Info: ../../Screen slide/Screenshot 2023-08-17 alle 11.36.02
 \openout8 = `"Ripasso Sistemi Operativi.snm"'.
 
  (Ripasso Sistemi Operativi.aux)
-Package rerunfilecheck Info: File `"Ripasso Sistemi Operativi".out' has not cha
-nged.
-(rerunfilecheck)             Checksum: F80B4FCCFA1CA02D8EAB4BFF9A7A8D2D;10198.
+
+Package rerunfilecheck Warning: File `"Ripasso Sistemi Operativi".out' has chan
+ged.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Ripasso Sistemi Operativi".out':
+(rerunfilecheck)             Before: BEA88188DEDDD2F4DAB48B8DA05E1C6E;25173
+(rerunfilecheck)             After:  EED0B02592B6F35E97DC08F51056B052;25394.
  ) 
 Here is how much of TeX's memory you used:
- 24231 strings out of 476339
- 491882 string characters out of 5774840
- 1863388 words of memory out of 5000000
- 43973 multiletter control sequences out of 15000+600000
- 527020 words of font info for 65 fonts, out of 8000000 for 9000
+ 25132 strings out of 476339
+ 518773 string characters out of 5774840
+ 1865388 words of memory out of 5000000
+ 44575 multiletter control sequences out of 15000+600000
+ 527334 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,122p,445b,639s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,122p,448b,639s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/data/fonts
-/pk/ljfour/jknappen/ec/dpi600/ecss1200.pk> </Users/matteofranchini/Library/Appl
-ication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecso1095.
+/pk/ljfour/jknappen/ec/dpi600/ectt1095.pk> </Users/matteofranchini/Library/Appl
+ication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecss1200.
 pk> </Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/data/font
-s/pk/ljfour/jknappen/ec/dpi600/ecsi1095.pk> </Users/matteofranchini/Library/App
-lication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecsx1095
+s/pk/ljfour/jknappen/ec/dpi600/ecso1095.pk> </Users/matteofranchini/Library/App
+lication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecsi1095
 .pk> </Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/data/fon
-ts/pk/ljfour/jknappen/ec/dpi600/ecsx1440.pk> </Users/matteofranchini/Library/Ap
-plication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecss090
+ts/pk/ljfour/jknappen/ec/dpi600/ecsx1095.pk> </Users/matteofranchini/Library/Ap
+plication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecsx144
 0.pk> </Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/data/fo
-nts/pk/ljfour/jknappen/ec/dpi600/ecss0600.pk> </Users/matteofranchini/Library/A
-pplication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecss10
-95.pk> </Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/data/f
-onts/pk/ljfour/jknappen/ec/dpi600/ecss1440.pk></Users/matteofranchini/Library/A
-pplication Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb></Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/f
-onts/type1/public/amsfonts/cm/cmss10.pfb></Users/matteofranchini/Library/Applic
-ation Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmssi10.pfb>
-</Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/fonts
-/type1/public/amsfonts/cm/cmssi8.pfb></Users/matteofranchini/Library/Applicatio
-n Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Ripasso Sistemi Operativi.pdf" (58 pages, 1874930 bytes).
+nts/pk/ljfour/jknappen/ec/dpi600/ecss0900.pk> </Users/matteofranchini/Library/A
+pplication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecss06
+00.pk> </Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/data/f
+onts/pk/ljfour/jknappen/ec/dpi600/ecss1095.pk> </Users/matteofranchini/Library/
+Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecss1
+440.pk></Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/instal
+l/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/matteofranchini/Library/App
+lication Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmss10.pf
+b></Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/fon
+ts/type1/public/amsfonts/cm/cmssi10.pfb></Users/matteofranchini/Library/Applica
+tion Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmssi8.pfb></
+Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "Ripasso Sistemi Operativi.pdf" (147 pages, 4817390 bytes).
 PDF statistics:
- 2549 PDF objects out of 2984 (max. 8388607)
- 165 named destinations out of 1000 (max. 500000)
- 1142 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5666 PDF objects out of 6186 (max. 8388607)
+ 424 named destinations out of 1000 (max. 500000)
+ 2006 words of extra memory for PDF output out of 10000 (max. 10000000)
 

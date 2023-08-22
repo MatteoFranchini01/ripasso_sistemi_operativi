@@ -48,3 +48,84 @@
 \beamer@subsectionintoc {2}{3}{Sistema di elaborazione distribuito}{54}{0}{2}
 \beamer@subsectionintoc {2}{4}{Evoluzione dei SO}{55}{0}{2}
 \beamer@subsectionintoc {2}{5}{Tecniche di gestione di un sistema di calcolo}{57}{0}{2}
+\beamer@subsectionintoc {2}{6}{Gestione Batch}{59}{0}{2}
+\beamer@subsectionintoc {2}{7}{Time sharing}{60}{0}{2}
+\beamer@subsectionintoc {2}{8}{Spooling}{61}{0}{2}
+\beamer@sectionintoc {3}{Appofondimento delle interruzioni}{62}{0}{3}
+\beamer@subsectionintoc {3}{1}{Interruzioni}{63}{0}{3}
+\beamer@subsectionintoc {3}{2}{Sistema delle interruzioni}{64}{0}{3}
+\beamer@subsectionintoc {3}{3}{Sistema delle interruzioni}{65}{0}{3}
+\beamer@subsectionintoc {3}{4}{Processo delle interruzioni}{66}{0}{3}
+\beamer@subsectionintoc {3}{5}{Livelli di priorit^^c3^^a0}{67}{0}{3}
+\beamer@subsectionintoc {3}{6}{Salvataggio dello stato tramite stack}{68}{0}{3}
+\beamer@sectionintoc {4}{Servizi e organizzazione del SO}{70}{0}{4}
+\beamer@subsectionintoc {4}{1}{Servizi del sistema operativo}{71}{0}{4}
+\beamer@subsectionintoc {4}{2}{Interfaccia utente del SO - CLI}{73}{0}{4}
+\beamer@subsectionintoc {4}{3}{Interfaccia utente del SO - GUI}{74}{0}{4}
+\beamer@subsectionintoc {4}{4}{Chiamate di sistema (SysCall)}{75}{0}{4}
+\beamer@subsectionintoc {4}{5}{Esempio di API standard}{76}{0}{4}
+\beamer@subsectionintoc {4}{6}{Implementazione della chiamata di sistema}{77}{0}{4}
+\beamer@subsectionintoc {4}{7}{Passaggio dei parametri della SysCall}{78}{0}{4}
+\beamer@subsectionintoc {4}{8}{Tipi di System Call}{79}{0}{4}
+\beamer@subsectionintoc {4}{9}{Esempio: MS-DOS}{80}{0}{4}
+\beamer@subsectionintoc {4}{10}{Esempio: FreeBSD}{81}{0}{4}
+\beamer@subsectionintoc {4}{11}{Servizi di sistema}{82}{0}{4}
+\beamer@subsectionintoc {4}{12}{Linker e loader}{83}{0}{4}
+\beamer@subsectionintoc {4}{13}{Programmi e SO}{84}{0}{4}
+\beamer@subsectionintoc {4}{14}{Struttura del sistema operativo}{85}{0}{4}
+\beamer@subsectionintoc {4}{15}{Struttura a strati}{86}{0}{4}
+\beamer@subsectionintoc {4}{16}{Struttura a livelli di MS-DOS}{87}{0}{4}
+\beamer@subsectionintoc {4}{17}{Struttura non semplice - UNIX}{88}{0}{4}
+\beamer@subsectionintoc {4}{18}{Microkernel}{90}{0}{4}
+\beamer@subsectionintoc {4}{19}{Archicettura a microkernel}{91}{0}{4}
+\beamer@subsectionintoc {4}{20}{Moduli}{92}{0}{4}
+\beamer@subsectionintoc {4}{21}{Sistemi ibridi}{93}{0}{4}
+\beamer@subsectionintoc {4}{22}{iOS}{94}{0}{4}
+\beamer@subsectionintoc {4}{23}{Android}{95}{0}{4}
+\beamer@subsectionintoc {4}{24}{Debug del sistema operativo}{96}{0}{4}
+\beamer@subsectionintoc {4}{25}{DTrace}{97}{0}{4}
+\beamer@subsectionintoc {4}{26}{Generazione del sistema operativo}{98}{0}{4}
+\beamer@subsectionintoc {4}{27}{Avvio del sistema}{99}{0}{4}
+\beamer@subsectionintoc {4}{28}{Struttura del SO}{100}{0}{4}
+\beamer@subsectionintoc {4}{29}{Nucleo di un SO}{101}{0}{4}
+\beamer@sectionintoc {5}{Virtualizzazione}{102}{0}{5}
+\beamer@subsectionintoc {5}{1}{Macchine virtuali}{103}{0}{5}
+\beamer@subsectionintoc {5}{2}{Virtualizzazione}{104}{0}{5}
+\beamer@subsectionintoc {5}{3}{Esempi di virtualizzazione}{105}{0}{5}
+\beamer@subsectionintoc {5}{4}{Sistemi operativi per la virtualizzazione}{106}{0}{5}
+\beamer@subsectionintoc {5}{5}{Virtualizzazione di sistema}{107}{0}{5}
+\beamer@subsectionintoc {5}{6}{VMM di sistema vs VMM ospitato}{108}{0}{5}
+\beamer@subsectionintoc {5}{7}{VMM di sistema}{109}{0}{5}
+\beamer@subsectionintoc {5}{8}{VMM ospitato}{110}{0}{5}
+\beamer@subsectionintoc {5}{9}{Emulazione vs Virtualizzazione}{111}{0}{5}
+\beamer@subsectionintoc {5}{10}{Vantaggi della virtualizzazione}{112}{0}{5}
+\beamer@subsectionintoc {5}{11}{Vantaggi della virtualizzazione}{113}{0}{5}
+\beamer@subsectionintoc {5}{12}{Virtualizzazione a livello del SO}{114}{0}{5}
+\beamer@sectionintoc {6}{Processi}{115}{0}{6}
+\beamer@subsectionintoc {6}{1}{Concetto di processo}{116}{0}{6}
+\beamer@subsectionintoc {6}{2}{Algoritmo, Programma, Processo}{118}{0}{6}
+\beamer@subsectionintoc {6}{3}{Stato del processo}{119}{0}{6}
+\beamer@subsectionintoc {6}{4}{Gestione dei processi}{121}{0}{6}
+\beamer@subsectionintoc {6}{5}{Process Control Block (PCB)}{122}{0}{6}
+\beamer@subsectionintoc {6}{6}{Thread}{123}{0}{6}
+\beamer@subsectionintoc {6}{7}{Scheduling dei processi}{124}{0}{6}
+\beamer@subsectionintoc {6}{8}{Commutazione di contesto}{125}{0}{6}
+\beamer@subsectionintoc {6}{9}{Multitasking nei sistemi mobili}{126}{0}{6}
+\beamer@subsectionintoc {6}{10}{Tipi di scheduler}{127}{0}{6}
+\beamer@subsectionintoc {6}{11}{Creazione del process}{128}{0}{6}
+\beamer@subsectionintoc {6}{12}{Terminazione del processo}{130}{0}{6}
+\beamer@subsectionintoc {6}{13}{Architettura multiprocesso - Browser Chrome}{132}{0}{6}
+\beamer@subsectionintoc {6}{14}{Comunicazione tra processi}{133}{0}{6}
+\beamer@subsectionintoc {6}{15}{Modelli di interazione tra processi}{134}{0}{6}
+\beamer@subsectionintoc {6}{16}{Modello ad ambiente globale}{135}{0}{6}
+\beamer@subsectionintoc {6}{17}{Modello a scambio di messaggi}{136}{0}{6}
+\beamer@subsectionintoc {6}{18}{Processi cooperanti}{137}{0}{6}
+\beamer@subsectionintoc {6}{19}{Problema produttore-consumatore}{138}{0}{6}
+\beamer@subsectionintoc {6}{20}{Comunicazione tra processi (IPC) - Memoria condivisa}{139}{0}{6}
+\beamer@subsectionintoc {6}{21}{Comunicazione tra processi - Scambio di messaggi}{140}{0}{6}
+\beamer@subsectionintoc {6}{22}{Costrutti linguistici per il modello a scambio di messaggi}{142}{0}{6}
+\beamer@subsectionintoc {6}{23}{Primitive con designazione esplicita}{143}{0}{6}
+\beamer@subsectionintoc {6}{24}{Designazione esplicita}{144}{0}{6}
+\beamer@subsectionintoc {6}{25}{Direct naming: schema asimmetrico}{145}{0}{6}
+\beamer@subsectionintoc {6}{26}{Modello client-server}{146}{0}{6}
+\beamer@subsectionintoc {6}{27}{Modello client-server e naming}{147}{0}{6}

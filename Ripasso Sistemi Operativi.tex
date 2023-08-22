@@ -8,6 +8,7 @@
 \usepackage[italian]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{multicol}
+\usepackage{verbatim}
 
 \definecolor{mioRosso}{RGB}{139,0,0}
 \definecolor{BluScuro}{RGB}{0,0,139}
@@ -579,5 +580,733 @@ Un programma che funge da intermediario tra l'utente di un computer e l'hardware
 	\end{block}
 \end{frame}
 \subsection{Gestione Batch}
-
+\begin{mainframe}
+	Significa raggruppare i lavori o programmi in \textbf{lotti} per conseguire una \textbf{maggiore utilizzazione delle risorse}, cioè un \textit{throughput} più elevato.\\
+	Nel caso di multiprogrammazione il SO deve provvedere algoritmi per la scelta di quell'insieme di programmi che, in esecuzione contemporanea, massimizza il througput.\\
+	La \textbf{gestione batch} può essere \textbf{locale} (unità centrale direttamente collegata ai dispositivi di I/O) o \textbf{remota} (è presente una trasmissione dei job e dei risultati ed eventualmente una memorizzazione intermedia).
+\end{mainframe}
+\subsection{Time sharing}
+\begin{mainframe}
+	L'elaboratore serve \textbf{simultaneamente} una pluralità di utenti, dotati di terminali, dedicando a ciascuno di essi tutte le risorse del sistema per \textbf{quanti fissati di tempo}.\\
+	Migliora i \textbf{tempi di risposta} ma peggiore l'utilizzazione delle risorse.\\
+	Normalmente una modalità di gestione \textbf{time-sharing} è adottata nei \textbf{sistemi conversazionali}, in cui più utenti contemporaneamente "colloquiano" con il sistema
+\end{mainframe}
+\subsection{Spooling}
+\begin{mainframe}
+	Per accrescere la velocità di esecuzione dei programmi conviene utilizzare la \textbf{memoria a disco per simulare i dispositivi di I/O}: il disco viene usato come un buffer di grosse dimensioni a cui accedono sia il lettore di schede che la CPU.\\
+	I trasferimenti lettore di scheme-memoria di massa (\textbf{spool-in}) e memoria di massa-stampante (\textbf{spool out}) sono effettuati da appositi programmi detti di \textbf{spooling}.
+\end{mainframe}
+\section{Appofondimento delle interruzioni}
+\subsection{Interruzioni}
+\begin{mainframe}
+	\begin{enumerate}
+	\item	\textbf{Interruzioni hardware (asincrone)}: per terminazione di un trasferimento dati o per condizione di errore rilevata dalle o nelle periferiche
+		\item \textbf{Interruzioni software (sincrone)}: eccezioni o trap (es. divisione per zero), programmate o supervisory call (per utilizzare funzioni del SO)
+	\end{enumerate}
+\end{mainframe}
+\subsection{Sistema delle interruzioni}
+\begin{mainframe}
+	A ciascuna causa di interruzione è associata un'azione che verrà effettuata dal programma di risposta alle interruzioni.\\
+	Una causa \textbf{non produce di per se un'interruzione} ma solo una \textbf{richiesta di interruzione}. Affinché la richiesta di interruzione segua effettivamente un'interruzione è necessario che \textbf{la causa di interruzione sia abilitata}.
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 21.27.04}
+	\end{figure}
+\end{mainframe}
+\subsection{Sistema delle interruzioni}
+\begin{mainframe}
+	L'interruzione "i" si manifesta se:
+	\begin{itemize}
+		\item $AG = 1$ (il sistema di interruzione è abilitato)
+		\item $IRRi = 1$ (si è presentata la causa di interruzione "Ii")
+		\item $IMRi = 1$ (l'interruzione "i" è abilitata nel registro di maschera)
+	\end{itemize}
+\end{mainframe}
+\subsection{Processo delle interruzioni}
+\begin{mainframe}
+	Al verificarsi di un'interruzione occorre
+	\begin{enumerate}
+		\item \textbf{salvare tutte le informazioni necessarie per la ripresa del programma interrotto}\\
+		l'Hw provvede in generale a salvare PC e PSW, mentre i registri generali vengono tipicamente salvati in software. È necessario che il salvataggio dei registri avvenga ad interrupt disabilitati.
+		\item \textbf{individuare la causa dell'interruzione}\\
+		l'Hw può trasferire il controllo sempre al medesimo programma di risposta, che provvederà quindi ad individuare la causa dell'interruzione tramite \textit{skip chain}
+		\item \textbf{eseguire le azioni richieste (servizio dell'interruzione)}\\
+		Durante il servizio dell'interruzione il sistema delle interruzioni può essere riabilitato (AG), eventualmente selettivamente (IMR)
+		\item \textbf{ripristinare lo stato del programma interrotto e riavviato}\\
+		Il ripristino dei registri deve avvenire ad interrupt disabilitati. Un'apposita istruzione di ritorno dell'interrupt (RTI) ripristina i registri
+	\end{enumerate}
+\end{mainframe}
+\subsection{Livelli di priorità}
+\begin{mainframe}
+	I diversi tipi di fonti di interruzione possono suggerire una gestione con diversi livelli di priorità, se all'tto del ritorno esistono più richieste pendenti si serve di quella di livello più elevato.
+\end{mainframe}
+\subsection{Salvataggio dello stato tramite stack}
+\begin{mainframe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 21.42.56}
+	\end{figure}
+\end{mainframe}
+\begin{frame}
+	Programma di risposta ad interruzione di livello L:
+	\begin{itemize}
+		\item salvo lo stato del processore nello stack e modifica SP
+		\item abilita interruzioni di livello $K>L$
+		\item esegue programma di risposta
+		\item ripristina lo stato del processore modificando SP
+	\end{itemize}
+\end{frame}
+\section{Servizi e organizzazione del SO}
+\subsection{Servizi del sistema operativo}
+\begin{mainframe}
+	Forniscono un ambiente per l'esecuzione di programmi e servizi a programmi e utenti:
+	\begin{itemize}
+		\item \textbf{Interfaccia utente}
+		\item \textbf{Esecuzione del programma}
+		\item \textbf{Operazioni di I/O}
+		\item \textbf{Manipolazione del file system}
+		\item \textbf{Comunicazioni}
+		\item \textbf{Rilevamento di errori}
+	\end{itemize}
+\end{mainframe}
+\begin{frame}
+	Permette anche il funzionamento efficiente del sistema stesso attraverso la condivisione delle risorse
+	\begin{itemize}
+		\item \textbf{Allocazione delle risorse}: quando più utenti o più job vengono eseguiti simultaneamente
+		\item \textbf{Contabilità}: per tenere traccia di quali utenti utilizzano la quantità e il tipo di risorsa del computer
+		\item \textbf{Protezione e sicurezza}
+	\end{itemize}
+\end{frame}
+\subsection{Interfaccia utente del SO - CLI}
+\begin{mainframe}
+	La CLI consente l'immissione diretta di comandi, a volte implementato nel \textbf{kernel}, a volta da un \textbf{programma di sistema}.\\
+	A volte sono implementate più versioni: \textbf{shell}
+\end{mainframe}
+\subsection{Interfaccia utente del SO - GUI}
+\begin{mainframe}
+	Interfaccia desktop con metafora facile da usare.\\
+	Molti sistemi includono sia \textbf{CLI che GUI}:
+	\begin{itemize}
+		\item Microsoft Windows è un'interfaccia GUI con una shell di comando CLI
+		\item Apple Mac OS X è una GUI "Aqua" con kernel UNIX
+	\end{itemize}
+\end{mainframe}
+\subsection{Chiamate di sistema (SysCall)}
+\begin{mainframe}
+	Interfaccia di programmazione per i servizi forniti dal SO, tipicamente scritta in C o C++.\\
+	I programmi vi accedono tramite un'\textbf{interfaccia di programmazione delle applicazioni (API)} di alto livello.\\
+	Le \textbf{API} più comuni sono \textbf{Win32 API}, \textbf{POSIX API} (per tutte le versioni di UNIX)
+\end{mainframe}
+\subsection{Esempio di API standard}
+\begin{mainframe}
+	Come API standard, si consideri la funzione
+	\begin{semiverbatim}
+		read()
+	\end{semiverbatim}
+	si ottiene dalla pagina \textit{man} invocando il comando
+	\begin{semiverbatim}
+		man read
+	\end{semiverbatim}
+\end{mainframe}
+\subsection{Implementazione della chiamata di sistema}
+\begin{mainframe}
+	In genere, a ciascuna SysCall è associato un numero (l'interfaccia delle chiamate di sistema mantiene una tabella indicizzata in base a questi numeri).\\
+	L'interfaccia SysCall invoca la chiamata di sistema prevista nel kernel del SO e restituisce lo stato della chiamata di sistema e gli eventuali valori di ritorno.\\
+	Il chiamante non deve sapere nulla di come viene implementata la SysCall.
+\end{mainframe}
+\subsection{Passaggio dei parametri della SysCall}
+\begin{mainframe}
+	Spesso sono necessarie più informazioni della semplice identità della chiamata di sistema desiderata.\\
+	Tre metodi generali utilizzati per passare parametri al SO
+	\begin{itemize}
+		\item Passarli nei registri (più semplice)
+		\item Parametri memorizzati in un blocco, o tabella, in memoria
+		\item Parametri messi sullo stack dal programma
+	\end{itemize}
+\end{mainframe}
+\subsection{Tipi di System Call}
+\begin{mainframe}
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item \textbf{Controllo del processo}
+	\begin{itemize}
+		\item creare un processo, terminare un processo
+		\item caricare, eseguire
+		\item allocare e liberare memoria
+		\item debugger per determinare i bug, esecuzione a passo singolo
+		\item blocchi per gestire l'accesso ai dati condivisi
+	\end{itemize}
+	\item \textbf{Gestione dei file}
+	\item \textbf{Gestione dei dispositivi}
+	\begin{itemize}
+		\item richiedere un dispositivo, rilasciare un dispositivo
+		\item leggere, scrivere, riposizionare
+	\end{itemize}
+	\item \textbf{Manutenzione delle informazioni}
+	\item \textbf{Comunicazione}
+	\begin{itemize}
+		\item inviare, ricevere messaggi nel \textbf{modello a scambio di messaggi}
+		\item creare e accedere a regioni di memoria nel \textbf{modello a memoria condivisa}
+	\end{itemize}
+	\item \textbf{Protezione}
+\end{itemize}
+		\end{multicols}
+\end{mainframe}
+\subsection{Esempio: MS-DOS}
+\begin{mainframe}
+	\begin{itemize}
+		\item Lavoro a task singolo
+		\item Shell invocata all'avvio del sistema
+		\item Metodo semplice per eseguire un programma
+		\item Singolo spazio di memoria
+		\item Uscita dal programma $\rightarrow$ viene ricaricato lo shell
+	\end{itemize}
+\end{mainframe}
+\subsection{Esempio: FreeBSD}
+\begin{mainframe}
+	\begin{itemize}
+		\item Variante UNIX
+		\item Multitasking
+		\item Lo shell esegue la chiamata di sistema \textit{fork()} per crear un processo
+		\item Il processo esce con
+		\begin{itemize}
+			\item $codice = 0$ - nessun errore
+			\item $codice > 0$ - codice errore
+		\end{itemize}
+	\end{itemize}
+\end{mainframe}
+\subsection{Servizi di sistema}
+\begin{mainframe}
+	I programmi di sistema forniscono un comodo \textbf{ambiente per lo sviluppo e l'esecuzione dei programmi}. Possono essere suddivisi in:
+	\begin{itemize}
+		\item Manipolazione dei file
+		\item Informazioni di stato a volte memorizzate in un file
+		\item Supporto ai linguaggi di programmazione
+		\item Caricamento ed esecuzione dei programmi
+		\item Comunicazioni
+		\item Servizi di background: avvio a tempo di boot, servizi come il controllo del disco
+		\item Programmi applicativi
+	\end{itemize}
+\end{mainframe}
+\subsection{Linker e loader}
+\begin{mainframe}
+	Il \textbf{linker} combina i file oggetto in singoli file eseguibili e il \textbf{loader} li carica in memoria
+\end{mainframe}
+\subsection{Programmi e SO}
+\begin{mainframe}
+	\textbf{Application Binary Interface (ABI)} è un'architettura equivalente all'API che definisce come differenti componenti del codice possono interfacciarsi ad un dato sistema operativo o ad una data architettura
+\end{mainframe}
+\subsection{Struttura del sistema operativo}
+\begin{mainframe}
+	\textbf{Sistema a livelli}: il livello più \textbf{interno} è l'Hw, quello più \textbf{esterno} è l'\textbf{interfaccia utente}\\
+	Ci sono vari modi per strutturare un SO:
+	\begin{itemize}
+		\item Struttura semplice \textbf{MS-DOS}
+		\item Più complessa \textbf{UNIX}
+		\item A strati \textbf{un'astrazione}
+		\item Microkernel \textbf{Mach}
+	\end{itemize}
+\end{mainframe}
+\subsection{Struttura a strati}
+\begin{mainframe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.11}
+	\end{figure}
+\end{mainframe}
+\subsection{Struttura a livelli di MS-DOS}
+\begin{mainframe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.20}
+	\end{figure}
+\end{mainframe}
+\subsection{Struttura non semplice - UNIX}
+\begin{mainframe}
+	UNIX - limitato dalla funzionalità Hw, il sistema operativo UNIX originale aveva una struttura limitata.\\
+	UNIX è composto da due parti separabili: \textbf{programmi di sistema}, \textbf{kernel} (ovvero tutto quello che trova sotto l'interfaccia delle chiamate di sistema e al di sopra dell'Hw fisico)
+\end{mainframe}
+\begin{frame}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.31}
+	\end{figure}
+\end{frame}
+\subsection{Microkernel}
+\begin{mainframe}
+	Sposta il più possibile dal kernel allo spazio comune.\\
+	Esempio di \textbf{microkernel per Mach}: la comunicazione tra i moduli utente avviene tramite il passaggio di messaggi\\
+	\textbf{Vantaggi}: estensione più semplice del SO, più affidaile, più sicuro\\
+	\textbf{Svantaggi}: sovraccarico di prestazioni della comunicazione tra spazio utente e spazio kernel
+\end{mainframe}
+\subsection{Archicettura a microkernel}
+\begin{mainframe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.41}
+	\end{figure}
+\end{mainframe}
+\subsection{Moduli}
+\begin{mainframe}
+	Molti sistemi operativi moderni implementano moduli del kernel caricabili (approccio orientato agli oggetti, ogni componente centrale è separato, ciascuno parla con gli altri attraverso interfacce note).\\
+	Nel complesso è simile ai livelli ma con una maggiore flessibilità
+\end{mainframe}
+\subsection{Sistemi ibridi}
+\begin{mainframe}
+	La \textbf{maggior parte dei SO moderni non sono un unico modello puro}, l'ibrido combina più approcci per rispondere alle esigenze delle prestazioni.\\
+	I kernel di Linux sono nello spazio degli indirizzi del kernel, quindi monolitici, ma anche modulari per il caricamento dinamico delle funzionalità.\\
+	Windows per lo più monolitico, più microkernel per le diverse personalità dei sottosistemi.
+\end{mainframe}
+\subsection{iOS}
+\begin{mainframe}
+	Sistema operativo mobile di Apple, strutturato su Mac OS X con funzionalità aggiuntive.\\
+	API Cocoa Touch Objcective-C per lo sviluppo delle applicazioni.\\
+	Livelli di servizi multimediali per grafica, video e audio.
+\end{mainframe}
+\subsection{Android}
+\begin{mainframe}
+	Sviluppato principalmente da Google ed ha uno stack simile a quello di iOS (open source).\\
+	Basato sul kernel Linux ma modificato, l'ambiente di runtime include un set di librerie di base e la macchina virtuale Dalvik
+\end{mainframe}
+\subsection{Debug del sistema operativo}
+\begin{mainframe}
+	Il \textbf{debug  consiste nel trovare e correggere gli errori o i bug}.\\
+	I SO generano file di log contenenti informazioni sugli errori.\\
+	Il \textbf{fallimento di un'app} può generare un file di \textbf{core dump che cattura la memoria del processo}.\\
+	Il \textbf{fallimento del SO} può generare un \textbf{file di crash dump contenente la memoria del kernel}
+\end{mainframe}
+\subsection{DTrace}
+\begin{mainframe}
+	Lo strumento \textbf{DTrace} in Solaris, FreeBSD e MacOS X consente la strumentazione live sui sistemi di produzione.\\
+	\textbf{Le sonde si attivano quando il codice viene eseguito all'interno di un provider}, catturando i dati di stato e inviandoli ai consumatori di tali sonde.
+\end{mainframe}
+\subsection{Generazione del sistema operativo}
+\begin{mainframe}
+	\begin{itemize}
+		\item I sistemi operativi sono progettati per funzionare su una qualsiasi classe di macchine
+		\item Il programma \textbf{SYGEN} ottiene informazioni sulla configurazione specifica del sistema Hw
+	\end{itemize}
+\end{mainframe}
+\subsection{Avvio del sistema}
+\begin{mainframe}
+	Quando l'alimentazione viene inizializzata sul sistema, l'esecuzione inizia da una posizione di memoria fissa.\\
+	Il SO deve essere reso disponibile all'Hw in modo che quest'ultimo possa avviarlo.\\
+	Il comune \textbf{bootstrap loader} permette di selezionare il kernel da più dischi, versioni, opzioni del kernel.
+\end{mainframe}
+\subsection{Struttura del SO}
+\begin{mainframe}
+	La stratificazione più opportuna può risultare non evidente, dipende dall'evoluzione tecnologica dell'Hw.\\
+	\textbf{Sistema a macchine virtuali} (VM IBM): usando lo scheduling della CPU e la tecnica della memoria virtuale si possono creare macchine virtuali, una per ogni processo\\
+	Realizzazione in linguaggi ad alto livello.\\
+	\textbf{Nucleo o kernel}: mette a disposizione le SysCall ai programmi di sistema ed applicativi
+\end{mainframe}
+\subsection{Nucleo di un SO}
+\begin{mainframe}
+	Fornisce un meccanismo per la creazione e la distruzione dei processi.\\
+	Provvede allo \textbf{scheduling della CPU}, alla \textbf{gestione della memoria} e dei \textbf{dispositivi di I/O}.\\
+	Fornisce strumenti per la sincronizzazione
+\end{mainframe}
+\section{Virtualizzazione}
+\subsection{Macchine virtuali}
+\begin{mainframe}
+	Creano un'illusione di processi multipli, ciascuno in esecuzione sul suo processore privato e con la propria memoria virtuale privata, messa a disposizione dal proprio kernel del SO, che può essere diverso per processi diversi
+\end{mainframe}
+\subsection{Virtualizzazione}
+\begin{mainframe}
+	Dato un sistema caratterizzato da un insieme di risorse, virtualizzare il sistema significa presentare all'utilizzatore una visione delle risorse del sistema diversa da quella reale.\\
+	\textbf{Obbiettivo}: disaccopiare il comportamento delle risorse Hw e Sw di un sistema di elaborazione, così come viste dall'utente, dalla loro realizzazione fisica
+\end{mainframe}
+\subsection{Esempi di virtualizzazione}
+\begin{mainframe}
+	\textbf{Astrazione}: in generale un oggetto astratto (risorse virtuale) è la rappresentazione semplificata di un oggetto (risorsa fisica)\\
+	\textbf{Linguaggio di programmazione}: la capacità di portare lo stesso programma su architetture diverse è possibile grazie alla \textbf{definizione di un VM} in grado di \textbf{interpretare ed eseguire ogni istruzione del linguaggio}\\
+	\textbf{Virtualizzazione a livello di processo}: i sistemi multitasking permettono la contemporanea esecuzione di più processi, ognuno dei quali dispone di una VM dedicata
+\end{mainframe}
+\subsection{Sistemi operativi per la virtualizzazione}
+\begin{mainframe}
+	La macchina fisica viene trasformata in $n$ interfacce (VM), ognuna delle quali è una replica della macchina fisica.\\
+	Su ogni macchina virtuale è possibile installare ed eseguire un sistema operativo: \textbf{VM monitor}
+\end{mainframe}
+\subsection{Virtualizzazione di sistema}
+\begin{mainframe}
+	Il disaccopiamento è realizzazto da un componente chiamato VM monitor il cui compito è consentire la condivisione da parte di più macchine virtuali di una singola piattaforma Hw\\
+	Il VMM è il mediatore unico nelle interazioni tra le macchine virtuali e l'Hw sottostante, che garantisce
+	\begin{itemize}
+		\item \textbf{Isolamento tra le VM}
+		\item \textbf{Stabilità del sistema}
+	\end{itemize}
+\end{mainframe}
+\subsection{VMM di sistema vs VMM ospitato}
+\begin{mainframe}
+	\textbf{VMM di sistema}: le funzionalità di virtualizzazione vengono integrate in un SO leggero, costituendo un unico sistema posto direttamente sopra l'Hw dell'elaboratore.\\
+	È necessario corredare il VMM di tutti i driver necessari per pilotare le periferiche
+\end{mainframe}
+\subsection{VMM di sistema}
+\begin{mainframe}
+	\begin{itemize}
+		\item \textbf{Host}: piattaforma di base sulla quale si realizzano macchine virtuali
+		\item \textbf{Guest}: la VM
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-20 alle 10.34.02}
+	\end{figure}
+\end{mainframe}
+\subsection{VMM ospitato}
+\begin{mainframe}
+	Il VMM viene installato come un'app sopra un sistema operativo esistente, che opera nello spazioutente e accede all'Hw tramite le SysCall del SO su cui viene installato.\\
+	Prodotti: User Mode Linux, VMWare, Microsoft Virtual Server
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-20 alle 10.35.40}
+	\end{figure}
+\end{mainframe}
+\subsection{Emulazione vs Virtualizzazione}
+\begin{mainframe}
+	\begin{itemize}
+		\item \textbf{Emulazione}
+		\begin{itemize}
+			\item eseguire app (o SO) compilate per un'architettura su un'altra
+			\item uno strato sw che emula le funzionalità dell'architettura
+		\end{itemize}
+		\item \textbf{Virtualizzazione}
+		\begin{itemize}
+			\item definizione di contesti di esecuzione multipli su di un singolo processore, partizionando le risorse
+		\end{itemize}
+	\end{itemize}
+\end{mainframe}
+\subsection{Vantaggi della virtualizzazione}
+\begin{mainframe}
+	\textbf{Uno o più SO sulla stessa macchina fisica}\\
+	\textbf{Isolamento dell'ambiente di esecuzione}
+\end{mainframe}
+\subsection{Vantaggi della virtualizzazione}
+\begin{mainframe}
+	\textbf{Consolidamento Hw}: possibilità di concentrare più macchine su un'unica architettura Hw per un utilizzo efficiente dell'Hw\\
+	\textbf{Gestione facilitata della macchine}: migrazione a caldo di macchine virtuali tra macchine fisiche, ovvero la possibilità di manutenzione Hw senza interrompere i servizi forniti dalle macchine virtuali, disaster recovery
+\end{mainframe}
+\subsection{Virtualizzazione a livello del SO}
+\begin{mainframe}
+	Una modalità di virtualizzazione in cui il kernel consente l'esistenza di molteplici istanze isolate nello spazio utente.\\
+	Consentono di migliorare la sicurezza, l'indipendenza dall'Hw e la gestione delle risorse.\\
+	Rispetto alla \textbf{virtualizzazione piena (basata su VMM) l'overhead è inferiore ma è anche inferiore la flessibilità}
+\end{mainframe}
+\section{Processi}
+\subsection{Concetto di processo}
+\begin{mainframe}
+	Un SO esegue una serie di programmi:
+	\begin{itemize}
+		\item Sistema batch - lavori (job)
+		\item Sistema time-sharing - programmi o attività dell'utente
+	\end{itemize}
+	\begin{block}{Processo}
+		È un \textbf{programma in esecuzione}, l'esecuzione del processo deve procedere in modo sequenziale
+	\end{block}
+\end{mainframe}
+\begin{frame}
+	Parti multiple
+	\begin{itemize}
+		\item Codice del programma
+		\item Attività corrente
+		\item Stack che contiene dati temporanei
+		\item Sezione dati
+		\item Heap che contiene la memoria allocata
+	\end{itemize}
+\end{frame}
+\subsection{Algoritmo, Programma, Processo}
+\begin{mainframe}
+	\begin{block}{Algoritmo}
+		Procedimento logico che deve essere eseguito per risolvere il problema in esame
+	\end{block}
+	\begin{block}{Programma}
+		Descrizione dell'algoritmo tramite un opportuno formalismo (linguaggio di programmazione) che rende possibile l'esecuzione dell'algoritmo da parte di un particolare elaboratore
+	\end{block}
+	\begin{block}{Processo (sequenziale)}
+		Sequenza di eventi cui dà luogo un elaboratore quando opera sotto il controllo di un particolare programma
+	\end{block}
+\end{mainframe}
+\subsection{Stato del processo}
+\begin{mainframe}
+	Per tenere traccia e gestire correttamente i programmi in memoria principale, il SO deve associare esplicitamente ad essi un concetto di \textbf{stato del processo}
+	\begin{itemize}
+		\item \textbf{In esecuzione}
+		\item \textbf{Pronto} per l'esecuzione se \textbf{dispone di tutte le risorse e le condizioni logiche per eseguire ma non dispone del processore}
+		\item \textbf{In attesa} se \textbf{non dispone delle risorse e delle condizioni logiche per essere eseguito}
+	\end{itemize}
+\end{mainframe}
+\begin{frame}
+	Durante l'esecuzione, un processo cambia stato
+	\begin{itemize}
+		\item \textbf{Nuovo}: il processo viene creato
+		\item \textbf{Running}: le istruzioni vengono eseguite
+		\item \textbf{Waiting}: il processo è in attesa di qualche evento
+		\item \textbf{Ready}: il processo è in attesa di essere assegnato ad un processore
+		\item \textbf{Terminated}: il processo ha terminato l'esecuzione
+	\end{itemize}
+\end{frame}
+\subsection{Gestione dei processi}
+\begin{mainframe}
+	La possibilità che la CPU venga commutata in un qualsiasi istante da un processo ad un altro rende indispensabile ad ogni commutazione salvare tutte le informazioni contenute nei registri della CPU e relative al processo che è stato sospeso
+	\begin{block}{Descrittore di processo o PCB}
+		Area di memoria, mantenuta all'interno dell'area protetta del SO, associata al processo e contenente tutte le informazioni proprie del processo
+	\end{block}
+\end{mainframe}
+\subsection{Process Control Block (PCB)}
+\begin{mainframe}
+	\textbf{Informazioni associate a ciascun processo}
+	\begin{itemize}
+		\item Stato del processo
+		\item Program counter
+		\item Registri della CPU
+		\item Informazioni sulla programmazione della CPU
+		\item Informazioni sulla gestione della memoria
+		\item Informazioni di accounting: CPU utilizzata, tempo di clock
+		\item Informazioni sullo stato dell'I/O
+	\end{itemize}
+\end{mainframe}
+\subsection{Thread}
+\begin{mainframe}
+	Si consideri la \textbf{possibilità di avere più contatori di programma per processo}, quindi più \textbf{thread di controllo}. Deve quindi esserci una memoria per i dettagli dei thread, quindi dei contatori multipli nel PCB
+\end{mainframe}
+\subsection{Scheduling dei processi}
+\begin{mainframe}
+	Massimizzare l'uso della CPU, passare rapidamente i processi alla CPU per la condivisione del tempo.\\
+	Lo \textbf{scheduler dei processi} seleziona tra i processi disponibili per la successiva esecuzione sulla CPU\\
+	Mantiene le code di scheduling dei processi
+	\begin{itemize}
+		\item \textbf{Ready queue}: insieme di tutti i processi del SO che risiedono nella memoria principale
+		\item \textbf{Wait queues}: insieme dei processi in attesa di un evento
+	\end{itemize}
+\end{mainframe}
+\subsection{Commutazione di contesto}
+\begin{mainframe}
+	Quando la CPU passa a un altro processo, il sistema deve salvare lo stato del vecchio processo e caricare lo stato salvato per il nuovo processo tramite un context switch.\\
+	\textbf{Contesto di un processo rappresentato nel PCB}.\\
+	Il tempo di commutazione del contesto è un \textbf{overhead}; il sistema non svolge alcun lavoro utile durante la commutazione.\\
+	Il tempo necessario per lo switch dipende dal supporto Hw
+\end{mainframe}
+\subsection{Multitasking nei sistemi mobili}
+\begin{mainframe}
+	A causa della superficie dello schermo e dei limiti dell'interfaccia utente, iOS prevede un:
+	\begin{itemize}
+		\item singolo processo in \textbf{foreground} primo piano, controllato dalla GUI
+		\item processi multipli in \textbf{background}
+	\end{itemize}
+\end{mainframe}
+\subsection{Tipi di scheduler}
+\begin{mainframe}
+	\begin{itemize}
+		\item \textbf{Scheduler a breve termine (o della CPU)}: seleziona quale processo deve essere eseguito successivamente e alloca la CPU, a volte è l'unico scheduler del sistema
+		\item \textbf{Scheduler a lungo termine (o job scheduler)}: seleziona quali processi devono essere messi in coda di attesa
+		\item I processi possono essere descritti come:
+		\begin{itemize}
+			\item processo I/O-bound: passa più tempo a fare I/O che calcoli
+			\item Processo CPU-bound: passa più tempo a eseguire i calcoli
+		\end{itemize}
+	\end{itemize}
+\end{mainframe}
+\subsection{Creazione del process}
+\begin{mainframe}
+	I processi padre (\textbf{parent}) creano processi figli (\textbf{children}) che a loro volta creano altri processi, formando un albero di processi.\\
+	In generale i processi vengono identificati e gestiti tramite un \textbf{identificatore di processi (PID)}.\\
+	\textbf{Opzioni di condivisione delle risorse}:
+	\begin{itemize}
+		\item padre e figli condividono tutte le risorse
+		\item i figli condividono un sottoinsieme delle risorse del padre
+		\item padre e figlio non condividono alcuna risorsa
+	\end{itemize}
+	\textbf{Opzioni di esecuzione}
+	\begin{itemize}
+		\item il genitore e i figli eseguono simultaneamente
+		\item il genitore attende che i figli terminino
+	\end{itemize}
+\end{mainframe}
+\begin{frame}
+	\textbf{Spazio degli indirizzi}: 
+	\begin{itemize}
+		\item i figli duplicano quello del genitore
+		\item il figlio ha un programma caricato al suo interno
+	\end{itemize}
+	Esempi UNIX
+	\begin{itemize}
+		\item la chiamata di sistema \begin{semiverbatim}
+			fork()
+		\end{semiverbatim} crea un nuovo processo
+		\item La chiamata di sistema \begin{semiverbatim}
+			exec()
+		\end{semiverbatim} è usata dopo una \begin{semiverbatim}
+		fork()
+		\end{semiverbatim} per sostituire lo spazio di memoria del processo con un nuovo programma
+	\end{itemize}
+\end{frame}
+\subsection{Terminazione del processo}
+\begin{mainframe}
+	Il processo esegue l'ultima istruzione e poi chiede al SO di eliminarlo utilizzando la chiamata di sistema 
+	\begin{semiverbatim}
+		exit()
+	\end{semiverbatim}
+	Il genitore può terminare l'esecuzione dei processi figli:
+	\begin{itemize}
+		\item il processo figlio ha superato le risorse allocate
+		\item il compito assegnato al figlio non è più necessario
+		\item il processo padre sta terminando e il SO non consente a un figlio di continuare se il suo genitore termina
+	\end{itemize}
+\end{mainframe}
+\begin{frame}
+	Alcuni sistemi operativi non consentono ai figli di esistere se il loro genitore è terminato. Se un processo termine, \textbf{anche tutti i suoi figli devono essere terminati}.\\
+	In UNIX il processo genitore può attendere la terminazione di un processo figlio utilizzando la chiamata di sistema \begin{semiverbatim}
+		wait()
+	\end{semiverbatim}
+	Se nessun genitore è in attesa (non ha invocato \textit{wait()}), il processo è uno \textbf{zombie}.\\
+	Se il genitore è terminato senza invocare \textit{wait()}, il processo è \textbf{orfano}
+\end{frame}
+\subsection{Architettura multiprocesso - Browser Chrome}
+\begin{mainframe}
+	Molti browser web venivano eseguiti come singoli processi, il \textbf{browser chrome} è multiprocesso con 3 diversi tipi di processi:
+	\begin{itemize}
+		\item Il processo del \textbf{browser} gestisce l'interfaccia utente
+		\item Il processo \textbf{render} esegue il rendering delle pagine web
+		\item Processo dei plug-in per ogni tipo di plug-in
+	\end{itemize}
+\end{mainframe}
+\subsection{Comunicazione tra processi}
+\begin{mainframe}
+	I processi all'interno di un sistema possono essere \textbf{indipendenti o cooperanti}.\\
+	I processi \textbf{cooperanti} necessitano di \textbf{comunicazione interprocesso (IPC)}\\
+	Due \textbf{modelli di IPC}:
+	\begin{itemize}
+		\item \textbf{Memoria condivisa}
+		\item \textbf{Passaggio di messaggi}
+	\end{itemize}
+\end{mainframe}
+\subsection{Modelli di interazione tra processi}
+\begin{mainframe}
+	Modello ad ambiente glogale o modello a memoria comune, modello ad ambiente locale o modello a scambio di messaggi.\\
+	Tipi di interazione tra processi:
+	\begin{itemize}
+		\item \textbf{Competizione}
+		\item \textbf{Cooperazione}
+	\end{itemize}
+\end{mainframe}
+\subsection{Modello ad ambiente globale}
+\begin{mainframe}
+	Il sistema è visto come un insieme di processi e oggetti (risorse)\\
+	Il modello ad ambiente globale rappresenta la natura astrazione di un sistema multiprogrammazione costituito da uno o più processori che hanno accesso ad una memoria comune.\\
+	Ad ogni processore può essere eventualmente associata una \textbf{memoria privata}, ma ogni interazione avviene tramite oggetti contenuti nella \textbf{memoria comune}
+\end{mainframe}
+\subsection{Modello a scambio di messaggi}
+\begin{mainframe}
+	Il sistema è visto come un insieme di processi ciascuno operante in un ambiente locale non accessibile direttamente a nessun altro processo.\\
+	Ogni forma di interazione tra processi (\textbf{comunicazione, sincronizzazione}) avviene tramite scambio di messaggi\\
+	Modello a scambi di messaggi rappresenta la naturale astrazione di un sistema privo di memoria comune, in cui a ciascun processore è associata una memoria privata
+\end{mainframe}
+\subsection{Processi cooperanti}
+\begin{mainframe}
+	Un processo indipendente non può influenzare o essere influenzato dall'esecuzione di un altro processo\\
+	Processi cooperanti possono influenzare o essere influenzati dall'esecuzione di un altro processo.\\
+	Vantaggi della cooperazione tra processi
+	\begin{itemize}
+		\item Condivisione delle informazioni
+		\item Velocità di calcolo
+		\item Modularità
+		\item Convenienza
+	\end{itemize}
+\end{mainframe}
+\subsection{Problema produttore-consumatore}
+\begin{mainframe}
+	Paradigma dei processi cooperanti, il processo produttore produce informazioni che vengono consumate da un processo consumatore
+	\begin{itemize}
+		\item \textbf{Unbounded-buffer} non pone limiti pratici alla dimensione del buffer
+		\item \textbf{Bounded-buffer} presuppone l'esistenza di una dimensione fissa del buffer
+	\end{itemize}
+\end{mainframe}
+\subsection{Comunicazione tra processi (IPC) - Memoria condivisa}
+\begin{mainframe}
+	Un'area di memoria condivisa tra i processi che desiderano comunicare.\\
+	La comunicazione è sotto il controllo dei processi degli utenti e non del SO.\\
+	Il problema principale è fornire un meccanismo che permetta ai processi utente di sincronizzare le loro azioni quando accedono alla memoria condivisa.
+\end{mainframe}
+\subsection{Comunicazione tra processi - Scambio di messaggi}
+\begin{mainframe}
+	Meccanismo che consente ai processi di comunicare e sincronizzare le loro azioni\\
+	Sistema di messaggi - i processi comunicano tra loro senza ricorrere a variabili condivise.\\
+	La struttura IPC fornisce due operazioni:
+	\begin{itemize}
+		\item \textbf{send(messaggio)}
+		\item \textbf{receive(messaggio)}
+	\end{itemize}
+\end{mainframe}
+\begin{frame}
+	Implementazione del collegamento di comunicazione
+	\begin{itemize}
+		\item \textbf{Fisico}
+		\begin{itemize}
+			\item Memoria condivisa
+			\item Bus hardware
+			\item rete
+		\end{itemize}
+		\item \textbf{Logico}
+		\begin{itemize}
+			\item Diretto o indiretto
+			\item Sincrono o asincorno
+			\item Buffering automatico o esplicito
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+\subsection{Costrutti linguistici per il modello a scambio di messaggi}
+\begin{mainframe}
+	Classificazione
+	\begin{itemize}
+		\item \textbf{Designazione} dei processi sorgente e destinatario di ogni comunicazione
+		\begin{itemize}
+			\item designazione diretta o esplicita
+			\begin{itemize}
+				\item simmetrica
+				\item asimmetrica
+			\end{itemize}
+			\item designazione indiretta o globale
+			\begin{itemize}
+				\item mailbox
+				\item porte
+			\end{itemize}
+		\end{itemize}
+		\item \textbf{Tipo di sincronizzazione} tra i processi comunicanti
+		\begin{itemize}
+			\item sincrona
+			\item asincrona
+		\end{itemize}
+	\end{itemize}
+\end{mainframe}
+\subsection{Primitive con designazione esplicita}
+\begin{mainframe}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.38.02}
+	\end{figure}
+\end{mainframe}
+\subsection{Designazione esplicita}
+\begin{mainframe}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.37.54}
+	\end{figure}
+\end{mainframe}
+\subsection{Direct naming: schema asimmetrico}
+\begin{mainframe}
+	Il mittente nomina \textbf{esplicitamente} il destinatario, mentre questi, al contrario, non esprime il nome del processo con cui desidera comunicare.\\
+	La \textbf{designazione asimmetrica} facilita l'organizzazione dell'interazione tra processi secondo il paradigma \textbf{client-server}, in cui un processo gestore di una risorsa (server) riceve richieste da più processi client.
+\end{mainframe}
+\subsection{Modello client-server}
+\begin{mainframe}
+	Corrisponde all'uso di un \textbf{processo come gestore di una risorsa}\\
+	\textbf{Schema da-molti-a-uno}: i processi client inviano richieste non ad un particolare server, ma ad uno qualunque scelto tra un insieme di \textbf{server equivalenti}.\\
+	È difficile realizzazione con designazione diretta. Richiede di passare ad una \textbf{designazione indiretta o globale (mailbox)}
+\end{mainframe}
+\subsection{Modello client-server e naming}
+\begin{mainframe}
+	Il \textbf{direct naming} è in generale poco adatto al modello client-server.\\
+	In presenza di \textbf{più client} la \textit{receive} di un server dovrebbe consentire la ricezione di un messaggio da un qualsiasi client.\\
+	In presenza di più \textbf{server equivalenti} la \textit{send} di un clinet dovrebbe produrre un messaggio che possa essere ricevuto da un qualsiasi server.\\
+	Occorre uno schema più sofisticato per la definizione dei canali di comunicazione: \textbf{designazione globale o indiretta} che fa uso di nomi globali detti \textbf{mailbox}
+\end{mainframe}
 \end{document}
