@@ -556,8 +556,84 @@
 \headcommand {\beamer@subsectionentry {0}{6}{27}{147}{Modello client-server e naming}}
 \headcommand {\slideentry {6}{27}{1}{147/147}{Modello client-server e naming}{0}}
 \headcommand {\beamer@framepages {147}{147}}
-\headcommand {\beamer@partpages {1}{147}}
 \headcommand {\beamer@subsectionpages {147}{147}}
-\headcommand {\beamer@sectionpages {115}{147}}
-\headcommand {\beamer@documentpages {147}}
-\headcommand {\gdef \inserttotalframenumber {147}}
+\headcommand {\beamer@subsectionentry {0}{6}{28}{148}{Uso delle mailbox}}
+\headcommand {\slideentry {6}{28}{1}{148/148}{Uso delle mailbox}{0}}
+\headcommand {\beamer@framepages {148}{148}}
+\headcommand {\beamer@subsectionpages {148}{148}}
+\headcommand {\beamer@subsectionentry {0}{6}{29}{149}{Porte}}
+\headcommand {\slideentry {6}{29}{1}{149/149}{Porte}{0}}
+\headcommand {\beamer@framepages {149}{149}}
+\headcommand {\beamer@subsectionpages {149}{149}}
+\headcommand {\beamer@subsectionentry {0}{6}{30}{150}{Designazione (naming)}}
+\headcommand {\slideentry {6}{30}{1}{150/150}{Designazione (naming)}{0}}
+\headcommand {\beamer@framepages {150}{150}}
+\headcommand {\beamer@subsectionpages {150}{150}}
+\headcommand {\beamer@subsectionentry {0}{6}{31}{151}{Sincronizzazione - send asincrona}}
+\headcommand {\slideentry {6}{31}{1}{151/151}{Sincronizzazione - send asincrona}{0}}
+\headcommand {\beamer@framepages {151}{151}}
+\headcommand {\beamer@subsectionpages {151}{151}}
+\headcommand {\beamer@subsectionentry {0}{6}{32}{152}{Sincronizzazione - send sincrona}}
+\headcommand {\slideentry {6}{32}{1}{152/152}{Sincronizzazione - send sincrona}{0}}
+\headcommand {\beamer@framepages {152}{152}}
+\headcommand {\beamer@subsectionpages {152}{152}}
+\headcommand {\beamer@subsectionentry {0}{6}{33}{153}{Send di tipo "chiamata di procedura remota"}}
+\headcommand {\slideentry {6}{33}{1}{153/153}{Send di tipo "chiamata di procedura remota"}{0}}
+\headcommand {\beamer@framepages {153}{153}}
+\headcommand {\beamer@subsectionpages {153}{153}}
+\headcommand {\beamer@subsectionentry {0}{6}{34}{154}{Receive}}
+\headcommand {\slideentry {6}{34}{1}{154/154}{Receive}{0}}
+\headcommand {\beamer@framepages {154}{154}}
+\headcommand {\beamer@subsectionpages {154}{154}}
+\headcommand {\beamer@subsectionentry {0}{6}{35}{155}{Chiamata di procedura remota (RPC)}}
+\headcommand {\slideentry {6}{35}{1}{155/155}{Chiamata di procedura remota (RPC)}{0}}
+\headcommand {\beamer@framepages {155}{155}}
+\headcommand {\beamer@subsectionpages {155}{155}}
+\headcommand {\beamer@subsectionentry {0}{6}{36}{156}{RPC: specifica lato server}}
+\headcommand {\slideentry {6}{36}{1}{156/156}{RPC: specifica lato server}{0}}
+\headcommand {\beamer@framepages {156}{156}}
+\headcommand {\beamer@subsectionpages {156}{156}}
+\headcommand {\beamer@subsectionentry {0}{6}{37}{157}{Uso delle accept}}
+\headcommand {\slideentry {6}{37}{1}{157/157}{Uso delle accept}{0}}
+\headcommand {\beamer@framepages {157}{157}}
+\headcommand {\beamer@subsectionpages {157}{157}}
+\headcommand {\beamer@subsectionentry {0}{6}{38}{158}{Uso delle RPC}}
+\headcommand {\slideentry {6}{38}{1}{158/158}{Uso delle RPC}{0}}
+\headcommand {\beamer@framepages {158}{158}}
+\headcommand {\beamer@subsectionpages {158}{158}}
+\headcommand {\beamer@subsectionentry {0}{6}{39}{159}{Esempi di sistemi IPC - Mach}}
+\headcommand {\slideentry {6}{39}{1}{159/159}{Esempi di sistemi IPC - Mach}{0}}
+\headcommand {\beamer@framepages {159}{159}}
+\headcommand {\beamer@subsectionpages {159}{159}}
+\headcommand {\beamer@subsectionentry {0}{6}{40}{160}{Esempi di sistemi IPC - Windows}}
+\headcommand {\slideentry {6}{40}{1}{160/160}{Esempi di sistemi IPC - Windows}{0}}
+\headcommand {\beamer@framepages {160}{160}}
+\headcommand {\beamer@subsectionpages {160}{160}}
+\headcommand {\beamer@subsectionentry {0}{6}{41}{161}{Comunicazioni nei sistemi client-server}}
+\headcommand {\slideentry {6}{41}{1}{161/161}{Comunicazioni nei sistemi client-server}{0}}
+\headcommand {\beamer@framepages {161}{161}}
+\headcommand {\beamer@subsectionpages {161}{161}}
+\headcommand {\beamer@subsectionentry {0}{6}{42}{162}{Socket}}
+\headcommand {\slideentry {6}{42}{1}{162/162}{Socket}{0}}
+\headcommand {\beamer@framepages {162}{162}}
+\headcommand {\beamer@subsectionpages {162}{162}}
+\headcommand {\beamer@subsectionentry {0}{6}{43}{163}{Chiamate di procedura remota}}
+\headcommand {\slideentry {6}{43}{1}{163/163}{Chiamate di procedura remota}{0}}
+\headcommand {\beamer@framepages {163}{163}}
+\headcommand {\beamer@subsectionpages {163}{163}}
+\headcommand {\beamer@subsectionentry {0}{6}{44}{164}{Pipe}}
+\headcommand {\slideentry {6}{44}{1}{164/164}{Pipe}{0}}
+\headcommand {\beamer@framepages {164}{164}}
+\headcommand {\beamer@subsectionpages {164}{164}}
+\headcommand {\beamer@subsectionentry {0}{6}{45}{165}{Pipe ordinarie}}
+\headcommand {\slideentry {6}{45}{1}{165/165}{Pipe ordinarie}{0}}
+\headcommand {\beamer@framepages {165}{165}}
+\headcommand {\beamer@subsectionpages {165}{165}}
+\headcommand {\beamer@subsectionentry {0}{6}{46}{166}{Pipe con nome: FIFO}}
+\headcommand {\slideentry {6}{46}{1}{166/166}{Pipe con nome: FIFO}{0}}
+\headcommand {\beamer@framepages {166}{166}}
+\headcommand {\beamer@partpages {1}{166}}
+\headcommand {\beamer@subsectionpages {166}{166}}
+\headcommand {\beamer@sectionpages {115}{166}}
+\headcommand {\beamer@documentpages {166}}
+\headcommand {\gdef \inserttotalframenumber {166}}

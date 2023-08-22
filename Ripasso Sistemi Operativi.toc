@@ -129,3 +129,22 @@
 \beamer@subsectionintoc {6}{25}{Direct naming: schema asimmetrico}{145}{0}{6}
 \beamer@subsectionintoc {6}{26}{Modello client-server}{146}{0}{6}
 \beamer@subsectionintoc {6}{27}{Modello client-server e naming}{147}{0}{6}
+\beamer@subsectionintoc {6}{28}{Uso delle mailbox}{148}{0}{6}
+\beamer@subsectionintoc {6}{29}{Porte}{149}{0}{6}
+\beamer@subsectionintoc {6}{30}{Designazione (naming)}{150}{0}{6}
+\beamer@subsectionintoc {6}{31}{Sincronizzazione - send asincrona}{151}{0}{6}
+\beamer@subsectionintoc {6}{32}{Sincronizzazione - send sincrona}{152}{0}{6}
+\beamer@subsectionintoc {6}{33}{Send di tipo "chiamata di procedura remota"}{153}{0}{6}
+\beamer@subsectionintoc {6}{34}{Receive}{154}{0}{6}
+\beamer@subsectionintoc {6}{35}{Chiamata di procedura remota (RPC)}{155}{0}{6}
+\beamer@subsectionintoc {6}{36}{RPC: specifica lato server}{156}{0}{6}
+\beamer@subsectionintoc {6}{37}{Uso delle accept}{157}{0}{6}
+\beamer@subsectionintoc {6}{38}{Uso delle RPC}{158}{0}{6}
+\beamer@subsectionintoc {6}{39}{Esempi di sistemi IPC - Mach}{159}{0}{6}
+\beamer@subsectionintoc {6}{40}{Esempi di sistemi IPC - Windows}{160}{0}{6}
+\beamer@subsectionintoc {6}{41}{Comunicazioni nei sistemi client-server}{161}{0}{6}
+\beamer@subsectionintoc {6}{42}{Socket}{162}{0}{6}
+\beamer@subsectionintoc {6}{43}{Chiamate di procedura remota}{163}{0}{6}
+\beamer@subsectionintoc {6}{44}{Pipe}{164}{0}{6}
+\beamer@subsectionintoc {6}{45}{Pipe ordinarie}{165}{0}{6}
+\beamer@subsectionintoc {6}{46}{Pipe con nome: FIFO}{166}{0}{6}

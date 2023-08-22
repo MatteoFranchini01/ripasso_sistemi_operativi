@@ -1309,4 +1309,193 @@ Un programma che funge da intermediario tra l'utente di un computer e l'hardware
 	In presenza di più \textbf{server equivalenti} la \textit{send} di un clinet dovrebbe produrre un messaggio che possa essere ricevuto da un qualsiasi server.\\
 	Occorre uno schema più sofisticato per la definizione dei canali di comunicazione: \textbf{designazione globale o indiretta} che fa uso di nomi globali detti \textbf{mailbox}
 \end{mainframe}
+\subsection{Uso delle mailbox}
+\begin{mainframe}
+	La \textbf{mailbox} consente in modo immediato la \textbf{programmazione delle interazioni client-server} anche nel caso da-molti-a-molti.\\
+	I client eseguono una \textit{send} sulla mailbox associata al servizio, i server una \textit{receive}.\\
+	La realizzazione delle mailbox in ambiente distribuito presenta problemi di \textbf{natura realizzativa}. Il supporto a tempo di esecuzione del linguaggio deve garantire che:
+	\begin{itemize}
+		\item un messaggio di richiesta indirizzato ad una mailbox è inviato a tutti i processi che possono eseguire una \textit{receive} su di essa
+		\item non appena il messaggio è ricevuto da un processo, esso deve \textbf{diventare indisponibile} per tutti gli altri server
+	\end{itemize}
+\end{mainframe}
+\subsection{Porte}
+\begin{mainframe}
+	Sono mailbox il cui nome può comparire solamente in un processo come \textit{<source-designator>} in uno statement di \textit{receive}.\\
+	Un processo può selezionare i messaggi che desidera ricevere attraverso l'uso di \textbf{porte distinte}
+\end{mainframe}
+\subsection{Designazione (naming)}
+\begin{mainframe}
+\begin{itemize}
+	\item \textbf{Direct naming simmetrico}: comunicazione \textit{one to one}
+	\item \textbf{Direct naming asimmetrico e port naming}: comunicazione \textit{many to one}
+	\item \textbf{Global naming}: comunicazione \textit{many to many}
+\end{itemize}
+\textbf{Naming statico}:
+\begin{itemize}
+	\item Impedisce ad un programma di comunicare tramite canali non noti a tempo di compilazione
+	\item il potenziale accesso di un programma ad un canale deve essere assicurato fin dall'inizio
+\end{itemize}
+\textbf{Naming dinamico}
+\begin{itemize}
+	\item uno schema statico di base di designazione dei canali viene arricchito mediante variabili per la designazione di sorgente o destinazione
+\end{itemize}
+\end{mainframe}
+\subsection{Sincronizzazione - send asincrona}
+\begin{mainframe}
+	Il processo mittente \textbf{continua la sua esecuzione} immediatamente dopo che il messaggio è stato inviato.\\
+	Il messaggio ricevuto contiene informazioni che non possono essere associate allo stato attuale del mittente\\
+	L'interazione viene definita come \textbf{scambio di messaggi asincrono}.\\
+	In analogia con il meccanismo semaforico, la \textbf{send asincrona} è caratterizzata da:
+	\begin{itemize}
+		\item \textbf{flessibilità d'uso}
+		\item \textbf{carenza espressiva}
+	\end{itemize}
+	Richiede, a livello realizzativo, un buffer di capacità limitata. Si può ovviare \textbf{modificandone la semantica}
+	\begin{enumerate}
+		\item un processo mittente si blocca qualora la coda dei messaggi sia piena
+		\item la primitiva send, in caso di coda piena, solleva un'\textbf{eccezione} che viene notificata al processo mittente
+	\end{enumerate}
+\end{mainframe}
+\subsection{Sincronizzazione - send sincrona}
+\begin{mainframe}
+	Il processo mittente si blocca in attesa che il messaggio sia stato ricevuto.\\
+	Un messaggio ricevuto contiene informazioni corrispondenti allo \textbf{stato attuale del processo mittente}.\\
+	L'invio di un messaggio costituisce un \textbf{punto di sincronizzazione} sia per il mittente che per il destinatario.\\
+	L'interazione viene definita come \textbf{scambio di messaggi sincrono}
+\end{mainframe}
+\subsection{Send di tipo "chiamata di procedura remota"}
+\begin{mainframe}
+	"Rendez-vous" esteso: il processo mittente \textbf{rimane in attesa} fino a che il ricevimento non ha terminato di svolgere l'azione richiesta.\\
+	Un processo client "chiama" una procedura eseguita da un processo server su una macchina potenzialmente remota.\\
+	Il nome della procedura remota identifica un \textbf{processo in caso di direct naming}.\\
+	I programmi risultano più facilmente verificabili grazie alla localizzazione dei vincoli di sincronizzazione
+\end{mainframe}
+\subsection{Receive}
+\begin{mainframe}
+	Normalmente è bloccante se non vi sono messaggi sul canale. Costituisce un \textbf{punto di sincronizzazione} per il processo ricevente.\\
+	Si ricorre ad una primitiva che verifica lo stato del canel e restituisce un messaggio se esso è presente, ovvero un'indicazione di canale vuoto (\textbf{receive non bloccante}).\\
+	Inconveniente: per l'attesa di messaggi da specifici canali occore fare uso di cicli di attesa attiva
+\end{mainframe}
+\subsection{Chiamata di procedura remota (RPC)}
+\begin{mainframe}
+	Consente di esprimere a \textbf{più alto livello e in maniera più sintentica le interazioni di tipo client-server}.\\
+	\textbf{Service} è il nome di un canale:
+	\begin{itemize}
+		\item se la designazione è diretta, service indica il processo servitore
+		\item se la designazione è indiretta (porte o mailbox), service indica il tipo di servizio richiesto
+	\end{itemize}
+	Specifica lato server:
+	\begin{enumerate}
+		\item come procedura dichiarate separatamente
+		\item come statement collocato in un punto qualunque di un processo
+	\end{enumerate}
+\end{mainframe}
+\subsection{RPC: specifica lato server}
+\begin{mainframe}
+	La procedura remota viene dichiarata come una procedura in un linguaggio sequenziale e realizzata come un processo server che attende la ricezione di un messaggio, esegue il corpo e trasmette un messaggio di risposta.\\
+	Può essere realizzata come un \textbf{singolo processo} che esegue le richieste una alla volt ain modo sequenziale, oppure con la creazione di un \textbf{nuovo processo per ogni chiamata}. Le varie istanze sono eseguite concorrentemente, e potranno eventualmente doversi sincronizzare tra loro.\\
+	La RPC è uno \textbf{statement}, e come tale può essere collocato in un punto qualunque del processo server.\\
+	L'esecuzione delle \textbf{accept} sospende il servitore fino all'arrivo di un messaggio corrispondente alla \textbf{call} di servizio.\\
+	L'esecuzione del corpo può fare uso dei valori dei parametri e di tutte le variabili accessibili dallo scope dello statement.\\
+	Al termine viene trasmesso il messaggio di risposta al processo chiamante, dopo di che il processo server \textbf{continua la propria esecuzione}
+\end{mainframe}
+\subsection{Uso delle accept}
+\begin{mainframe}
+	Quando il lato server è specificato con una \textbf{accept}, la RPC viene chiamata \textit{extended rendez-vous}: client e server si "incontrano" per la durata dell'esecuzione del corpo della accept per poi proseguire separatamente.\\
+	\textbf{Vantaggi}:
+	\begin{itemize}
+		\item il server può fornire più tipi di servizi
+		\item il server può decidere quando servire le call dei client
+		\item le istruzioni di accept possono essere alternate o innestate
+		\item vi possono essere più accept di chiamate allo stesso servizio con diverso body
+	\end{itemize}
+\end{mainframe}
+\subsection{Uso delle RPC}
+\begin{mainframe}
+	Lo schema di comunicazione realizzato dal meccanismo della chiamata a procedura remota è di tipo asimmetrico e da molto ad uno.\\
+	L'accoppiamento tra una chiamata priva di parametri ed una accept priva di corpo rappresenta la tramissione ed il relativo riconoscimento di un segnale di sincronizzazione.\\
+	Problemi della RPC:
+	\begin{itemize}
+		\item interazioni non client-server
+		\item perdita di messaggi nelle architetture distribuite
+	\end{itemize}
+\end{mainframe}
+\subsection{Esempi di sistemi IPC - Mach}
+\begin{mainframe}
+	La comunicazione di Mach è basata su messaggi
+	\begin{itemize}
+		\item Anche le chiamate di sistema sono messaggi
+		\item Ogni task riceve due mailbox alla craezione: Kernel e Notify
+		\item Le mailbox necessarie per la comunicazione sono create tramite \textit{$port\_allocate()$}
+		\item L'invio e la ricezione sono flessibili, ad esempio quattro opzioni se la casella di posta è piena:
+		\begin{itemize}
+			\item Attendere indefinitamente
+			\item Attendere al massimo n millisecondi
+			\item Restituire immeditamente
+			\item Mettere temporaneamente in cache un messaggio
+		\end{itemize}
+	\end{itemize}
+\end{mainframe}
+\subsection{Esempi di sistemi IPC - Windows}
+\begin{mainframe}
+	Centralità del \textbf{message passing} tramite una struttura avanzata di chiamata di procedura locale (LPC).\\
+	Funziona solo tra processi sullo stesso sistema, utilizza porte per stabilire e mantenere i canli di comunicazione.\\
+	La comunicazione funziona come segue:
+	\begin{itemize}
+		\item Il client apre un handle dell'oggetto porta di connessione del sottosistema
+		\item Il cliente invia una richiesta di connessione
+		\item Il server crea due porte di comunicazione private e restituisce al cliente l'handle di una di esse
+		\item Il client e il server utilizzano l'handle della porta corrispondente per inviare messaggi o callback e per ascoltare le risposte
+	\end{itemize}
+\end{mainframe}
+\subsection{Comunicazioni nei sistemi client-server}
+\begin{mainframe}
+	\begin{itemize}
+		\item Socket
+		\item Chiamate di procedura remota
+		\item Pipe
+		\item Invocazione di metodi remoti (Java)
+	\end{itemize}
+\end{mainframe}
+\subsection{Socket}
+\begin{mainframe}
+	\begin{block}{Socket}
+		Una \textbf{socket} è definita come un \textbf{endpoint} per la comunicazione.
+	\end{block}
+	Concatenazione di indirizzo IP e porta - numero incluso all'inizio del pacchetto di messaggi per differenziare i servizi di rete su un host.\\
+	La comunicazione consiste in una coppia di socket.\\
+	Tutte le porte inferiori a 1024 sono ben conosciute, utilizzate per servizi standard.\\
+	Indirizzo IP speciale 127.0.0.1 (loopback) per riferirsi al sistema su cui il processo è in esecuzione
+\end{mainframe}
+\subsection{Chiamate di procedura remota}
+\begin{mainframe}
+	\begin{block}{RPC}
+		La RPC astrae le chiamate di procedura tra processi su sistemi di rete
+	\end{block}
+	\textbf{Stub - proxy lato client per la procedura effettiva sul server}.\\
+	Lo stub sul lato client individua il server e fa il marshalling dei parametri.\\
+	Lo stub lato server riceve questo messaggio, scompatta i parametri ed esegue la procedura sul server\\
+	Rappresentazione dei dati gestita tramite il formato XDL per tenere conto delle diverse architetture (\textbf{Big endian, little endian}).\\
+	La comunicazione remota ha più scenari di fallimento rispetto a quella locale.\\
+	Il sistema operativo fornisce tipicamente un servizio di rendez-vous (o mathmaker) per connettere client e server
+\end{mainframe}
+\subsection{Pipe}
+\begin{mainframe}
+	Agisce come un condotto che consente a due processi di comunicare\\
+	Le \textbf{pipe ordinarie non sono accessibili dall'esterno del processo che le ha create}. In generale, un processo padre crea una pipe e la usa per comunicare con un processo figlio che ha creato.\\
+	FIFO: è possibile accedervi senza una relazione genitore-figlio.
+\end{mainframe}
+\subsection{Pipe ordinarie}
+\begin{mainframe}
+	Le \textbf{pipe ordinarie consentono la comunicazione in stile produttore-consumatore standard}.\\
+	Il produttore scrive su un'estremità e il consumatore legge dall'altra parte.\\
+	Le pipe ordinarie sono quindi unidirezionali, richiedono una relazione genitore-figlio tra i processi comunicati.
+\end{mainframe}
+\subsection{Pipe con nome: FIFO}
+\begin{mainframe}
+	Le FIFO sono più potenti delle pipe ordinarie, la comunicazione è bidirezionale.\\
+	Non è necessaria alcuna relazione genitore-figlio tra i processi comunicanti.\\
+	Diversi processi possono utilizzare le pipe con nome per comunicare
+\end{mainframe}
 \end{document}
