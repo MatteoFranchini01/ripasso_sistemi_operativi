@@ -148,3 +148,131 @@
 \beamer@subsectionintoc {6}{44}{Pipe}{164}{0}{6}
 \beamer@subsectionintoc {6}{45}{Pipe ordinarie}{165}{0}{6}
 \beamer@subsectionintoc {6}{46}{Pipe con nome: FIFO}{166}{0}{6}
+\beamer@sectionintoc {7}{Thread e concorrenza}{167}{0}{7}
+\beamer@subsectionintoc {7}{1}{Processi e thread}{168}{0}{7}
+\beamer@subsectionintoc {7}{2}{Vantaggi del multithreading}{169}{0}{7}
+\beamer@subsectionintoc {7}{3}{Concorrenza vs Parallelismo}{170}{0}{7}
+\beamer@subsectionintoc {7}{4}{Programmazione multicore}{171}{0}{7}
+\beamer@subsectionintoc {7}{5}{Legge di Amdahl}{172}{0}{7}
+\beamer@subsectionintoc {7}{6}{Thread utente e thread kernel}{173}{0}{7}
+\beamer@subsectionintoc {7}{7}{Modelli di multithreading}{174}{0}{7}
+\beamer@subsectionintoc {7}{8}{Librerie di thread}{179}{0}{7}
+\beamer@subsectionintoc {7}{9}{Pthreads}{180}{0}{7}
+\beamer@subsectionintoc {7}{10}{Thread Java}{181}{0}{7}
+\beamer@subsectionintoc {7}{11}{Thread implicite}{182}{0}{7}
+\beamer@subsectionintoc {7}{12}{Pool di thread}{183}{0}{7}
+\beamer@subsectionintoc {7}{13}{Parallelismo Fork-Join}{184}{0}{7}
+\beamer@subsectionintoc {7}{14}{OpemMP}{185}{0}{7}
+\beamer@subsectionintoc {7}{15}{Grand Central Dispatch}{186}{0}{7}
+\beamer@subsectionintoc {7}{16}{Intel Threading Building Block (TBB)}{187}{0}{7}
+\beamer@subsectionintoc {7}{17}{Problemi di threading}{188}{0}{7}
+\beamer@subsectionintoc {7}{18}{Gestione dei segnali}{189}{0}{7}
+\beamer@subsectionintoc {7}{19}{Cancellazione di un thread}{190}{0}{7}
+\beamer@subsectionintoc {7}{20}{Cancellazione di un thread in Java}{191}{0}{7}
+\beamer@subsectionintoc {7}{21}{Memorizzazione locale del thread}{192}{0}{7}
+\beamer@subsectionintoc {7}{22}{Attivazione dello scheduler}{193}{0}{7}
+\beamer@subsectionintoc {7}{23}{Thread di Windows}{194}{0}{7}
+\beamer@subsectionintoc {7}{24}{Thread di Linux}{196}{0}{7}
+\beamer@sectionintoc {8}{Scheduling}{197}{0}{8}
+\beamer@subsectionintoc {8}{1}{Introduzione}{198}{0}{8}
+\beamer@subsectionintoc {8}{2}{Scheduler della CPU}{199}{0}{8}
+\beamer@subsectionintoc {8}{3}{Scheduling e revoca della CPU}{201}{0}{8}
+\beamer@subsectionintoc {8}{4}{Criteri dello scheduling}{203}{0}{8}
+\beamer@subsectionintoc {8}{5}{Criteri di ottimizzazione degli algoritmi di pianificazione}{204}{0}{8}
+\beamer@subsectionintoc {8}{6}{First come, first server (FCFS)}{205}{0}{8}
+\beamer@subsectionintoc {8}{7}{Shortest Job First (SJF)}{206}{0}{8}
+\beamer@subsectionintoc {8}{8}{Priorit^^c3^^a0}{207}{0}{8}
+\beamer@subsectionintoc {8}{9}{Round Robin}{209}{0}{8}
+\beamer@subsectionintoc {8}{10}{Varianti preemptive degli algoritmi di scheduling}{210}{0}{8}
+\beamer@subsectionintoc {8}{11}{Coda multilivello}{211}{0}{8}
+\beamer@subsectionintoc {8}{12}{Coda di feedback multivello}{212}{0}{8}
+\beamer@subsectionintoc {8}{13}{Scheduling dei thread}{214}{0}{8}
+\beamer@subsectionintoc {8}{14}{Scheling a pi^^c3^^b9 processori}{215}{0}{8}
+\beamer@subsectionintoc {8}{15}{Processori multicore}{217}{0}{8}
+\beamer@subsectionintoc {8}{16}{Sistema multicore multithreading}{218}{0}{8}
+\beamer@subsectionintoc {8}{17}{Scheduling a pi^^c3^^b9 processori - Bilanciamento del carico}{219}{0}{8}
+\beamer@subsectionintoc {8}{18}{Scheduling a pi^^c3^^b9 processori - Affinit^^c3^^a0 dei processori}{220}{0}{8}
+\beamer@subsectionintoc {8}{19}{NUMA e lo scheduling delle CPU}{221}{0}{8}
+\beamer@subsectionintoc {8}{20}{Scheduling della CPU in tempo reale}{222}{0}{8}
+\beamer@subsectionintoc {8}{21}{Schedulazione basata sulla priorit^^c3^^a0}{224}{0}{8}
+\beamer@subsectionintoc {8}{22}{Rate Monitonic Scheduling}{225}{0}{8}
+\beamer@subsectionintoc {8}{23}{Schedulazione della scadenza pi^^c3^^b9 vicina (EDF)}{226}{0}{8}
+\beamer@subsectionintoc {8}{24}{Schedulazione a quote proporzionali}{227}{0}{8}
+\beamer@subsectionintoc {8}{25}{Scheduling in tempo reale POSIX}{228}{0}{8}
+\beamer@subsectionintoc {8}{26}{Esempi di sistema operativo}{229}{0}{8}
+\beamer@subsubsectionintoc {8}{26}{1}{Scheduling in UNIX}{230}{0}{8}
+\beamer@subsubsectionintoc {8}{26}{2}{Scheduling di Windows}{233}{0}{8}
+\beamer@subsectionintoc {8}{27}{Valutazione degli algoritmi}{235}{0}{8}
+\beamer@subsectionintoc {8}{28}{Valutazione deterministica}{236}{0}{8}
+\beamer@subsectionintoc {8}{29}{Modelli di code}{237}{0}{8}
+\beamer@subsectionintoc {8}{30}{Simulazioni}{238}{0}{8}
+\beamer@sectionintoc {9}{Sincronizzazione dei processi}{239}{0}{9}
+\beamer@subsectionintoc {9}{1}{Introduzione}{240}{0}{9}
+\beamer@subsectionintoc {9}{2}{Tipi di interazione tra processi}{241}{0}{9}
+\beamer@subsectionintoc {9}{3}{Esempi di interferenza}{242}{0}{9}
+\beamer@subsectionintoc {9}{4}{Problema delle interferenze}{243}{0}{9}
+\beamer@subsectionintoc {9}{5}{Sezione critica}{244}{0}{9}
+\beamer@subsectionintoc {9}{6}{Requisiti di una soluzione al problema della sezione critica}{245}{0}{9}
+\beamer@subsectionintoc {9}{7}{Soluzione al problema della mutua esclusione}{246}{0}{9}
+\beamer@subsectionintoc {9}{8}{Lock mutex}{247}{0}{9}
+\beamer@sectionintoc {10}{Sincronizzazione dei processi in ambiente globale mediante semafori}{248}{0}{10}
+\beamer@subsectionintoc {10}{1}{Semafori}{249}{0}{10}
+\beamer@subsectionintoc {10}{2}{Wait e signal}{250}{0}{10}
+\beamer@subsectionintoc {10}{3}{Mutua esclusione tramite semaforo}{251}{0}{10}
+\beamer@subsectionintoc {10}{4}{Indivisibilit^^c3^^a0 di wait e signal}{252}{0}{10}
+\beamer@subsectionintoc {10}{5}{Lock e Unlock}{253}{0}{10}
+\beamer@subsectionintoc {10}{6}{Livelli di sezioni critiche}{254}{0}{10}
+\beamer@subsectionintoc {10}{7}{Produttore-Consumatore}{255}{0}{10}
+\beamer@subsectionintoc {10}{8}{Regolazione dell'esecuzione di processi e thread}{256}{0}{10}
+\beamer@subsectionintoc {10}{9}{Programmazione concorrente e semafori}{257}{0}{10}
+\beamer@subsectionintoc {10}{10}{Monitor}{258}{0}{10}
+\beamer@subsectionintoc {10}{11}{Buffer di comunicazione nel modello a scambio di messaggi}{259}{0}{10}
+\beamer@sectionintoc {11}{Deadlock}{260}{0}{11}
+\beamer@subsectionintoc {11}{1}{Deadlock (blocco diretto)}{261}{0}{11}
+\beamer@subsectionintoc {11}{2}{Risorse riusabili e risorse consumabili}{262}{0}{11}
+\beamer@subsectionintoc {11}{3}{Modello di sistema}{263}{0}{11}
+\beamer@subsectionintoc {11}{4}{Esempio di deadlock}{264}{0}{11}
+\beamer@subsectionintoc {11}{5}{Grafo di allocazione delle risorse}{265}{0}{11}
+\beamer@subsectionintoc {11}{6}{Condizioni per il deadlock}{267}{0}{11}
+\beamer@subsectionintoc {11}{7}{Strategie per ignorare il deadlock}{268}{0}{11}
+\beamer@subsectionintoc {11}{8}{Deadlock nei sistemi reali}{269}{0}{11}
+\beamer@sectionintoc {12}{Sistema di protezione}{270}{0}{12}
+\beamer@subsectionintoc {12}{1}{Introduzione}{271}{0}{12}
+\beamer@subsectionintoc {12}{2}{Principi di protezione}{273}{0}{12}
+\beamer@subsectionintoc {12}{3}{Difesa in profondit^^c3^^a0}{274}{0}{12}
+\beamer@subsectionintoc {12}{4}{Misure applicabili ai diversi livelli}{275}{0}{12}
+\beamer@subsectionintoc {12}{5}{Anelli di protezione}{276}{0}{12}
+\beamer@subsectionintoc {12}{6}{Dominio di protezione}{277}{0}{12}
+\beamer@subsectionintoc {12}{7}{Struttura del dominio}{278}{0}{12}
+\beamer@subsectionintoc {12}{8}{Implementazione del dominio - UNIX}{279}{0}{12}
+\beamer@subsectionintoc {12}{9}{Implementazione del dominio - ID app Android}{280}{0}{12}
+\beamer@subsectionintoc {12}{10}{Matrice di accesso}{281}{0}{12}
+\beamer@subsectionintoc {12}{11}{Implementazione della matrice di accesso}{283}{0}{12}
+\beamer@subsectionintoc {12}{12}{Confronto tra implementazioni}{285}{0}{12}
+\beamer@subsectionintoc {12}{13}{Revoca dei diritti di accesso}{286}{0}{12}
+\beamer@subsectionintoc {12}{14}{Role-based Access Control}{288}{0}{12}
+\beamer@subsectionintoc {12}{15}{Controllo dell'accesso obbligatorio (MAC)}{289}{0}{12}
+\beamer@subsectionintoc {12}{16}{Sistemi basati sulle capability}{290}{0}{12}
+\beamer@subsectionintoc {12}{17}{Altri metodi di miglioramento della protezione}{291}{0}{12}
+\beamer@subsectionintoc {12}{18}{Protezione basata sul linguaggio di programmazione}{292}{0}{12}
+\beamer@subsectionintoc {12}{19}{Protezione in Java 2}{293}{0}{12}
+\beamer@sectionintoc {13}{Gestione della memoria principale e virtuale}{294}{0}{13}
+\beamer@subsectionintoc {13}{1}{Introduzione}{295}{0}{13}
+\beamer@subsectionintoc {13}{2}{Protezione della memoria con registri limite}{296}{0}{13}
+\beamer@subsectionintoc {13}{3}{Protezione della memoria in Hw con registri limite}{297}{0}{13}
+\beamer@subsectionintoc {13}{4}{Binding degli indirizzi}{298}{0}{13}
+\beamer@subsectionintoc {13}{5}{Binding di istruzioni e dati alla memoria}{299}{0}{13}
+\beamer@subsectionintoc {13}{6}{Spazio degli indirizzi logici e fisici}{300}{0}{13}
+\beamer@subsectionintoc {13}{7}{Unit^^c3^^a0 di gestione della memoria (MMU)}{301}{0}{13}
+\beamer@subsectionintoc {13}{8}{Caricamento dinamico}{302}{0}{13}
+\beamer@subsectionintoc {13}{9}{Linking dinamico}{303}{0}{13}
+\beamer@subsectionintoc {13}{10}{Allocazione contigua}{304}{0}{13}
+\beamer@subsectionintoc {13}{11}{Partizionamento variabile}{305}{0}{13}
+\beamer@subsectionintoc {13}{12}{Problema di allocazione dinamica dello storage}{306}{0}{13}
+\beamer@subsectionintoc {13}{13}{Frammentazione}{307}{0}{13}
+\beamer@subsectionintoc {13}{14}{Spazio di indirizzamente virtuale e spazio di indirzzamento fisico}{308}{0}{13}
+\beamer@subsectionintoc {13}{15}{Astrazione memoria virtuale}{309}{0}{13}
+\beamer@subsectionintoc {13}{16}{Memoria virtuale: motivazioni}{310}{0}{13}
+\beamer@subsectionintoc {13}{17}{Memoria virtuale}{311}{0}{13}
+\beamer@subsectionintoc {13}{18}{Segmentazione}{312}{0}{13}
+\beamer@subsectionintoc {13}{19}{Paginazione}{313}{0}{13}

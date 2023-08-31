@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2023.4.4)  22 AUG 2023 15:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2023.4.4)  31 AUG 2023 11:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1141,7 +1141,11 @@ LaTeX Info: Redefining \it@ccap on input line 44.
 p/pdftex/pdftex.map}]
 (Ripasso Sistemi Operativi.toc) [2
 
-] (Ripasso Sistemi Operativi.toc) [3
+] (Ripasso Sistemi Operativi.toc)
+Overfull \vbox (0.22755pt too high) detected at line 55
+ []
+
+[3
 
 ]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
@@ -1180,8 +1184,8 @@ thkerncmss.
 ] [10
 
 ]
-<../../Screen slide/Screenshot 2023-08-16 alle 21.38.15.png, id=921, 1149.29375
-pt x 407.5225pt>
+<../../Screen slide/Screenshot 2023-08-16 alle 21.38.15.png, id=1450, 1149.2937
+5pt x 407.5225pt>
 File: ../../Screen slide/Screenshot 2023-08-16 alle 21.38.15.png Graphic file (
 type png)
 <use ../../Screen slide/Screenshot 2023-08-16 alle 21.38.15.png>
@@ -1213,7 +1217,7 @@ Overfull \vbox (2.9648pt too high) detected at line 179
 ] [20
 
 ]
-<../../Screen slide/Screenshot 2023-08-16 alle 22.15.22.png, id=1299, 743.77875
+<../../Screen slide/Screenshot 2023-08-16 alle 22.15.22.png, id=1828, 743.77875
 pt x 606.265pt>
 File: ../../Screen slide/Screenshot 2023-08-16 alle 22.15.22.png Graphic file (
 type png)
@@ -1232,7 +1236,7 @@ Overfull \vbox (2.1763pt too high) detected at line 247
 ] [23
 
 ]
-<../../Screen slide/Screenshot 2023-08-17 alle 10.01.59.png, id=1400, 973.6375p
+<../../Screen slide/Screenshot 2023-08-17 alle 10.01.59.png, id=1929, 973.6375p
 t x 614.295pt>
 File: ../../Screen slide/Screenshot 2023-08-17 alle 10.01.59.png Graphic file (
 type png)
@@ -1246,7 +1250,7 @@ Package pdftex.def Info: ../../Screen slide/Screenshot 2023-08-17 alle 10.01.59
  <../../Screen slide/Screenshot 2023-08-17 alle 10.01.59.png>] [25
 
 ]
-<../../Screen slide/Screenshot 2023-08-17 alle 10.15.15.png, id=1461, 831.105pt
+<../../Screen slide/Screenshot 2023-08-17 alle 10.15.15.png, id=1990, 831.105pt
  x 424.58624pt>
 File: ../../Screen slide/Screenshot 2023-08-17 alle 10.15.15.png Graphic file (
 type png)
@@ -1274,7 +1278,7 @@ Package pdftex.def Info: ../../Screen slide/Screenshot 2023-08-17 alle 10.15.15
 ] [34
 
 ]
-<../../Screen slide/Screenshot 2023-08-17 alle 11.36.02.png, id=1772, 868.24374
+<../../Screen slide/Screenshot 2023-08-17 alle 11.36.02.png, id=2301, 868.24374
 pt x 174.6525pt>
 File: ../../Screen slide/Screenshot 2023-08-17 alle 11.36.02.png Graphic file (
 type png)
@@ -1315,7 +1319,11 @@ Package pdftex.def Info: ../../Screen slide/Screenshot 2023-08-17 alle 11.36.02
 
 ] [50
 
-] (Ripasso Sistemi Operativi.toc) [51
+] (Ripasso Sistemi Operativi.toc)
+Overfull \vbox (0.22755pt too high) detected at line 525
+ []
+
+[51
 
 ] [52
 
@@ -1325,8 +1333,7 @@ Package pdftex.def Info: ../../Screen slide/Screenshot 2023-08-17 alle 11.36.02
 
 ] [55
 
-]
-[56
+] [56
 
 ] [57
 
@@ -1338,14 +1345,19 @@ Package pdftex.def Info: ../../Screen slide/Screenshot 2023-08-17 alle 11.36.02
 
 ] [61
 
-] (Ripasso Sistemi Operativi.toc) [62
+]
+(Ripasso Sistemi Operativi.toc)
+Overfull \vbox (0.22755pt too high) detected at line 599
+ []
+
+[62
 
 ] [63
 
 ]
 <../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
 0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 21.27.04.png,
- id=2695, 864.22874pt x 470.75874pt>
+ id=3242, 864.22874pt x 470.75874pt>
 File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
 c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 21.27.04
 .png Graphic file (type png)
@@ -1377,7 +1389,7 @@ Overfull \vbox (3.57306pt too high) detected at line 638
 ]
 <../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
 0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 21.42.56.png,
- id=2814, 1090.0725pt x 385.44pt>
+ id=3361, 1090.0725pt x 385.44pt>
 File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
 c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 21.42.56
 .png Graphic file (type png)
@@ -1393,7 +1405,11 @@ diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
  <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
  slide/II anno/Screen slide/Screenshot 2023-08-19 alle 21.42.56.png>] [69
 
-] (Ripasso Sistemi Operativi.toc) [70
+] (Ripasso Sistemi Operativi.toc)
+Overfull \vbox (0.22755pt too high) detected at line 659
+ []
+
+[70
 
 ] [71
 
@@ -1435,7 +1451,7 @@ File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ]
 <../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
 0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.11.png,
- id=3341, 770.88pt x 677.53125pt>
+ id=3897, 770.88pt x 677.53125pt>
 File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
 c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.11
 .png Graphic file (type png)
@@ -1456,7 +1472,7 @@ Overfull \vbox (1.82684pt too high) detected at line 816
  slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.11.png>]
 <../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
 0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.20.png,
- id=3372, 1080.035pt x 608.2725pt>
+ id=3928, 1080.035pt x 608.2725pt>
 File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
 c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.20
 .png Graphic file (type png)
@@ -1477,7 +1493,7 @@ diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
 ]
 <../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
 0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.31.png,
- id=3433, 1077.02374pt x 641.39626pt>
+ id=3989, 1077.02374pt x 641.39626pt>
 File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
 c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.31
 .png Graphic file (type png)
@@ -1497,7 +1513,7 @@ diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
 ]
 <../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
 0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.41.png,
- id=3490, 1034.86626pt x 566.115pt>
+ id=4046, 1034.86626pt x 566.115pt>
 File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
 c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-19 alle 23.08.41
 .png Graphic file (type png)
@@ -1533,7 +1549,11 @@ diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
 ] [101
 
 ]
-(Ripasso Sistemi Operativi.toc) [102
+(Ripasso Sistemi Operativi.toc)
+Overfull \vbox (0.22755pt too high) detected at line 909
+ []
+
+[102
 
 ] [103
 
@@ -1550,7 +1570,7 @@ diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
 ]
 <../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
 0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-20 alle 10.34.02.png,
- id=4020, 726.715pt x 361.35pt>
+ id=4585, 726.715pt x 361.35pt>
 File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
 c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-20 alle 10.34.02
 .png Graphic file (type png)
@@ -1561,14 +1581,13 @@ Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
 diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
 08-20 alle 10.34.02.png  used on input line 954.
 (pdftex.def)             Requested size: 273.83728pt x 136.16205pt.
-
-[109
+ [109
 
  <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
  slide/II anno/Screen slide/Screenshot 2023-08-20 alle 10.34.02.png>]
 <../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
 0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-20 alle 10.35.40.png,
- id=4052, 862.22125pt x 561.09625pt>
+ id=4617, 862.22125pt x 561.09625pt>
 File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
 c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-20 alle 10.35.40
 .png Graphic file (type png)
@@ -1595,14 +1614,17 @@ Overfull \vbox (2.93446pt too high) detected at line 963
 
 ] [114
 
-] (Ripasso Sistemi Operativi.toc) [115
+] (Ripasso Sistemi Operativi.toc)
+Overfull \vbox (0.22755pt too high) detected at line 994
+ []
+
+[115
 
 ] [116
 
 ] [117
 
-]
-[118
+] [118
 
 ] [119
 
@@ -1620,14 +1642,14 @@ Overfull \vbox (2.93446pt too high) detected at line 963
 
 ] [126
 
-] [127
+]
+[127
 
 ] [128
 
 ] [129
 
-]
-[130
+] [130
 
 ] [131
 
@@ -1645,19 +1667,19 @@ Overfull \vbox (2.93446pt too high) detected at line 963
 
 ] [138
 
-] [139
+]
+[139
 
 ] [140
 
 ] [141
 
-]
-[142
+] [142
 
 ]
 <../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
 0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.38.02.png,
- id=5065, 1085.05376pt x 491.8375pt>
+ id=5640, 1085.05376pt x 491.8375pt>
 File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
 c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.38.02
 .png Graphic file (type png)
@@ -1674,7 +1696,7 @@ diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
  slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.38.02.png>]
 <../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
 0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.37.54.png,
- id=5096, 1079.03125pt x 490.83376pt>
+ id=5671, 1079.03125pt x 490.83376pt>
 File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
 c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.37.54
 .png Graphic file (type png)
@@ -1685,11 +1707,10 @@ Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
 diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
 08-21 alle 19.37.54.png  used on input line 1293.
 (pdftex.def)             Requested size: 342.2953pt x 155.70691pt.
-[144
+ [144
 
  <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
- slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.37.54.png>]
-[145
+ slide/II anno/Screen slide/Screenshot 2023-08-21 alle 19.37.54.png>] [145
 
 ] [146
 
@@ -1709,12 +1730,12 @@ diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
 
 ] [154
 
-] [155
+]
+[155
 
 ] [156
 
-]
-[157
+] [157
 
 ] [158
 
@@ -1735,6 +1756,611 @@ diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
 ] [166
 
 ]
+(Ripasso Sistemi Operativi.toc)
+Overfull \vbox (0.22755pt too high) detected at line 1501
+ []
+
+[167
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.06.19.png,
+ id=6409, 932.48375pt x 520.94624pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.06.19
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.06.19.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-24 alle 17.06.19.png  used on input line 1508.
+(pdftex.def)             Requested size: 342.2953pt x 191.22884pt.
+ [168
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.06.19.png>] [169
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.10.13.png,
+ id=6470, 890.32625pt x 468.75125pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.10.13
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.10.13.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-24 alle 17.10.13.png  used on input line 1524.
+(pdftex.def)             Requested size: 342.2953pt x 180.21587pt.
+ [170
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.10.13.png>]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.14.01.png,
+ id=6501, 643.40375pt x 461.725pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.14.01
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.14.01.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-24 alle 17.14.01.png  used on input line 1536.
+(pdftex.def)             Requested size: 136.91603pt x 98.25441pt.
+ [171
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.14.01.png>]
+[172
+
+] [173
+
+] [174
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.24.09.png,
+ id=6621, 472.76625pt x 301.125pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.24.09
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.24.09.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-24 alle 17.24.09.png  used on input line 1563.
+(pdftex.def)             Requested size: 205.37926pt x 130.8183pt.
+ [175
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.24.09.png>]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.29.00.png,
+ id=6651, 456.70625pt x 264.99pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.29.00
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.29.00.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-24 alle 17.29.00.png  used on input line 1573.
+(pdftex.def)             Requested size: 205.37926pt x 119.16353pt.
+ [176
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.29.00.png>]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.32.14.png,
+ id=6680, 446.66875pt x 266.9975pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.32.14
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.32.14.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-24 alle 17.32.14.png  used on input line 1581.
+(pdftex.def)             Requested size: 205.37926pt x 122.76736pt.
+ [177
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.32.14.png>]
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.32.14
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.32.14.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-24 alle 17.32.14.png  used on input line 1588.
+(pdftex.def)             Requested size: 205.37926pt x 122.76736pt.
+ [178
+
+] [179
+
+] [180
+
+] [181
+
+] [182
+
+] [183
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 18.17.52.png,
+ id=6880, 908.39375pt x 325.215pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 18.17.52
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 18.17.52.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-24 alle 18.17.52.png  used on input line 1639.
+(pdftex.def)             Requested size: 273.83728pt x 98.03667pt.
+ [184
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-24 alle 18.17.52.png>] [185
+
+] [186
+
+] [187
+
+] [188
+
+] [189
+
+] [190
+
+] [191
+
+]
+[192
+
+] [193
+
+] [194
+
+] [195
+
+] [196
+
+] (Ripasso Sistemi Operativi.toc)
+Overfull \vbox (0.22755pt too high) detected at line 1742
+ []
+
+[197
+
+] [198
+
+] [199
+
+] [200
+
+] [201
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 10.24.26.png,
+ id=7473, 519.9425pt x 352.31625pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 10.24.26
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 10.24.26.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-29 alle 10.24.26.png  used on input line 1805.
+(pdftex.def)             Requested size: 104.18825pt x 70.59639pt.
+ [202
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-29 alle 10.24.26.png>] [203
+
+] [204
+
+] [205
+
+] [206
+
+] [207
+
+] [208
+
+] [209
+
+] [210
+
+]
+[211
+
+] [212
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 10.49.39.png,
+ id=7804, 1277.77374pt x 602.25pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 10.49.39
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 10.49.39.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-29 alle 10.49.39.png  used on input line 1903.
+(pdftex.def)             Requested size: 342.2953pt x 161.33232pt.
+ [213
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-29 alle 10.49.39.png>] [214
+
+] [215
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 11.21.01.png,
+ id=7891, 707.64375pt x 363.3575pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 11.21.01
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 11.21.01.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-29 alle 11.21.01.png  used on input line 1930.
+(pdftex.def)             Requested size: 273.83728pt x 140.61105pt.
+ [216
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-29 alle 11.21.01.png>] [217
+
+] [218
+
+] [219
+
+] [220
+
+] [221
+
+] [222
+
+] [223
+
+] [224
+
+] [225
+
+] [226
+
+]
+[227
+
+] [228
+
+] [229
+
+] [230
+
+] [231
+
+] [232
+
+] [233
+
+] [234
+
+] [235
+
+] [236
+
+] [237
+
+] [238
+
+]
+(Ripasso Sistemi Operativi.toc)
+Overfull \vbox (0.22755pt too high) detected at line 2097
+ []
+
+[239
+
+] [240
+
+]
+Overfull \vbox (4.9648pt too high) detected at line 2124
+ []
+
+[241
+
+] [242
+
+] [243
+
+] [244
+
+] [245
+
+] [246
+
+] [247
+
+] (Ripasso Sistemi Operativi.toc)
+Overfull \vbox (0.22755pt too high) detected at line 2180
+ []
+
+[248
+
+] [249
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 18.27.33.png,
+ id=8933, 1175.39125pt x 561.09625pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 18.27.33
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 18.27.33.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-29 alle 18.27.33.png  used on input line 2196.
+(pdftex.def)             Requested size: 342.2953pt x 163.39867pt.
+ [250
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-29 alle 18.27.33.png>] [251
+
+] [252
+
+] [253
+
+] [254
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 18.36.18.png,
+ id=9081, 1112.155pt x 501.875pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 18.36.18
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 18.36.18.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-29 alle 18.36.18.png  used on input line 2227.
+(pdftex.def)             Requested size: 342.2953pt x 154.46156pt.
+ [255
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-29 alle 18.36.18.png>]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 18.40.18.png,
+ id=9112, 1108.14pt x 558.085pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 18.40.18
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 18.40.18.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-29 alle 18.40.18.png  used on input line 2234.
+(pdftex.def)             Requested size: 342.2953pt x 172.38292pt.
+ [256
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-29 alle 18.40.18.png>] [257
+
+] [258
+
+] [259
+
+] (Ripasso Sistemi Operativi.toc)
+Overfull \vbox (0.22755pt too high) detected at line 2261
+ []
+
+[260
+
+] [261
+
+] [262
+
+] [263
+
+] [264
+
+] [265
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 10.54.54.png,
+ id=9449, 635.37375pt x 570.13pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 10.54.54
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 10.54.54.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-30 alle 10.54.54.png  used on input line 2324.
+(pdftex.def)             Requested size: 166.14764pt x 149.08286pt.
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 10.55.03.png,
+ id=9450, 949.5475pt x 573.14125pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 10.55.03
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 10.55.03.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-30 alle 10.55.03.png  used on input line 2324.
+(pdftex.def)             Requested size: 166.14764pt x 100.28372pt.
+ [266
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-30 alle 10.54.54.png> <../../../
+../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II a
+nno/Screen slide/Screenshot 2023-08-30 alle 10.55.03.png>] [267
+
+] [268
+
+] [269
+
+] (Ripasso Sistemi Operativi.toc)
+Overfull \vbox (0.22755pt too high) detected at line 2367
+ []
+
+[270
+
+] [271
+
+] [272
+
+] [273
+
+] [274
+
+] [275
+
+] [276
+
+] [277
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 16.05.59.png,
+ id=9813, 1256.695pt x 529.98pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 16.05.59
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 16.05.59.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-30 alle 16.05.59.png  used on input line 2433.
+(pdftex.def)             Requested size: 342.2953pt x 144.34996pt.
+ [278
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-30 alle 16.05.59.png>] [279
+
+] [280
+
+]
+<../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c3^^a
+0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 16.14.44.png,
+ id=9902, 648.4225pt x 365.365pt>
+File: ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^
+c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 16.14.44
+.png Graphic file (type png)
+<use ../../../../../../OneDrive-Universit^^c3^^a0degliStudidiParma/Universit^^c
+3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 16.14.44.
+png>
+Package pdftex.def Info: ../../../../../../OneDrive-Universit^^c3^^a0degliStudi
+diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
+08-30 alle 16.14.44.png  used on input line 2462.
+(pdftex.def)             Requested size: 273.83728pt x 154.29965pt.
+
+Overfull \vbox (43.8644pt too high) detected at line 2462
+ []
+
+[281
+
+ <../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e
+ slide/II anno/Screen slide/Screenshot 2023-08-30 alle 16.14.44.png>]
+[282
+
+] [283
+
+] [284
+
+] [285
+
+] [286
+
+] [287
+
+] [288
+
+] [289
+
+] [290
+
+] [291
+
+] [292
+
+] [293
+
+]
+(Ripasso Sistemi Operativi.toc)
+Overfull \vbox (0.22755pt too high) detected at line 2598
+ []
+
+[294
+
+] [295
+
+] [296
+
+] [297
+
+] [298
+
+] [299
+
+] [300
+
+] [301
+
+] [302
+
+] [303
+
+] [304
+
+] [305
+
+]
+[306
+
+] [307
+
+] [308
+
+] [309
+
+] [310
+
+] [311
+
+] [312
+
+] [313
+
+]
 \tf@nav=\write6
 \openout6 = `"Ripasso Sistemi Operativi.nav"'.
 
@@ -1744,8 +2370,7 @@ diParma/Universit^^c3^^a0/Appunti e slide/II anno/Screen slide/Screenshot 2023-
 \tf@snm=\write8
 \openout8 = `"Ripasso Sistemi Operativi.snm"'.
 
-
-(Ripasso Sistemi Operativi.aux)
+ (Ripasso Sistemi Operativi.aux)
 
 Package rerunfilecheck Warning: File `"Ripasso Sistemi Operativi".out' has chan
 ged.
@@ -1753,43 +2378,49 @@ ged.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `"Ripasso Sistemi Operativi".out':
-(rerunfilecheck)             Before: 969395EA38E07130D87C276C539426C6;28501
-(rerunfilecheck)             After:  100AE87FF55F4B4FF4AC3F16AC8950DC;28802.
+(rerunfilecheck)             Before: C1C8093B8E3CABCFE6B426E654760851;54459
+(rerunfilecheck)             After:  34CD067FBAA2AB39FC74470072A256F0;54707.
  ) 
 Here is how much of TeX's memory you used:
- 25299 strings out of 476339
- 521208 string characters out of 5774840
- 1865388 words of memory out of 5000000
- 44683 multiletter control sequences out of 15000+600000
- 528975 words of font info for 68 fonts, out of 8000000 for 9000
+ 26685 strings out of 476339
+ 564032 string characters out of 5774840
+ 1871388 words of memory out of 5000000
+ 45583 multiletter control sequences out of 15000+600000
+ 531865 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,122p,448b,642s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,122p,491b,1197s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/data/fonts
-/pk/ljfour/jknappen/ec/dpi600/ectt1095.pk> </Users/matteofranchini/Library/Appl
-ication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecss1200.
+/pk/ljfour/jknappen/ec/dpi600/ecsi0600.pk> </Users/matteofranchini/Library/Appl
+ication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecsx0600.
 pk> </Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/data/font
-s/pk/ljfour/jknappen/ec/dpi600/ecso1095.pk> </Users/matteofranchini/Library/App
-lication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecsi1095
+s/pk/ljfour/jknappen/ec/dpi600/ecss0800.pk> </Users/matteofranchini/Library/App
+lication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1095
 .pk> </Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/data/fon
-ts/pk/ljfour/jknappen/ec/dpi600/ecsx1095.pk> </Users/matteofranchini/Library/Ap
-plication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecsx144
-0.pk> </Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/data/fo
-nts/pk/ljfour/jknappen/ec/dpi600/ecss0900.pk> </Users/matteofranchini/Library/A
-pplication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecss06
-00.pk> </Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/data/f
-onts/pk/ljfour/jknappen/ec/dpi600/ecss1095.pk> </Users/matteofranchini/Library/
-Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecss1
-440.pk></Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/instal
-l/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/matteofranchini/Library/App
-lication Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmss10.pf
+ts/pk/ljfour/jknappen/ec/dpi600/ecss1200.pk> </Users/matteofranchini/Library/Ap
+plication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecso109
+5.pk> </Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/data/fo
+nts/pk/ljfour/jknappen/ec/dpi600/ecsi1095.pk> </Users/matteofranchini/Library/A
+pplication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecsx10
+95.pk> </Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/data/f
+onts/pk/ljfour/jknappen/ec/dpi600/ecsx1440.pk> </Users/matteofranchini/Library/
+Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecss0
+900.pk> </Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/data/
+fonts/pk/ljfour/jknappen/ec/dpi600/ecss0600.pk> </Users/matteofranchini/Library
+/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecss
+1095.pk> </Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/data
+/fonts/pk/ljfour/jknappen/ec/dpi600/ecss1440.pk></Users/matteofranchini/Library
+/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb></Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install
+/fonts/type1/public/amsfonts/cm/cmss10.pfb></Users/matteofranchini/Library/Appl
+ication Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmssi10.pf
 b></Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/fon
-ts/type1/public/amsfonts/cm/cmssi10.pfb></Users/matteofranchini/Library/Applica
-tion Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmssi8.pfb></
-Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Ripasso Sistemi Operativi.pdf" (166 pages, 4960109 bytes).
+ts/type1/public/amsfonts/cm/cmssi8.pfb></Users/matteofranchini/Library/Applicat
+ion Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></U
+sers/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/fonts/ty
+pe1/public/amsfonts/cm/cmsy6.pfb>
+Output written on "Ripasso Sistemi Operativi.pdf" (313 pages, 8974970 bytes).
 PDF statistics:
- 6341 PDF objects out of 7423 (max. 8388607)
- 481 named destinations out of 1000 (max. 500000)
- 2222 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11637 PDF objects out of 12825 (max. 8388607)
+ 903 named destinations out of 1000 (max. 500000)
+ 3717 words of extra memory for PDF output out of 10000 (max. 10000000)
 

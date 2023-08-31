@@ -1498,4 +1498,1276 @@ Un programma che funge da intermediario tra l'utente di un computer e l'hardware
 	Non è necessaria alcuna relazione genitore-figlio tra i processi comunicanti.\\
 	Diversi processi possono utilizzare le pipe con nome per comunicare
 \end{mainframe}
+\section{Thread e concorrenza}
+\subsection{Processi e thread}
+\begin{mainframe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.06.19}
+	\end{figure}
+\end{mainframe}
+\subsection{Vantaggi del multithreading}
+\begin{mainframe}
+	\begin{itemize}
+		\item \textbf{Reattività}: può consentire di continuare l'esecuzione se una parte del processo è bloccata, particolarmente importante per le interfacce utente
+		\item \textbf{Condivisione delle risorse}: i thread condividono le risorse del processo, più facilmente della memoria condivisa o del passaggio di messaggi
+		\item \textbf{Economicità}: meno costoso della creazione di un processo, la commutazione di thread ha un overhead rispetto alla commutazione di contesto
+		\item \textbf{Scalabilità}: il processo può trarre vantaggio dalle architetture multicore
+	\end{itemize}
+\end{mainframe}
+\subsection{Concorrenza vs Parallelismo}
+\begin{mainframe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.10.13}
+	\end{figure}
+\end{mainframe}
+\subsection{Programmazione multicore}
+\begin{mainframe}
+	Tipi di parallelismo:
+	\begin{itemize}
+		\item \textbf{Parallelismo dei dati}: distribuisce sottoinsiemi degli stessi dati su più core, la stessa operazione su ciascuno di essi
+		\item \textbf{Parallelismo dei task}: distribuzione dei thread tra i core, ogni thread esegue un'unica operazione
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.4 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.14.01}
+	\end{figure}
+\end{mainframe}
+\subsection{Legge di Amdahl}
+\begin{mainframe}
+	Identifica i guardagni di prestazioni derivanti dall'aggiunta di core supplementari a un'applicazione che presenta componenti sia seriali che paralleli
+\end{mainframe}
+\subsection{Thread utente e thread kernel}
+\begin{mainframe}
+	\textbf{Thread utente} - gestione effettuata dalla libreria dei thread a livello utente (POSIX Pthread, Thread Windows, Thread Java).\\
+	\textbf{Thread del kernel} - supportati dal kernel
+\end{mainframe}
+\subsection{Modelli di multithreading}
+\begin{mainframe}
+	\begin{itemize}
+		\item Da uno a molti
+		\item Da uno a uno
+		\item Da molti a molti
+	\end{itemize}
+\end{mainframe}
+\begin{frame}{Da molti a uno}
+	Molti thread a livello utente mappati su un singolo thread del kernel\\
+	Il \textbf{blocco di un thread causa il blocco di tutti}.\\
+	Più thread non possono essere eseguiti in parallelo su un sistema multicore ma \textbf{solo uno alla volta}.\\
+	Pochi sistemi attualmente utilizzano questo modello
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.6 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.24.09}
+	\end{figure}
+\end{frame}
+\begin{frame}{Uno a uno}
+	Ogni thread a livello utente è mappato in un \textbf{thread kernel}.\\
+	La creazione di un thread a livello utente crea un thread del kernel.\\
+	Più \textbf{concorrenza rispetto a molti-a-uno}\\
+	Numero di thread per processo a volte limitato a causa dell'overhead
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.6 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.29.00}
+	\end{figure}
+\end{frame}
+\begin{frame}{Molti a molti}
+	Permette a un thread a livello utente di essere mappato su molti thread del kernel.\\
+	Permette al sistema operativo di creare un numero sufficiente di thread del kernel
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.6 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.32.14}
+	\end{figure}
+\end{frame}
+\begin{frame}{Modello a due livelli}
+	Simile a molti-a-molti, tranne per il fatto che permett a un thread utente di essere legato a un thread kernel
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.6 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 17.32.14}
+	\end{figure}
+\end{frame}
+\subsection{Librerie di thread}
+\begin{mainframe}
+	Le librerie di thread forniscono al programmatore le API per la creazione e la gestione dei thread.\\
+	Due modi principali di implementare
+	\begin{itemize}
+		\item Libreria interamente in spazio utente
+		\item Libreria a livello di kernel supportata dal sistema operativo
+	\end{itemize}
+\end{mainframe}
+\subsection{Pthreads}
+\begin{mainframe}
+	Può essere fornita a livello utente o a livello kernel\\
+	API a standard POSIX per la creazione e la sincronizzazione dei thread.\\
+	L'API specifica il comportamento della libreria di thread, l'implementazione spetta allo sviluppo della libreria stessa
+\end{mainframe}
+\subsection{Thread Java}
+\begin{mainframe}
+	I thread Java \textbf{sono gestiti dalla JVM}.\\
+	Tipicamente implementati utilizzando il modello di thread fornito dal sistema operativo sottostante.
+\end{mainframe}
+\subsection{Thread implicite}
+\begin{mainframe}
+	Sempre più diffusa per il numero crescente di thread, la verifica della correttezza del programma è sempre più difficile.\\
+	Creazione e gestione dei thread da parte dei compilatori e delle librerie runtime piuttosto che dei programmatori.\\
+	\textbf{Cinque metodi esplorati};
+	\begin{itemize}
+		\item Pool di thread
+		\item Fork-Join
+		\item OpenMP
+		\item Spedizione Grand Centrale
+		\item Blocchi costruttivi della filettatura Intel
+	\end{itemize}
+\end{mainframe}
+\subsection{Pool di thread}
+\begin{mainframe}
+	Vengono creati un numero di thread in un pool in cui attendono di lavorare.\\
+	\textbf{Vantaggi};
+	\begin{itemize}
+		\item Di solito è leggermente più veloce service una richiesta con un thread esistente piuttosto che crearne uno nuovo
+		\item Consente di vincolare il numero di thread dell'applicazione alla dimensione del pool
+		\item Separare l'attività da eseguire dalla meccanica di creazione dell'attività consente diverse strategie per l'esecuzione dell'attività
+	\end{itemize}
+\end{mainframe}
+\subsection{Parallelismo Fork-Join}
+\begin{mainframe}
+	Più thread vengono biforcati e poi uniti
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-24 alle 18.17.52}
+	\end{figure}
+\end{mainframe}
+\subsection{OpemMP}
+\begin{mainframe}
+	Insieme di direttive del compilatore e API per C, C++\\
+	Fornisce supporto per la programmazione parallela in ambienti a memoria condivisa\\
+	Identifica le regioni parallele-blocchi di codice che possono essere eseguiti in parallelo
+\end{mainframe}
+\subsection{Grand Central Dispatch}
+\begin{mainframe}
+	\begin{itemize}
+		\item Tecnologia Apple per i sistemi operativi macOS e iOS
+		\item Estensioni dei linguaggi C, C++, API e libreria di esecuzione che incapsulano codice e dati
+		\item Permette di identificare le sezioni parallele
+		\item Gestisce la maggior parte dei dettagli del threading
+	\end{itemize}
+	Due tipi di code di invio:
+	\begin{itemize}
+		\item \textbf{Seriale}: blocchi rimossi in ordine FIFO, la coda è per processo, chiamata \textbf{coda principale}
+		\item \textbf{Concorrente}: rimozione in ordine FIFO, ma possono esserene rimossi diversi alla volta
+	\end{itemize}
+	Per il lingauggio Swift, un task è definito come una closure, simile a un blocco, senza il trattino
+\end{mainframe}
+\subsection{Intel Threading Building Block (TBB)}
+\begin{mainframe}
+	Libreria di modelli per la progettazione di programmi paralleli in C++
+\end{mainframe}
+\subsection{Problemi di threading}
+\begin{mainframe}
+	Semantica delle chiamate di sistemi \textit{fork()} ed \textit{exec()}.\\
+	Signal handling: \textit{sincrono e asincrono}\\
+	Cancellazione del thread di destinazione: asincrona o differita\\
+	Memoria locale del thread\\
+	Attivazione dello scheduler
+\end{mainframe}
+\subsection{Gestione dei segnali}
+\begin{mainframe}
+	\begin{itemize}
+		\item I \textbf{segnali} sono utilizzati nei sistemi UNIX per notificare a un processo che si è verificato un particolare evento
+		\item Un \textbf{gestore di segnali} viene utilizzato per elaborare i segnali
+		\begin{itemize}
+			\item Il segnale è generato da un particolare evento
+			\item Il segnale è consegnato ad un processo
+			\item Il segnale viene gestito da uno dei due possibili gestori del segnale
+		\end{itemize}
+		\item Ogni segnale ha un gestore di default che il kernel esegue quando gestisce un segnale
+	\end{itemize}
+\end{mainframe}
+\subsection{Cancellazione di un thread}
+\begin{mainframe}
+	\begin{itemize}
+		\item Terminare un thread prima che sia terminato
+		\item Il thread da cancellare è il \textbf{thread target}
+		\item Due approcci generali:
+		\begin{itemize}
+			\item \textbf{Cancellazione asincrona} termina immediatamente il thread target
+			\item \textbf{Cancellazione differita} consente al thread target di controllare periodicamente se deve essere cancellata
+		\end{itemize}
+	\end{itemize}
+\textbf{	L'invocazione della cancellazione del thread richiede la cancellazione, ma la cancellazione effettiva dipende dallo stato del thread}\\
+Il tipo predefinito è differito: la cancellazione avviene solo quando il thread raggiunge il \textbf{punto di cancellazione}
+\end{mainframe}
+\subsection{Cancellazione di un thread in Java}
+\begin{mainframe}
+	La cancellazione \textbf{differita utilizza il metodo \textit{interrupt()}}, che imposta lo stato di interruzione di un thread
+\end{mainframe}
+\subsection{Memorizzazione locale del thread}
+\begin{mainframe}
+	Il \textbf{Thread-Local Storage (TLS)} consente a ciascun thread di avere la propria copia di dati.\\
+	Utile quando non si ha il controllo sul processo di creazione del thread.\\
+	Diverso dalle variabili locali, le variabili locali sono visibili solo durante l'invocazione di una singola funzione, il TLS è visibile tra le invocazioni di funzioni.\\
+	È simile ai dati statici, è unico per ogni thread.
+\end{mainframe}
+\subsection{Attivazione dello scheduler}
+\begin{mainframe}
+	Entrambi i modelli M:M e a due livelli richiedono una comunicazione per mantenere il numero appropriato di thread del kernel allocate all'applicazione.\\
+	Tipicamente usano una struttura dati intermedia tra i thread user e quelli kernel - \textbf{lightweight process (LWP)}.\\
+	Le attivazioni dello scheduler forniscono \textbf{upcall} - un meccanismo di comunicazione dal kernel al \textbf{gestore di upcall} nella libreria dei thread
+\end{mainframe}
+\subsection{Thread di Windows}
+\begin{mainframe}
+	Windows API - API principale per le applicazioni windows, implementa la mappatura uno-a-uno, a livello di kernel.\\
+	Ogni thread contiene
+	\begin{itemize}
+		\item un id di thread
+		\item un set di registri che rappresentano lo stato del processore
+		\item stack utente e stack kernel separati per quando il thread viene eseguito in modalità utente o in modalità kernel
+		\item area di memorizzazione dati privata utilizzata dalle librerie run-time
+	\end{itemize}
+	Il set di registri, gli stack e l'area di archiviazoine privata sono noti come \textbf{contesto del therad}
+\end{mainframe}
+\begin{frame}
+	Le strutture dati primarie di un thread includono:
+	\begin{itemize}
+		\item \textbf{ETHREAD}: include il puntatore al processo a cui appartiene il thread
+		\item \textbf{KTHREAD}: informazioni sullo scheduling e sulla sincronizzazione, stack in modalità kernel
+		\item \textbf{TEB (blocco ambiente thread)}: id del thread, stack in modalità utente, memoria locale dei thread
+	\end{itemize}
+\end{frame}
+\subsection{Thread di Linux}
+\begin{mainframe}
+	Linux le chiama \textbf{task}.\\
+	La creazione di un thread avviene tramite la chiamata sistema \textit{clone()} che permette ad un task figlio di condividere lo spazio degli indirizzi del task genitore (processo).
+\end{mainframe}
+\section{Scheduling}
+\subsection{Introduzione}
+\begin{mainframe}
+	La gestione delle risorse impone al SO di prendere \textbf{decisioni sulla loro assegnazione} in base a criteri di efficienza e funzionalità.\\
+	Le risorse più importanti, a questo riguardo, sono la \textbf{CPU} e la \textbf{memoria principale}.
+	\begin{block}{Scheduler (della CPU)}
+		Parte del SO che \textbf{decide} a quale dei processi pronti presenti nel sistema assegnare il controllo della CPU
+	\end{block}
+	\begin{block}{Algoritmo di scheduling}
+		Realizza un particolare criterio di scelta tra i processi pronti (politica)
+	\end{block}
+\end{mainframe}
+\subsection{Scheduler della CPU}
+\begin{mainframe}
+	\begin{block}{Long-term scheduler (o job scheduler)}
+		Determina \textbf{quali processi dalla memoria di massa devono essere caricati in memoria principali pronti per l'esecuzione}.\\
+		\textbf{Controlla il grado di multiprogrammazione}\\
+		\textbf{Criterio di selezione} è basato su un mix equilibrato di job I/O bound e CPU bound
+	\end{block}
+	\begin{block}{Short-term scheduler}
+		Seleziona tra tutti i processi in memoria pronti per l'esecuzione quello cui assegnare la CPU.\\
+		Deve essere efficente in quanto interviene \textbf{frequentemente}
+	\end{block}
+\end{mainframe}
+\begin{frame}
+	Nei sistemi \textbf{time-sharing} non esiste il long-term scheduling.\\
+	I processi entrano immediatamente in memoria centrale, il limite è imposto o dal numero dei terminali connessi o dal tempo di risposta che diviene troppo lungo.\\
+	\begin{block}{Medium-term scheduler}
+		È coinvolto \textbf{soprattutto nei sistemi operativi multitasking} e \textbf{multiprogrammazione}, dove più processi concorrono per l'accesso alla CPU.\\
+		Il medium-term scheduler può decidere di sospendere temporaneamente l'esecuzione di alcuni processi, spostandoli dalla memoria principale a uno spazio di scambio su disco (\textbf{swap space})
+	\end{block} 
+\end{frame}
+\subsection{Scheduling e revoca della CPU}
+\begin{mainframe}
+	La \textbf{riassegnazione della CPU può avvenire a seguito di uno dei seguenti eventi}
+	\begin{enumerate}
+		\item Un processo commuta dallo \textbf{stato di esecuzione a sospeso}
+		\item Un processo commuta dallo \textbf{stato di esecuzione a pronto}
+		\item Il processo in esecuzione termina
+		\item Un processo \textbf{commuta dallo stato sospeso a pronto}
+	\end{enumerate}
+\end{mainframe}
+\begin{frame}
+\begin{columns}
+	\begin{column}{0.6 \textwidth}
+			\textbf{Scheduling non-preemptive}
+		\begin{itemize}
+			\item Un processo in esecuzione prosegue fino al rilascio spontaneo della CPU
+			\item La riassegnazione della CPU avviene solo a seguito di eventi di tipo 1 e 3, o di tipo 2 nel caso di \textit{yield}
+		\end{itemize}
+		\textbf{Scheduling preemptive}
+		\begin{itemize}
+			\item Il processo in esecuzione può perdere il controllo della CPU anche se "logicamente" in grado di proseguire
+			\item La riassegnazione della CPU può avvenire anche a seguito di eventi di tipo 2 e 4
+		\end{itemize}
+	\end{column}
+\begin{column}{0.4 \textheight}
+\begin{figure}
+	\centering
+	\includegraphics[width=1 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 10.24.26}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+\subsection{Criteri dello scheduling}
+\begin{mainframe}
+	\begin{itemize}
+		\item \textbf{Utilizzo della CPU} - mantiene la CPU il più possibile occupata
+		\item \textbf{Througput} - numero di processi che completano la loro esecuzione per unità di tempo
+		\item \textbf{Turnaroung time} - tempo di esecuzione di un particolare processo
+		\item \textbf{Tempo di attesa} - quantità di tempo in cui un processo è rimasto in attesa nella coda di attesa
+		\item \textbf{Tempo di risposta} - quantità di tempo che intercorre tra l'invio di una richiesta e la produzione della prima risposta, non l'output
+		\item \textbf{Fairness} - assenza di privilegi
+	\end{itemize}
+\end{mainframe}
+\subsection{Criteri di ottimizzazione degli algoritmi di pianificazione}
+\begin{mainframe}
+	\begin{itemize}
+		\item Utilizzo massimo della CPU
+		\item Throughput massimo
+		\item Tempo minimo di esecuzione
+		\item Tempo di attesa minimo
+		\item Tempo di risposta minimo - variazna del tempo di risposta minima
+	\end{itemize}
+\end{mainframe}
+\subsection{First come, first server (FCFS)}
+\begin{mainframe}
+	La CPU viene assegnata al processo che l'ha richiesta per primo.\\
+	La realizzazione di questa politica è ottenuta con code gestite in modo FIFO.\\
+	Le prestazioni di questo algoritmo sono in \textbf{genere scadetni}, in termini di tempo medio di attesa.\\
+	È semplice da realizzare
+\end{mainframe}
+\subsection{Shortest Job First (SJF)}
+\begin{mainframe}
+	A ciascun processo è associata la \textbf{lunghezza del successivo burst di CPU}, quando la CPU è libera, essa viene assegnata al processo con il burst di CPU più breve.\\
+	\textbf{Fornisce la soluzione ottima per il criterio del tempo medio di attesa}.
+\end{mainframe}
+\subsection{Priorità}
+\begin{mainframe}
+	Il SO mantiene i processi pronti in \textbf{code separate} per i diversi livelli di priorità\\
+	Lo scheduler seleziona sempre il primo processo nella coda al livello massimo di priorità che contiene processi pronti.\\
+	In presenza di \textbf{preemption}, in ogni istante è in esecuzione \textbf{un processo a priorità massima}.\\
+	\textbf{Valutazione della priorità}
+	\begin{itemize}
+		\item \textbf{Valutata internamente}: la priorità è individuata sulla base di qualche quantità misurabile (es. limiti di tempo, richieste di memoria, ecc.)
+		\item \textbf{Valutata esternemante}: è impostata da condizioni esterne
+	\end{itemize}
+\end{mainframe}
+\begin{frame}
+	\begin{block}{Problema di starvation}	
+		Processi a bassa priorità possono rimanere indefinitamente ritardati.\\
+		Una \textbf{soluzione} è quella di \textbf{aumentare gradualmente la priorità dei job che attendono}
+	\end{block}
+	\textbf{Priorità statica e priorità dinamica}:
+	\begin{itemize}
+		\item \textbf{Priorità statica}: attribuita ai processi all'atto della creazione in base alle loro caratteristiche o a politiche riferite dal tipo di utente
+		\item \textbf{Priorità dinamica}: modificata durante l'esecuzione del processo
+		\begin{itemize}
+			\item per penalizzare processi che impegnano troppo la CPU
+			\item per evitare starvation
+			\item per favorire i processi che si dimostrano I/O-bound
+			\item per mantenere un buon job-mix
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+\subsection{Round Robin}
+\begin{mainframe}
+	\textbf{Politica caratteristica dei sistemi \textbf{time-sharing}}: assegna un quanto di tempo prefissato ad ogni processo.\\
+	La coda dei processi pronti è \textbf{circolare} e la CPU è \textbf{assegnata a ciascuno dei processi per un quanto di tempo}.\\
+	Un processo, se introdotto per l'esaurimento del suo quanto viene inserito come \textbf{ultimo nella coda dei processi pronti}.\\
+	\textbf{Elevata fairness e assenza di starvation}
+\end{mainframe}
+\subsection{Varianti preemptive degli algoritmi di scheduling}
+\begin{mainframe}
+	\begin{itemize}
+		\item \textbf{Gli algoritmi FCFS, SJF e a priorità} sono di tipo \textbf{non-preemptive}, cioè quando la CPU è stata assegnata ad un processo questi ne mantiene il controllo fino al proprio completamento, o alla richiesta di una operazione di I/O.
+		\item \textbf{Gli algoritmi SJF e a priorità} possono anche essere di tipo \textbf{preemptive}. Tale possibilità nasce quando, durante l'esecuzione di un processo, un nuovo processo entra nella coda dei processi pronti. Il nuovo processo può \textbf{richiedere un tempo di CPU inferiore e avere una priorità maggiore di quello in esecuzione}
+		\item L'algoritmo SJF di tipo \textbf{preemptive} viene chiamato anche \textbf{shortest remaining time first (SRTF)}
+	\end{itemize}
+\end{mainframe}
+\subsection{Coda multilivello}
+\begin{mainframe}
+	Con lo scheduling a priorità vi sono code separate per ogni priorità.\\
+	Viene eseguito il processo a priorità più alta
+\end{mainframe}
+\subsection{Coda di feedback multivello}
+\begin{mainframe}
+	Un processo può spostarsi tra le varie code.\\
+	Uno scheduler di code a feedback multivello definito dai seguenti parametri
+	\begin{itemize}
+		\item numero di code
+		\item metodo utilizzato per determinare quando aggiornare un processo
+		\item metodo utilizzato per determinare quando retrocedere un processo
+		\item metodo utilizzato per determinare in quale coda entra un processo quando ha bisogno di assistenza
+	\end{itemize}
+\end{mainframe}
+\begin{frame}{Esempio di coda multivello}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 10.49.39}
+	\end{figure}
+\end{frame}
+\subsection{Scheduling dei thread}
+\begin{mainframe}
+	Distinzione tra \textbf{thread a livello utente e a livello kernel}.\\
+	Quando sono supportate, lo scheduling riguardo i thread, non i processi.\\
+	Modelli \textbf{molti-a-uno} e \textbf{molti-a-molti}, la libreria di thread pianifica i thread a livello utente per l'esecuzione su LWP. Conosciuto come \textbf{process-contention scope (PCS)}, poiché la competizione di scheduling è all'interno del processo.\\
+	Lo scheduling di un kernel thread su una CPU disponibile è un \textbf{system-contention scope (SCS)} - competizione tra tutti i thread del sistema.
+\end{mainframe}
+\subsection{Scheling a più processori}
+\begin{mainframe}
+	Lo scheduling della CPU è più complesso quando sono disponibili più CPU\\
+	Una qualsiasi delle seguenti architetture può essere multiprocessore
+	\begin{itemize}
+		\item CPU multicore
+		\item Core multithread
+		\item Sistemi NUMA
+		\item Multiprocessing eterogeneo
+	\end{itemize}
+\end{mainframe}
+\begin{frame}
+	Il multiprocessing simmetrico (SMP) è quello in cui ogni processore è auto-schedulante.\\
+	Tutti i thread possono trovarsi in una \textbf{ready queue} comune (a).\\
+	Ogni processore può avere la propria ready queue privata di thread (b)
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 11.21.01}
+	\end{figure}
+\end{frame}
+\subsection{Processori multicore}
+\begin{mainframe}
+	Tendenza recente a collocare più core di processore sullo stesso chip fisico.\\
+	Più veloce e consuma meno energia.\\
+	Crescono anche i thread multipli per core
+\end{mainframe}
+\subsection{Sistema multicore multithreading}
+\begin{mainframe}
+	\textbf{Chip-multithreading (CMT)} assegna a ciascun core più thread hardware. (Interl lo chiama \textbf{hyperthreading}).\\
+	Su un sistema quad-core con 2 thread hardware per core, il SO vede 8 processori logici.\\
+	Abbiamo due livelli di \textbf{schedulazione}
+	\begin{enumerate}
+		\item Il SO decide quale thread software eseguire su una CPU logica
+		\item Ogni core decide quale thread hardware eseguire sul core fisico
+	\end{enumerate}
+\end{mainframe}
+\subsection{Scheduling a più processori - Bilanciamento del carico}
+\begin{mainframe}
+	Se il sistema è SMP, è necessario che tutte le CPU siano caricate per garantire l'efficienza.\\
+	Il \textbf{load balancing} cerca di mantenere il carico di lavoro uniformemente distribuito.\\
+	\textbf{Migrazione push} - un task periodico controlla il carico su ciascun processore e, se lo trova, spinge il task dalla CPU sovraccarica ad un'altra CPU.\\
+	\textbf{Migrazione pull} - i processore inattivi prelevano i task in attesa dai processori occupati
+\end{mainframe}
+\subsection{Scheduling a più processori - Affinità dei processori}
+\begin{mainframe}
+	Quando un thread è in esecuzione su un processore, il contenuto della cache di quel processore memorizza gli accessi alla memoria effettuata da quel thread.\\
+	Si parla di thread che \textbf{hanno affinità con un processore}.\\
+	\textbf{Soft affinity} - il SO tenta di mantenere un thread in esecuzione sullo stesso processore, ma senza garanzie\\
+	\textbf{Hard affinity} - consente a un processo di specificare un insieme di processori su cui può essere eseguito
+\end{mainframe}
+\subsection{NUMA e lo scheduling delle CPU}
+\begin{mainframe}
+	Se il SO è \textbf{NUMA-aware}, assegnerà memoria vicina alla CPU su cui il thread è in esecuzione.
+\end{mainframe}
+\subsection{Scheduling della CPU in tempo reale}
+\begin{mainframe}
+	\textbf{Sistemi soft real-time}: i task critici in tempo reale hanno la massima priorità, ma non c'è garanzia su quando i task saranno posti in esecuzione\\
+	\textbf{Sistemi hard real-time}: i task \textbf{devono essere serviti entro la loro scadenza}.\\
+	Nei sistemi \textbf{real-time} organizzati a processi tipicamente sono presenti sia \textbf{processi critici}, che devono soddisfare i vincoli temporali, che \textbf{processi non critici}, eseguiti con algoritmi di scheduling convenzionali negli intervalli di tempo residui\\
+\end{mainframe}
+\begin{frame}
+	\begin{block}{Latenza degli eventi}
+		La quantità di tempo che intercorre tra il momento in cui si verifica un evento e il momento in cui viene servito
+	\end{block}
+	Due tipi di latenza influenzano le prestazioni
+	\begin{itemize}
+		\item \textbf{Latenza dell'interrput}: tempo che intercorrete tra l'arrivo dell'interrupt e l'inizio della routine che lo serve
+		\item \textbf{Latenza di dispatch}: tempo necessario al dispatcher per togliere il processo corrente dalla CPU e passare ad un altro
+	\end{itemize}
+\end{frame}
+\subsection{Schedulazione basata sulla priorità}
+\begin{mainframe}
+	Per una schedulazione in tempo reale, lo scheduler deve supportare una schedulazione \textbf{preemptive} e basata su priorità.\\
+	Per l'\textbf{hard real-time} deve anche fornire la capacità di rispettare le scadenze.\\
+	I processi hanno nuove caratteristiche: quelli periodici richiedono la CPU a intervalli costanti
+\end{mainframe}
+\subsection{Rate Monitonic Scheduling}
+\begin{mainframe}
+	Una priorità viene assegnata in base all'inverso del suo periodo
+\end{mainframe}
+\subsection{Schedulazione della scadenza più vicina (EDF)}
+\begin{mainframe}
+	Le priorità sono assegnate in base alle scandenze: quanto più è precoce la scadenza, tanto più alta è la priorità
+\end{mainframe}
+\subsection{Schedulazione a quote proporzionali}
+\begin{mainframe}
+	Le quote T sono distribuite tra tutti i processi del sistema.\\
+	Un'applicazione riceve N condivisioni dove $N < T$
+\end{mainframe}
+\subsection{Scheduling in tempo reale POSIX}
+\begin{mainframe}
+	Lo standard POSIX.1b API fornisce \textbf{funzioni per la gestione dei thread} in tempo reale.\\
+	Definisce due classi di schedulazione per i thread in tempo reale:
+	\begin{itemize}
+		\item $SCHED\_FIFO$: i thread sono programmati utilizzato una strategia FCFS con una coda FIFO. Non c'è time-slicing per i thread di uguale priorità
+		\item $SCHED\_RR$: simile a $SHED\_FIFO$, tranne per il fatto che il time-slicing (RR) avviene per i thread di pari priorità
+	\end{itemize}
+\end{mainframe}
+\subsection{Esempi di sistema operativo}
+\begin{mainframe}
+	\begin{itemize}
+		\item Schedulazione tradizionale UNIX
+		\item Scheduling di Linux
+		\item Scheduling Windows
+	\end{itemize}
+\end{mainframe}
+\subsubsection{Scheduling in UNIX}
+\begin{frame}
+	\frametitle{\insertsubsection: \insertsubsubsection}
+	\framesubtitle{\insertsection}
+	\begin{itemize}
+		\item L'algoritmo di scheduling favorisce i \textbf{job di tipo interattivo} (foreground)
+		\item Si tratta di un \textbf{round-robin con priorità}
+		\item Ad ogni processo è associata una priorità di scheduling. La priorità è rappresentata in senso decrescente
+		\item La priorità \textbf{varia dinamicamente}: al crescere del tempo di CPU utilizzato da un processo diminuisce la sua priorità. Analogamente, al crescere del tempo di attesa di un processo aumenta anche la sua priorità
+		\item Le priorità variano da 0 (massima) a 127 (minima). Da 0 a 49 per i processi che eseguono in modo kernel, da 50 a 127 per i processi in modo utente
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\begin{itemize}
+		\item Viene usato il meccanismo di \textbf{time-out}: ogni quanto di tempo l'interruzione di clock mette in funzione una procedura che esegue l'azione richiesta e predispone il clock per essere nuovamente chiamata
+		\item Quando si verifica un \textbf{event}, il kernel provvede a risvegliare tutti i processi in attesa di \textbf{event}. I processi vengono messi in coda per essere scelti dal meccanismo di scheduling
+		\item Possono nascere "condizioni di corsa" relative al meccanismo dgli eventi. Se un processo decide di sospendersi in attesa di un evento e l'evento si verifica prima che il processo completi la primitiva \textbf{sleep}, il processo rimane in attesa indefinita (\textbf{deadlock}), una soluzione al problema consiste nell'impedire all'evento di verificarsi durante l'esecuzione della primitiva
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	Prima del \textbf{kernel 2.5} Linux utilizzava lo "0(1) scheduler". Per ogni CPU e per ogni livello di priorità abbiamo due code:
+	\begin{itemize}
+		\item \textbf{Active queue}: per processi che non hanno usato tutto il loro timeslice
+		\item \textbf{Expired queue}: per quelli che l'hanno esauerito
+	\end{itemize}
+	se la coda active è vuota, le due code vengono scambiate.\\
+	Dal kernel 2.6.23 il \textbf{Completely Fair Scheduler} è lo scheduler di default per i task non RT: cerca di modellare una CPU multitasking ideale e precisa e che fornisce ad ogni processo la stessa capacità di elaborazione\\
+	Linux supporta il \textbf{bilanciamento di carico}, ma è anche consapevole di NUMA.\\
+	Il \textbf{dominio di scheduling è un insieme di core della CPU che possono essere bilanciati tra loro}
+\end{frame}
+\subsubsection{Scheduling di Windows}
+\begin{frame}
+		\frametitle{\insertsubsection: \insertsubsubsection}
+	\framesubtitle{\insertsection}
+	\begin{itemize}
+		\item Windows utilizza uno \textbf{scheduling preemptive basato sulle priorità}. I thread con priorità più alta vengono eseguiti successivamente
+		\item Il \textbf{dispatcher è lo scheduler}
+		\item Il thread viene eseguito fino a quando 1) non si blocca, 2) non utilizza un time slice, 3) non viene preempted da un thread a priorità superiore
+		\item La \textbf{classe variabile} è 1-15, la \textbf{classe in tempo reale} è 16-31
+		\item La priorità 0 è il thread di \textbf{gestione della memoria}
+		\item Coda per ogni priorità
+	\end{itemize}
+\end{frame}
+\begin{frame}{Classi di priorità di Windows}
+	L'API Win32 identifica diverse classi di priorità a cui un processo può appartenere ($REALTIME\_PRIORITY\_CLASS$, $HIGH\_PRIORITY\_CLASS$,...)\\
+	Un thread all'interno di una determinata classe di priorità ha una priorità relativa.\\
+	La classe di priorità e la priorità relativa si combinano per dare una priorità numerica.
+\end{frame}
+\subsection{Valutazione degli algoritmi}
+\begin{mainframe}
+	Come selezioare l'algoritmo di schedulazione della CPU per un SO? Intanto dobbiamo \textbf{determinare i criteri}
+	\begin{itemize}
+		\item massimizzare l'utilizzazione della CPU con il vincolo che il tempo di risposta max sia 1 sec
+		\item massimizzare il throughput in modo che il tempo di risposta sia proprozioale al tempo di esecuzione totale
+	\end{itemize}
+	\textbf{Modellazione deterministica}
+	\begin{itemize}
+		\item Tipo di valutazione analitica
+		\item Prende un particolare carico di lavoro predeterminato e definisce le prestazioni di ogni algoritmo per quel carico di lavoro
+	\end{itemize}
+\end{mainframe}
+\subsection{Valutazione deterministica}
+\begin{mainframe}
+	Per ogni algoritmo, calcolare il tempo medio minimo di attesa
+\end{mainframe}
+\subsection{Modelli di code}
+\begin{mainframe}
+	Descrivono l'arrivo dei processo e dei burst di CPU e I/O in modo probabilistico.\\
+	Un sistema informatico descritto come una rete di server, ciascuno con una coda di processi di attesa.
+\end{mainframe}
+\subsection{Simulazioni}
+\begin{mainframe}
+	I modelli di code sono limitati.\\
+	Le simulazioni sono più accurate
+	\begin{itemize}
+		\item Modello programmato di sistema informatico
+		\item Il clock è una variabile
+		\item Si raccolgono le statistiche che indicano le prestazioni dell'algoritmo
+	\end{itemize}
+\end{mainframe}
+\section{Sincronizzazione dei processi}
+\subsection{Introduzione}
+\begin{mainframe}
+	I task (processi e thread) possono essere eseguiti simultaneamente, nel modello ad ambiente globale, l'accesso concorrente dei task a dati condivisi in memoria può causare incoerenza dei dati a causa dell'interferenza.\\
+	Il mantenimento della coerenza dei dati richiede meccanismi che assicurino l'esecuzione ordinata dei task cooperanti
+\end{mainframe}
+\subsection{Tipi di interazione tra processi}
+\begin{mainframe}
+	\textbf{Cooperazione}:
+	\begin{itemize}
+		\item Comprende tutte le interazioni \textbf{prevedibili e desiderate}, insiste cioè nella logica dei programmi
+		\item Prevede lo scambio di informazioni
+		\begin{itemize}
+			\item Segnale temporale
+			\item Messaggi
+		\end{itemize}
+	\end{itemize}
+	\textbf{Competizione}
+	\begin{itemize}
+		\item La "macchina concorrente" su cui i processi sono eseguiti mette a disposizione un numero limitato di risorse
+		\item Competizione per l'uso di risorse comuni che non possono essere usate contemporaneamente
+	\end{itemize}
+	\textbf{Interferenza}: provocata da errori di programmazione
+	\begin{itemize}
+		\item Inserimento nel programma di interazioni tra processi \textbf{non richieste} dalla natura del problema
+		\item Erronea soluzione a problemi di interazione necessari per il corretto funzionamento del programma
+	\end{itemize}
+\end{mainframe}
+\subsection{Esempi di interferenza}
+\begin{mainframe}
+	\begin{itemize}
+		\item \textbf{Esempio di interferenza del primo tipo}
+		\begin{enumerate}
+			\item Solo il processo P deve operare su una risorsa R
+			\item Per un errore di programmazione viene inserita nel processo Q un'istruzione che modifica lo stato di R
+			\item La condizione di errore si presenta solo per partcolari velocità relative dei processi
+		\end{enumerate}
+		\item \textbf{Esempio di interferenza del secondo tipo}
+		\begin{enumerate}
+			\item I processi P e Q competono per una stampante
+			\item Si garantisce la \textbf{mutua esclusione} solo per la stampa della prima linea
+			\item La condizione di errore si presenta solo per particolari velocità relative dei processi
+		\end{enumerate}
+	\end{itemize}
+\end{mainframe}
+\subsection{Problema delle interferenze}
+\begin{mainframe}
+	Un problema fondamentale della programmazione concorrente è l'eliminazione delle interferenze.\\
+	L'eliminazione delle interferenze del primo tipo risulta semplificata se la macchina concorrente fornisce \textbf{meccanismi di protezione degli accessi}.\\
+	Per evitare le interferenze del secondo tipo, trattandosi di interazioni previste ma programmate in modo errato, è opportuno adottare tecniche di \textbf{multiprogrammazione strutturata}
+\end{mainframe}
+\subsection{Sezione critica}
+\begin{mainframe}
+	\begin{block}{Sezione critica}
+		È la sequenza di istruzioni con le quali un processo accede e modifica un insieme di variabili comuni prende il nome di \textbf{sezione critica}
+	\end{block}
+	Ad un insieme di variabili comuni possono essere associate una sola sezione critica o più sezioni critiche.\\
+	La regola di mutua esclusione stabilisce che:
+	\begin{itemize}
+		\item "sezioni critiche appartenenti alla stessa classe devono escludersi mutuamente nel tempo"
+		\item "una sola sezione critica di una classe può essere in esecuzione ad ogni istante"
+	\end{itemize}
+\end{mainframe}
+\subsection{Requisiti di una soluzione al problema della sezione critica}
+\begin{mainframe}
+	\begin{itemize}
+		\item \textbf{Mutua esclusione}: se un processo $P_i$ sta eseguendo la sua sezione critica, \textbf{nessun altro processo può eseguire la propria}
+		\item \textbf{Avanzamento}: se nessun processo è in esecuzione nella sua sezione critica ed esistono processi che desiderano entrare nella loro sezione critica, la selezione dei processi che entreranno successivamente nella sezione critica non può essere rimandata all'infinito
+		\item \textbf{Attesa limitata}: deve esistere un limite al numero di volte in cui è consentito ad altri processi entrare nella propria sezione critica dopo che un processo ha fatto richiesta di entrare nella propria sezione critica e prima che tale richiesta venga accolta
+	\end{itemize}
+\end{mainframe}
+\subsection{Soluzione al problema della mutua esclusione}
+\begin{mainframe}
+	Tempificazione dell'esecuzione dei singoli processi da parte del programmatore.\\
+	Inibizione delle interruzioni del processore sul quale sono eseguite le sezioni critiche durante l'esecuzione di ciascuna di esse.\\
+	Strumenti di sincronizzazione: semafori e altri
+\end{mainframe}
+\subsection{Lock mutex}
+\begin{mainframe}
+	Le soluzioni tramite algoritmi come quello di Peterson o istruzioni hardware di \textbf{test-and-set} atomiche sono complicate e generalmente inaccessibili ai programmatori di applicazioni.\\
+	I progettisti di SO costruiscono strumenti software per risolvere il problema dlele sezioni critiche.\\
+	La più semplice è il \textbf{lock mutex}: protegge una sezione critica acquisendo (\textit{acquire()}) prima un lock e poi rilasciandolo (\textit{release()}) alla fine della sezione critica.
+\end{mainframe}
+\section{Sincronizzazione dei processi in ambiente globale mediante semafori}
+\subsection{Semafori}
+\begin{mainframe}
+	Come garantire la mutua esclusione tra i processi nell'accesso alle sezioni critiche o alle risorse?\\
+	I \textbf{semafori}, utilizzati tramite le loro primitive \textbf{wait} e \textbf{signal}, sono uno strumento di sincronizzazione generale e flessibile al problema della mutua esclusione e ad altri problemi di sincronizzazione
+	\begin{block}{Semaforo}
+		Un \textbf{semaforo} è una variabile intera non negativa ($s \geq 0$) con valore iniziale $s_0 \geq 0$.\\
+		Al semaforo è associata una \textbf{lista di attesa} $Q_s$ nella quale sono posti i descrittori dei processi che attendono l'autorizzazione a proseguire nell'esecuzione.
+	\end{block}
+\end{mainframe}
+\subsection{Wait e signal}
+\begin{mainframe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 18.27.33}
+	\end{figure}
+\end{mainframe}
+\subsection{Mutua esclusione tramite semaforo}
+\begin{mainframe}
+	Ad ogni classe di sezioni critiche viene associata una \textbf{variabile semaforo} $s$; prologo ed epilogo vengono realizzati rispettivamente tramite \textit{wait()} e \textit{signal()}.\\
+	Sono risolti i problemi di attesa attiva e attesa indefinita. Un processo non può riappropriarsi della sezione critica che ha appena liberato se ci sono altre richieste pendenti
+\end{mainframe}
+\subsection{Indivisibilità di wait e signal}
+\begin{mainframe}
+	Occorre garantire che l'azione di analisi e modifica del semaforo non sia separata dall'azione di sospensione.\\
+	Si può ottenere indivisibilità \textbf{inibendo le interruzioni durante l'esecuzione di wait e signal}.\\
+	Nel caso di \textbf{sistema multiprocessore} occorre considerare \textit{wait} e \textit{signal} come \textbf{sezioni critiche brevi} e \textbf{proteggerle mediante un meccanismo di più basso livello denominato lock}
+\end{mainframe}
+\subsection{Lock e Unlock}
+\begin{mainframe}
+	Lock e Unlock devono essere \textbf{indivisibili}\\
+	Nell'ipotesi che l'Hw garantisca la mutua esclusione solo a livello di singola lettura o scrittura di una cella di memoria, solo \textit{unlock(x)} è indivisile.
+\end{mainframe}
+\subsection{Livelli di sezioni critiche}
+\begin{mainframe}
+	\begin{itemize}
+		\item I LIVELLO sezioni critiche: $S_1$, $S_2$ (codice a livello utente) mutua esclusione tramite \textit{wait e signal}
+		\item II LIVELLO sezioni critiche: \textit{wait()} e \textit{signal()}, mutua esclusione tramite \textit{lock(x)} e \textit{unlock(x)}
+		\item III LIVELLO sezioni critiche: \textit{lock(x)}, \textit{unlock(x)}, mutua esclusione tramite hardware
+	\end{itemize}
+\end{mainframe}
+\subsection{Produttore-Consumatore}
+\begin{mainframe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 18.36.18}
+	\end{figure}
+\end{mainframe}
+\subsection{Regolazione dell'esecuzione di processi e thread}
+\begin{mainframe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-29 alle 18.40.18}
+	\end{figure}
+\end{mainframe}
+\subsection{Programmazione concorrente e semafori}
+\begin{mainframe}
+	I semafori sono uno strumento \textbf{potente e generale} per la soluzione dei problemi di programmazione concorrente in ambiente globale, sia per competizione che per cooperazione di thread e processi.\\
+	I semafori sono uno \textbf{strumento potente ma a basso livello}: è difficile risolvere problemi complessi utilizzando semafori\\
+	Si utilizzano pertanto \textbf{meccanismi di più alto livello}:
+	\begin{itemize}
+		\item Costrutti come Monitor, Regioni Critiche
+		\item Librerie per la programmazione multithread
+		\item Adottando pattern progettuali di provata affidabilità ed efficacia
+	\end{itemize}
+\end{mainframe}
+\subsection{Monitor}
+\begin{mainframe}
+	Un'astrazione di alto livello che fornisce un meccanismo comodo ed efficace per la sincronizzazione dei processi.\\
+	Tipo di dati astratto, variabili interne accessibili solo dal codice all'interno della procedura.\\
+\textbf{	All'interno del monitor può essere attivo un solo processo alla volta}
+\end{mainframe}
+\subsection{Buffer di comunicazione nel modello a scambio di messaggi}
+\begin{mainframe}
+	È necessario un \textbf{processo gestore} (buffer control) della risorsa buffer che serve i processi produttori $P_i$ e i processi consumatori $C_j$.
+	\begin{itemize}
+		\item $P_i$ manda un messaggio al processo \textit{buffer control} che a sua volta lo deve inviare ad uno dei processi $C_j$
+		\item Ciascun $C_j$ deve inviare un messaggio a \textit{buffer control} per indicare che è pronto a ricevere il messaggio
+		\item Devono esistere due code per memorizzare i due tipi di messaggi \textit{dataq} e \textit{readyq}
+	\end{itemize}
+\end{mainframe}
+\section{Deadlock}
+\subsection{Deadlock (blocco diretto)}
+\begin{mainframe}
+	Più processi possono entrare in competizione per ottenere l'uso di risorse. Se la \textbf{risorsa richiesta non è disponibile il processo viene posto in condizione di attesa}.\\
+	Se un processo in attesa non cambia più il suo stato, cioè se le risorse sono trattenute da altri processi essi pure in attesa, si ha una \textbf{sitauzione di deadlock} (blocco critico in stallo).\\
+	\begin{block}{Blocco critico}
+		Per blocco critico si intende una situazione nella quale uno o più processi rimangono \textbf{indefinitamente bloccati} a causa della impossibilità del verificarsi delle condizioni necessarie per il loro proseguimento
+	\end{block}
+\end{mainframe}
+\subsection{Risorse riusabili e risorse consumabili}
+\begin{mainframe}
+	\begin{block}{Risorse riusabili}
+		Dopo il loro uso da parte di un processo possono essere usate da altri processi
+	\end{block}
+	\begin{block}{Risorse consumabili}
+		\begin{itemize}
+			\item Sono segnali o messaggi scambiati tra processi
+			\item Cessano di esistere non appena acquisite da un processo
+			\item Sono potenzialmente in numero infinito
+		\end{itemize}
+	\end{block}
+\end{mainframe}
+\subsection{Modello di sistema}
+\begin{mainframe}
+	Il sistema è costituito da risorse.\\
+	Tipi di risorse $R_1$, $R_2$,...,$R_m$\\
+	Ogni tipo di risorsa $R_i$ ha $W_i$ istanze.\\
+	Ogni processo utilizza una risorsa come segue:
+	\begin{itemize}
+		\item \textbf{Richiesta}
+		\item \textbf{Utilizzo}
+		\item \textbf{Rilascio}
+	\end{itemize}
+\end{mainframe}
+\subsection{Esempio di deadlock}
+\begin{mainframe}
+	Due processi A e B necessitano entrambi delle risorse $R_1$ (disco) e $R_2$ (stampante)
+	\begin{itemize}
+		\item A richiede e ottiene R1
+		\item B richiede e ottiene R2
+		\item A richiede R2 e viene bloccato
+		\item B richiede R1 e viene bloccato
+	\end{itemize}
+	Deadlock provocato da un \textbf{uso scorretto delle primitive di sincronizzazione}\\
+	Deadlock provocato da un \textbf{accesso non ordinato alle risorse}
+\end{mainframe}
+\subsection{Grafo di allocazione delle risorse}
+\begin{mainframe}
+	$G = \{V, E\}$, dove V è l'insieme dei vertiici ed E quello dei lati.\\
+	L'insieme V è suddiviso in due tipi (\textbf{grafo bipartito}): nell'insieme dei processi e nell'insieme delle risorse.\\
+	Quando una richiesta è \textbf{soddisfatta} il lato di richiesta viene trasformato in lato di assegnazione. Quando il processo rilascia la risorsa, il lato viene eliminato.
+\end{mainframe}
+\begin{frame}
+	\begin{multicols}{2}
+		\begin{figure}
+			\centering
+			\includegraphics[width=1 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 10.54.54}
+		\end{figure}
+		\begin{figure}
+			\centering
+			\includegraphics[width=1 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 10.55.03}
+		\end{figure}
+	\end{multicols}
+\end{frame}
+\subsection{Condizioni per il deadlock}
+\begin{mainframe}
+	È \textbf{necessario}, ma \textbf{non sufficiente} che si verifichino quattro condizioni per il deadlock
+	\begin{enumerate}
+		\item \textbf{Mutua esclusione}: ogni risorsa risulta assegnata esattamente ad un processo oppure è disponibile
+		\item \textbf{Processo e attesa (hold and wait)}: un processo che detiene almeno una risorsa può richiederne altre che sono detenute da altri processi
+		\item \textbf{Assenza di revoca}: le risorse precedentemente assegnate possono essere rilasciate solo volontariamente
+		\item \textbf{Attesa circolare}: è presente una situazione di attesa circolare tra un gruppo di processi: ogni processo è in attesa di una risorsa posseduta dal processo che esegue nella lista, e l'ultimo processo è in attesa di una risorsa detenuta dal primo processo considerato
+	\end{enumerate}
+\end{mainframe}
+\subsection{Strategie per ignorare il deadlock}
+\begin{mainframe}
+	{\tiny
+	\begin{enumerate}
+		\item \textbf{Ignorare il problema}: è meglio accettare deadlock occasionali piuttosto che dover utilizzare una sola risorsa alla volta
+		\item \textbf{Rilevare la presenza di deadlock e risolverlo}: approccio denominato \textit{detection and recovery}.\\
+		Periodicamente il SO controlla un grafo di allocazione delle risorse, se c'è un ciclo (deadlock) si terminano uno o più processi nel ciclo fino a quando non vi è più deadlock.
+		\item \textbf{Prevenzione dinamica}: allocazione attenta delle risorse, vincolare i processi in modo che il deadlock risulti strutturalmente impossibile \textbf{mediante decisioni prese a tempo di esecuzione}.\\
+		\textbf{Algoritmo del banchiere}
+		\begin{itemize}
+			\item L'algoritmo richiede di conoscere a priori il massimo numero di risorse richeiste da ciascun processo e presuppone, come caso peggiore, che ogni processo possa richiedere contemporaneamente il \textbf{numero massimo} di risorse dichiarato e \textbf{mantenerle tutte durante l'esecuzione}
+			\item L'algoritmo identifica le situazioni rischiose e nega l'assegnazione di risorse disponibili quando la loro attribuzione potrebbe portare ad un deadlock
+			\item Un costo quadratico viene pagato ad ogni richiesta di allocazione di una risorsa libera
+			\item Appropriato per i sistemi di elaborazione con carico statico noto
+		\end{itemize}
+		\item \textbf{Prevenzione strutturale} (statica)
+		\begin{itemize}
+			\item Occorre negare una delle 4 condizioni di Havender
+			\item Negare la mutua esclusione?
+			\item Negare il possesso e attesa?
+			\item Negare la preemption?
+			\item Normalmente si evita l'\textbf{instaurarsi di una condizione di attesa circolare} imponendo un \textbf{ordine sulla richiesta delle risorse}
+		\end{itemize}
+	\end{enumerate}
+}
+\end{mainframe}
+\subsection{Deadlock nei sistemi reali}
+\begin{mainframe}
+	Nei sistemi interattivi, il deadlock è in genere ignorato nel codice utente, il deadlock è sempre prevenuto staticamente nei sistemi in tempo reale.\\
+	Il deadlock è prevenuto all'interno del kernel del SO; i programmatori del SO seguono un ordine concordato nell'acquisire le risorse.\\
+	Il deadlock viene talvolta prevenuto dinamicamente o con tecniche di \textit{detection and  recovery} nei sistemi gestionali con carico transazionale stabile e in alcuni sistemi di calcolo
+\end{mainframe}
+\section{Sistema di protezione}
+\subsection{Introduzione}
+\begin{mainframe}
+	Un processo potrebbe tentare di modificare il programma o i dati di un altro processo o di parte del SO stesso, o di accedere direttamente ai controllori di dispositivi.\\
+	All'\textbf{hardware} è affidato il \textbf{compito di rilevazione degli errori} come possibili errori di programmazione o comportamenti deliberatamente intrusivi.\\
+	Gli \textbf{errori} vengono segnalati e affidati alla \textbf{gestione del SO} tramite il meccanismo delle eccezioni/trap
+\end{mainframe}
+\begin{frame}
+	Abbiamo già visto come il sistema di protezione richieda l'esistenza di \textbf{più modi di funziomento della CPU}:
+	\begin{itemize}
+		\item \textbf{Supervisor mode}: monitor mode
+		\item \textbf{User mode}
+	\end{itemize}
+	Il passaggio dal modo \textbf{user} a quello \textbf{supervisor} avviene tramite l'interruzione (esterna, asincrona o interna, sincrona o da trap).\\
+	Il passaggio dal modo \textbf{supervisor} al modo \textbf{user} avviene tramite un'istruzione speciale di cambiamento di modo eseguita dal SO prima della cessione del controllo ad un processo utente
+\end{frame}
+\subsection{Principi di protezione}
+\begin{mainframe}
+	Principio guida, \textbf{principio del minimo privilegio}.
+	\begin{itemize}
+		\item Ai programmi, agli utenti e ai sistemi devono essere concessi solo i \textbf{privilegi sufficienti} per svolgere i loro compiti
+		\item \textbf{Permessi} impostati correttamente possono limitare i danni se l'entità presenta un bug o viene abusata
+		\item Possono essere statici o dinamici \textbf{cambio di dominio, escalation di privilegi}.
+		\item La compartimentazione è un concetto derivato per quanto riguarda l'accesso ai dati
+		\item \textbf{Audit trail} - registrazione di tutte le attività orientate alla protezione, importante per capire cosa è successo e perché, e per individuare le cose che non dovrebbero succedere
+	\end{itemize}
+\end{mainframe}
+\subsection{Difesa in profondità}
+\begin{mainframe}
+	Abbiamo \textbf{più livelli di protezione}, introdotti a livello di progettazione. Ogni dispositivo di sicurezza è in qualche misura vulnerabile e può essere difettoso.\\
+	Si assume che i livelli siano indipendenti, il fallimento di un livello non deve essere collagato ai fallimenti degli altri
+\end{mainframe}
+\subsection{Misure applicabili ai diversi livelli}
+\begin{mainframe}
+	\begin{itemize}
+		\item Organizzazione e aspetti umani: formazione, consapevolezza, gestione del rischio
+		\item Sicurezza fisica: protezione fisica, serrature, dispositivi di tracking
+		\item Perimetro: firewall
+		\item Rete: segmentazione rete, IPSec
+		\item Endpoint
+		\item Applicazioni
+		\item Dati
+	\end{itemize}
+\end{mainframe}
+\subsection{Anelli di protezione}
+\begin{mainframe}
+	Componenti ordinati in base alla qualità di privilegi e protetti l'uno dall'altro
+	\begin{itemize}
+		\item \textbf{Gate utilizzati per il passaggio da un livello all'altro}
+		\item \textbf{Gli hypervisor} hanno introdotto la necessità di un ulteriore anello
+		\item I processori ARMv7 hanno aggiunto l'anello \textbf{TrustZone(TZ)} per proteggere le funzioni crittografiche con accesso tramite la nuova istruzione \textbf{Secure Monitor Call (SMC)}
+	\end{itemize}
+\end{mainframe}
+\subsection{Dominio di protezione}
+\begin{mainframe}
+	Gli anelli di protezione separano le funzioni in domini e le ordinano in modo gerarchico.\\
+	I computer possono essere trattati come processi e oggetti: \textbf{oggetti hardware} (come dispositivi) e \textbf{oggetti software} (come i file, i programmi, i semafori).\\
+	Un processo, ad esempio, dovrebbe avere \textbf{accesso solo agli oggetti di cui ha bisogno per portare a termine il suo compito}, il principio del \textbf{need-to-know}.\\
+	L'implementazione può avvenire tramite processi che operano in un \textbf{dominio di protezione}, che specifica le risorse a cui un processo può accedere
+\end{mainframe}
+\subsection{Struttura del dominio}
+\begin{mainframe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 16.05.59}
+	\end{figure}
+\end{mainframe}
+\subsection{Implementazione del dominio - UNIX}
+\begin{mainframe}
+	Cambio di dominio tramite il \textit{file system}
+	\begin{itemize}
+		\item Ad ogni file è associato un bit di dominio
+		\item Quando il file viene eseguito e setuid è attivo allora l'ID utente viene impostato su quello del proprietario del file in esecuzione
+		\item Cambio di dominio tramite password
+		\item Commutazione di dominio tramite comandi (\textit{sudo})
+	\end{itemize}
+\end{mainframe}
+\subsection{Implementazione del dominio - ID app Android}
+\begin{mainframe}
+	In Android gli ID utente distinti sono forniti su base applicativa.\\
+	Quando una app viene installata il deamon installd le assegna un ID utente e un ID gruppo distinti, insieme a una directory di dati privata la cui proprietà è concessa solo a questa combinazione di ID utente e ID gruppo.
+\end{mainframe}
+\subsection{Matrice di accesso}
+\begin{mainframe}
+	\begin{itemize}
+		\item Visualizzazione della proteizone come matrice
+		\item Le righe rappresentano i domini
+		\item Le colonne rappresentano gli oggetti
+		\item \textit{Access(i,j)} è l'insieme delle operazioni che un processo in esecuzione nel Dominio può invocare sull'Oggetto
+	\end{itemize}
+	Se un processo nel dominio $D_i$ tenta di fare "op" sull'oggetto $O_j$, allora "op" deve essere nella matrice di accesso
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-30 alle 16.14.44}
+	\end{figure}
+\end{mainframe}
+\begin{frame}
+	Con la matrice di accesso si separa il meccanismo dalla politica
+	\begin{itemize}
+		\item \textbf{Meccanismo}
+		\begin{itemize}
+			\item Il SO fornisce una matrice di accesso e delle regole
+			\item Si assicura che la matrice sia manipolata solo da agenti autorizzati e che le regole siano rigorosamente applicate
+		\end{itemize}
+		\item \textbf{Politica}
+		\begin{itemize}
+			\item L'utente detta la politica
+			\item Chi può accedere a quale oggetto e in quale modalità
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+\subsection{Implementazione della matrice di accesso}
+\begin{mainframe}
+	in generale, una matrice sparsa
+	\begin{itemize}
+		\item \textbf{Opzione 1 - Tabella globale}
+		\begin{itemize}
+			\item memorizzazione di triple ordinate $< Dominio, Oggetto, Set \ di \ diritti >$ nella tabella
+			\item ma la tabelle potrebbe essere troppo grande per la memoria principale
+		\end{itemize}
+		\item \textbf{Opzione 2 - Liste di accesso per gli oggetti}
+		\begin{itemize}
+			\item ogni colonna è implementata come lista di accesso per un oggetto
+			\item l'elenco risultante per oggetto considste in coppie ordinate $<Dominio, Set \ di \ diritti>$ che definiscono tutti i domini con un insieme non vuoto di diritti di accesso per l'oggetto
+		\end{itemize}
+\end{itemize}
+\end{mainframe}
+\begin{frame}
+	\begin{itemize}
+			\item \textbf{Opzione 3 - Lista delle capability per i domini}
+	\begin{itemize}
+			\item la lista per le capability per il dominio è un elenco di oggetti insieme alle operazioni consentite su di essi
+		\item oggetto rappresentato dal suo nome o indirizzo, chiamato \textbf{capability}
+		\item Elenco di capability associate al dominio ma mai direttamente accessibili dal dominio
+	\end{itemize}
+\item \textbf{Opzione 4 - Lock key}
+\begin{itemize}
+	\item Compromesso tra liste di accesso e liste di capability
+	\item Ogni oggetto ha un elenco di pattern e bit unici, chiamati lock
+	\item Ogni dominio ha un elenco di pattern di bit unici, chiamati chiavi
+\end{itemize}
+	\end{itemize}
+\end{frame}
+\subsection{Confronto tra implementazioni}
+\begin{mainframe}
+	Molti compromessi da considerare
+	\begin{itemize}
+		\item la tabella globale è semplice, ma può essere molto grande
+		\item le access list corrispondono alle esigenze degli utenti: determinare l'insieme dei diritti di accesso per un dominio non localizzato è difficile
+		\item le liste di capability sono utili per localizzare le informazioni per un determinato processo
+		\item lock-key efficace e flessibile, le chiavi possono essere passate liberamente da un dominio all'altro
+	\end{itemize}
+\end{mainframe}
+\subsection{Revoca dei diritti di accesso}
+\begin{mainframe}
+	Varie opzioni per rimuovere il diritto di accesso di un dominio ad un oggetto:
+	\begin{itemize}
+		\item Immediata o ritardata
+		\item Selettivo o generale
+		\item Parziale o totale
+		\item Temporaneo o permanente
+	\end{itemize}
+	\textit{Acces list} - Eliminare i diritti di accesso dall'access list è \textbf{facile e immediato}, basta ricercare una voce nella lista ed eliminarla\\
+\end{mainframe}
+\begin{frame}
+	\textit{Elenco delle capability} - Schema necessario per individuare le capability nel sistema prima di poterle revocare
+	\begin{itemize}
+		\item Riacquisizione - cancellazione periodica
+		\item Back-pointer - insieme di puntatori da ogni oggetto a tutte le capability di quell'oggetto
+		\item Indirezione - la capacità punta alla voce della tabella globale che punta all'oggetto
+		\item Chiavi - bit univoci associati alla capability, generati quando la capability viene creata
+	\end{itemize}
+\end{frame}
+\subsection{Role-based Access Control}
+\begin{mainframe}
+	La protezione può essere applicata anche a risorse diverse dai file.\\
+	Oracle Solaris 10 fornisce un \textbf{controllo degli accessi basato sui ruoli (RBAC)} per implementare il minimo privilegio.\\
+	Il \textbf{privilegio} è il diritto di eseguire una chiamata di sistema o di utilizzare un'opzione all'interno di una chiamata di sistema.\\
+	Agli utenti vengono assegnati \textbf{ruoli} che garantiscono l'accesso a privilegi e programmi
+\end{mainframe}
+\subsection{Controllo dell'accesso obbligatorio (MAC)}
+\begin{mainframe}
+	Il SO tradizionalmente hanno un controllo di accesso discrezionale (DAC) per limitare l'accesso ai file e ad altri oggetti, la \textbf{discrezionalità è un pounto debole}\\
+	Una forma più forte è il controllo obbligatorio degli accessi (MAC), che nemmeno l'utente root può aggirare.\\
+	La base sono le etichette assegnate agli oggetti e ai soggetti (compresi i processi), quando un soggetto richiede l'accesso ad un oggetto, la politica controlla se un determinato soggetto con etichetta è autorizzato o meno a eseguire l'azione sull'oggetto
+\end{mainframe}
+\subsection{Sistemi basati sulle capability}
+\begin{mainframe}
+	\begin{itemize}
+		\item Hydra e CAP sono stati i primi sistemi basati sulle capability
+		\item Ora incluse in Linux, Android e altre, basate su POSIX.1e
+		\begin{itemize}
+			\item essenzialmente suddivide i poteri root in aree distinte, ognuna rappresentata da una bit e da una bitmap
+			\item il controllo a grana finne sulle operazioni privilegiate può essere ottenuto impostando o mascherando la bitmap
+		\end{itemize}
+	\end{itemize}
+\end{mainframe}
+\subsection{Altri metodi di miglioramento della protezione}
+\begin{mainframe}
+{\tiny 	\textbf{Protezione dell'integrità del sistema (SIP)}
+	\begin{itemize}
+		\item Introdotto da Apple in macOS 10.11
+		\item Limita l'accesso ai file e alle risorse di sistema, anche da parte di root
+		\item Utilizza attributi di file estesi per contrassegnare un binario per limitare le modifiche, disabilitare il debug e lo scrutinio
+	\end{itemize}
+	\textbf{Filtraggio delle chiamate di sistema}
+	\begin{itemize}
+		\item Come un firewall, per le chiamate di sistema
+		\item Può anche essere più profondo
+		\item Linux implementa tramite SECCOMP-BPF
+	\end{itemize}
+	\textbf{Sandboxing}
+	\begin{itemize}
+		\item Esecuzione del processo in un ambiente limitato
+		\item Imporre un insieme di restrizioni inammovibili all'inizio dell'avvio del processo
+		\item Il processore non è in grado di accedere a nessun risorsa oltre a quelle consentite
+		\item Apple è stata una delle prime ad adottare questo sistema, a partire dalla funzione "seabelt" di macOS 10.5
+	\end{itemize}
+	\textbf{Firma del codice da parte del programmatore}}
+\end{mainframe}
+\subsection{Protezione basata sul linguaggio di programmazione}
+\begin{mainframe}
+	La specifica della protezione in un linguaggio di programmazione consente di descrivere ad alto livello le politiche per l'allocazione e l'uso delle risorse.\\
+	L'implementazione del linguaggio può fornire software per l'applicazione della protezione quando il controllo automatico supportato dall'Hw non è disponibile
+\end{mainframe}
+\subsection{Protezione in Java 2}
+\begin{mainframe}
+	La protezione è gestita dalla macchina virtuale Java (JVM).\\
+	A una classe viene assegnato un dominio di protezione quando viene caricata dalla JVM.\\
+	Se viene invocato un meoto di libreria che esegue un'operazione privilegiata, lo stack viene ispezionato per assicurarsi che l'operazione possa essere eseguita dalla libreria
+\end{mainframe}
+\section{Gestione della memoria principale e virtuale}
+\subsection{Introduzione}
+\begin{mainframe}
+	Il programma deve essere portato (da disco) in memoria e collocato all'interno di un processo per poter essere eseguito.\\
+	La memoria principale e i registri sono l'unica memoria a cui la CPU può accedere dirattamente.\\
+	L'accesso ai registri avviene in un ciclo di clock della CPU.\\
+	La \textbf{cache} si colloca tra la memoria principale e i registri della CPU
+\end{mainframe}
+\subsection{Protezione della memoria con registri limite}
+\begin{mainframe}
+	Una possibili implementazione: prima di mettere un processo in esecuzione, il SO ne confina lo spazio logico di memoria mediante i registri limite
+\end{mainframe}
+\subsection{Protezione della memoria in Hw con registri limite}
+\begin{mainframe}
+	La CPU deve controllare ogni accesso alla memoria generato in modalità utente per assicurarsi che sia compreso tra la base e il limite per quell'utente.\\
+	Le istruzioni per caricare i registri base e limite sono privilegiate
+\end{mainframe}
+\subsection{Binding degli indirizzi}
+\begin{mainframe}
+	I programmi su disco, pronti per essere portati in memoria per essere eseguiti, formano una coda di ingresso.\\
+	Scomodo avere l'indirizzo fisico del primo processo utente sempre a 0.\\
+	Indirizzi rappresentati in modi diversi in fasi diverse della vita di un programma
+	\begin{itemize}
+		\item Gli indirizzi del codice sorgente di solito sono simbolici
+		\item Gli indirizzi del codice compilato \textbf{si legato (bind)} a indirizzi rilocabili
+		\item Il linker o il loader legheranno gli indirizzi rilocabili agli indirizzi assoluti
+	\end{itemize}
+\end{mainframe}
+\subsection{Binding di istruzioni e dati alla memoria}
+\begin{mainframe}
+	Il binding delle istruzioni e dei dati agli indirizzi di memoria può avvenire in tre fasi diverse
+	\begin{itemize}
+		\item \textbf{A tempo di compilazione}: se la posizione in memoria è nota a priori, è possibile generare \textbf{codice assoluto}, è necessario ricompilare il codice se la posizione iniziale cambia
+		\item \textbf{A tempo di caricamento}: deve essere gerato \textbf{codice rilocabile} se la posizione in memoria non è nota al momento della compilazione
+		\item \textbf{A tempo di esecuzione}: binding ritardato fino al tempo di esecuzione se il processo può essere spostato durante la sua esecuzione da un segmento di memoria ad un altro
+	\end{itemize}
+\end{mainframe}
+\subsection{Spazio degli indirizzi logici e fisici}
+\begin{mainframe}
+	Il concetto di uno spazio di indirizzo logico che viene legato ad uno \textbf{spazio di indirizzamento fisico} separato è centrale nella gestione della memoria
+	\begin{itemize}
+		\item \textbf{Indirizzo logico}: generato dalla CPU, indicato anche come \textbf{indirizzo virtuale}
+		\item \textbf{Indirizzo fisico}: indirizzo visto dall'unità di memoria
+	\end{itemize}
+	Lo \textbf{spazio degli indirizzi logici} è l'insieme di tutti gli indirizzi logici generati da un programma.\\
+	Lo \textbf{spazio degli indirizzi fisici} è l'insieme di tutti gli indirizzi fisici generati da un programma
+\end{mainframe}
+\subsection{Unità di gestione della memoria (MMU)}
+\begin{mainframe}
+	Dispositivo hardware che a tempo di esecuzione mappa gli indirizzi virtuali in quelli fisici.\\
+	Molti metodi possibili per il mapping\\
+	Si consideri uno schema semplice, che è una generalizzazione dello schema dei registri di base.\\
+	Il registro di base ora si chiama \textbf{registro di rilocazione}.\\
+	Il valore nel registro di rilocazione viene aggiunto a ogni indirizzo generato da un processo utente nel momento in cui viene inviato alla memoria.
+\end{mainframe}
+\subsection{Caricamento dinamico}
+\begin{mainframe}
+	\begin{itemize}
+		\item Non è necessario che l'intero programma sia in memoria per poter essere eseguito
+		\item Una routine non viene caricata fino a quando non viene chiamata
+		\item Migliore utilizzo dello spazio di memoria, una routine non utilizzata non viene mai caricata
+		\item Utile quando sono necessarie grandi quantità di codice per gestire casi poco frequenti
+	\end{itemize}
+\end{mainframe}
+\subsection{Linking dinamico}
+\begin{mainframe}
+	\begin{itemize}
+		\item \textbf{Linking statico} - librerie di sistema e codice di programma combinati dal loader nel file eseguibile del programma
+		\item \textbf{Linking dinamico} - linking rimandato al momento dell'esecuzione
+	\end{itemize}
+	Il SO controlla se la routine si trova nell'indirizzo di memoria del processo.\\
+	Il collegamento dinamico è particolarmente utile per le librerie.\\
+	Sistema noto anche come \textbf{librerie convise} (shared libraries o DLL)
+\end{mainframe}
+\subsection{Allocazione contigua}
+\begin{mainframe}
+	La memoria principale deve supportare sia il sistema operativo che i processi utente.\\
+	Risorsa limitata, deve essere allocata in modo efficiente.\\
+	La \textbf{memoria principale} è solitamente suddivisa in \textbf{due partizioni}:
+	\begin{itemize}
+		\item Sistema operativo residente, di solito nella parte bassa della memoria
+		\item Processi utente vengono tenuti nella parte alta della memoria
+		\item Ogni processo è contenuto in una singola sezione contigua di memoria
+	\end{itemize}
+	I registri di rilocazione sono usati per proteggere i processi utente uno dall'altro, ed impedire modifiche al codice e ai dati del SO
+	\begin{itemize}
+		\item Il registro base contiene il valore dell'indirizzo fisico più piccolo
+		\item Il registro limite contiene un intervallo di indirizzi logici
+		\item La MMU mappa gli indirizzi logici in modo dinamico
+	\end{itemize}
+\end{mainframe}
+\subsection{Partizionamento variabile}
+\begin{mainframe}
+	Allocazione di partizioni multiple
+	\begin{itemize}
+		\item \textbf{Dimensioni variabili} delle partizioni per l'efficienza
+		\item \textbf{Buco (hole)} - blocco di memoria disponibile, buchi di varie dimensioni sono sparsi in tutta la memoria
+		\item Il processo che esce libera la sua partizione, le partizioni libere adiacenti si combinano tra loro
+		\item Il sistema SO mantiene informazioni su:
+		\begin{enumerate}
+			\item partizioni allocate
+			\item partizioni libere (buchi)
+		\end{enumerate}
+	\end{itemize}
+\end{mainframe}
+\subsection{Problema di allocazione dinamica dello storage}
+\begin{mainframe}
+	Come può soddisfare una richiesta di dimensione \textit{n} da una lista di buchi liberi?
+	\begin{itemize}
+		\item \textbf{First-fit}: alloca il \textbf{primo} buco sufficientemente grande
+		\item \textbf{Best-fit}: alloca il buco \textbf{più piccolo} che sia sufficientemente grande; deve cercare nell'intero
+		\item \textbf{Worst-fit}: alloca il buco più grande, deve anche cercare nell'intero elenco
+	\end{itemize}
+\end{mainframe}
+\subsection{Frammentazione}
+\begin{mainframe}
+	\begin{itemize}
+		\item \textbf{Frammentazione esterna}: lo spazio di memoria totale esiste per soddisfare una richiesta, ma non è contiguo
+		\item \textbf{Frammentazione interna}: la memoria allocata può essere leggermente più grande di quella richiesta; questa differenza di dimenzione è memoria interna a una partizione, ma che non viene utilizzata
+	\end{itemize}
+	Ridurre la frammentazione esterna con la compattazione\\
+	Problema di I/O:
+	\begin{itemize}
+		\item Bloccare un job in memoria mentre è coinvolto nell'I/0
+		\item Eseguire l'I/0 solo nei buffer del sistema operativo
+	\end{itemize}
+\end{mainframe}
+\subsection{Spazio di indirizzamente virtuale e spazio di indirzzamento fisico}
+\begin{mainframe}
+	Il processore genera un indirizzo (virtuale) che non coincide con l'indirizzo fisico di accesso alla memoria
+\end{mainframe}
+\subsection{Astrazione memoria virtuale}
+\begin{mainframe}
+	Il processore accede per conto del processore ad uno spazio di indirizzamento \textbf{logico}
+\end{mainframe}
+\subsection{Memoria virtuale: motivazioni}
+\begin{mainframe}
+	Il codice deve essere in memoria per essere eseguito, ma rarmente l'intero programma è utilizzato.\\
+	L'intero codice del programma non è necessario allo stesso tempo.\\
+	Si consideri la capacità di eseguire programmi parzialmente caricati
+\end{mainframe}
+\subsection{Memoria virtuale}
+\begin{mainframe}
+	\textbf{Memoria virtuale}: separazione dalla memoria logica dei programmi alla memoria fisica
+	\begin{itemize}
+		\item solo una parte del programma è necessaria in memoria per l'esecuzione
+		\item lo spazio di indizzamento logico può essere molto più grande dello spazio di indirizzamento fisico
+		\item consente agli spazi di indirizzamento di essere condivisi da più processi
+		\item la memoria virtuale può essere implementata con: \textbf{demand segmentation}, \textbf{demand paging} (paginazione su richiesta)
+	\end{itemize}
+\end{mainframe}
+\subsection{Segmentazione}
+\begin{mainframe}
+	Traduzione di indirizzi con tabella dei segmenti
+\end{mainframe}
+\subsection{Paginazione}
+\begin{mainframe}
+	Lo spazio di indirizzamento fisico di un processo può essere non contiguo, al processo viene allocata memoria fisica appena questa è disponibile.\\
+	Divide la \textbf{memoria fisica in blocchi di dimensione fissa "frame"}.\\
+	Divide la \textbf{memoria logica in blocchi detti pagine}.\\
+	Va predisposta una \textbf{tabella delle pagine (\textit{page table})} per tradurre gli indirizzi logici in quelli fisici \textbf{per ogni processo}.\\
+	Anche la memoria ausiliaria è divisa in pagine
+\end{mainframe}
+\subsection{Schema di traduzione dell'indirizzo}
+\begin{mainframe}
+	L'indirizzo generato dalla CPU è diviso in:
+	\begin{itemize}
+		\item \textbf{Page number (p)} - usato come un indice nella \textbf{page table} che contiene l'indirizzo di base di ogni page frame nella memoria fisica
+		\item \textbf{Page offset (d)} - combinato con l'indirizzo di base per definire l'indirizzo di memoria fisica da inviare alla MMU
+	\end{itemize}
+\end{mainframe}
+\subsection{Implementazione della tabella delle pagine}
+\begin{mainframe}
+	La tabella delle p
+\end{mainframe}
 \end{document}
