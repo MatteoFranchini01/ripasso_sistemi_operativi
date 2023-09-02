@@ -276,3 +276,11 @@
 \beamer@subsectionintoc {13}{17}{Memoria virtuale}{311}{0}{13}
 \beamer@subsectionintoc {13}{18}{Segmentazione}{312}{0}{13}
 \beamer@subsectionintoc {13}{19}{Paginazione}{313}{0}{13}
+\beamer@subsectionintoc {13}{20}{Schema di traduzione dell'indirizzo}{314}{0}{13}
+\beamer@subsectionintoc {13}{21}{Implementazione della tabella delle pagine}{315}{0}{13}
+\beamer@subsectionintoc {13}{22}{Associative memory}{316}{0}{13}
+\beamer@subsectionintoc {13}{23}{Tempo di accesso effettivo}{317}{0}{13}
+\beamer@subsectionintoc {13}{24}{Pagine condivise}{318}{0}{13}
+\beamer@subsectionintoc {13}{25}{Struttura della tabella delle pagine}{319}{0}{13}
+\beamer@subsectionintoc {13}{26}{Tabelle di pagine gerachiche}{320}{0}{13}
+\beamer@subsectionintoc {13}{27}{Spazio degli indirizzi logici a 64-bit}{321}{0}{13}

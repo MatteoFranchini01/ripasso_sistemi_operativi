@@ -1187,8 +1187,40 @@
 \headcommand {\beamer@subsectionentry {0}{13}{19}{313}{Paginazione}}
 \headcommand {\slideentry {13}{19}{1}{313/313}{Paginazione}{0}}
 \headcommand {\beamer@framepages {313}{313}}
-\headcommand {\beamer@partpages {1}{313}}
 \headcommand {\beamer@subsectionpages {313}{313}}
-\headcommand {\beamer@sectionpages {294}{313}}
-\headcommand {\beamer@documentpages {313}}
-\headcommand {\gdef \inserttotalframenumber {313}}
+\headcommand {\beamer@subsectionentry {0}{13}{20}{314}{Schema di traduzione dell'indirizzo}}
+\headcommand {\slideentry {13}{20}{1}{314/314}{Schema di traduzione dell'indirizzo}{0}}
+\headcommand {\beamer@framepages {314}{314}}
+\headcommand {\beamer@subsectionpages {314}{314}}
+\headcommand {\beamer@subsectionentry {0}{13}{21}{315}{Implementazione della tabella delle pagine}}
+\headcommand {\slideentry {13}{21}{1}{315/315}{Implementazione della tabella delle pagine}{0}}
+\headcommand {\beamer@framepages {315}{315}}
+\headcommand {\beamer@subsectionpages {315}{315}}
+\headcommand {\beamer@subsectionentry {0}{13}{22}{316}{Associative memory}}
+\headcommand {\slideentry {13}{22}{1}{316/316}{Associative memory}{0}}
+\headcommand {\beamer@framepages {316}{316}}
+\headcommand {\beamer@subsectionpages {316}{316}}
+\headcommand {\beamer@subsectionentry {0}{13}{23}{317}{Tempo di accesso effettivo}}
+\headcommand {\slideentry {13}{23}{1}{317/317}{Tempo di accesso effettivo}{0}}
+\headcommand {\beamer@framepages {317}{317}}
+\headcommand {\beamer@subsectionpages {317}{317}}
+\headcommand {\beamer@subsectionentry {0}{13}{24}{318}{Pagine condivise}}
+\headcommand {\slideentry {13}{24}{1}{318/318}{Pagine condivise}{0}}
+\headcommand {\beamer@framepages {318}{318}}
+\headcommand {\beamer@subsectionpages {318}{318}}
+\headcommand {\beamer@subsectionentry {0}{13}{25}{319}{Struttura della tabella delle pagine}}
+\headcommand {\slideentry {13}{25}{1}{319/319}{Struttura della tabella delle pagine}{0}}
+\headcommand {\beamer@framepages {319}{319}}
+\headcommand {\beamer@subsectionpages {319}{319}}
+\headcommand {\beamer@subsectionentry {0}{13}{26}{320}{Tabelle di pagine gerachiche}}
+\headcommand {\slideentry {13}{26}{1}{320/320}{Tabelle di pagine gerachiche}{0}}
+\headcommand {\beamer@framepages {320}{320}}
+\headcommand {\beamer@subsectionpages {320}{320}}
+\headcommand {\beamer@subsectionentry {0}{13}{27}{321}{Spazio degli indirizzi logici a 64-bit}}
+\headcommand {\slideentry {13}{27}{1}{321/321}{Spazio degli indirizzi logici a 64-bit}{0}}
+\headcommand {\beamer@framepages {321}{321}}
+\headcommand {\beamer@partpages {1}{321}}
+\headcommand {\beamer@subsectionpages {321}{321}}
+\headcommand {\beamer@sectionpages {294}{321}}
+\headcommand {\beamer@documentpages {321}}
+\headcommand {\gdef \inserttotalframenumber {321}}

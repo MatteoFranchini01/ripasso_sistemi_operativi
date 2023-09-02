@@ -2768,6 +2768,67 @@ Il tipo predefinito è differito: la cancellazione avviene solo quando il thread
 \end{mainframe}
 \subsection{Implementazione della tabella delle pagine}
 \begin{mainframe}
-	La tabella delle p
+	La tabella delle pagine è conservata nella \textbf{memoria principale}.\\
+	\begin{itemize}
+		\item \textbf{Il registro di base della tabella delle pagine (PTBR)} punta alla tabella delle pagine
+		\item \textbf{Il registro della lunghezza della tabella delle pagine (PTLR)} indica la dimensione della tabella delle pagine
+	\end{itemize}
+	Il problema dei due accessi alla memoria può essere risolto con l'uso di una speciale cache hardware a ricerca rapida chiamata translation \textbf{look-aside buffer} (TLB)
+\end{mainframe}
+\subsection{Associative memory}
+\begin{mainframe}
+	Memoria associativa = ricerca in parallelo\\
+	Traduzione dell'indirizzo (p,d)
+	\begin{itemize}
+		\item se p è nel registro associativo, viene etratto il numero del frame corrispondente
+		\item altrimenti si ottiene il numero del frame della page table in memoria
+	\end{itemize}
+\end{mainframe}
+\subsection{Tempo di accesso effettivo}
+\begin{mainframe}
+	\textbf{Hit ratio} - percentuale di volte in cui un numero di pagina viene trovato nel TLB\\
+	Supponiamo che occorrano 10 ns per accedere alla memoria fisica, se si trova la pagina desiderata nel TLB, allora un accesso alla memoria mappata richiede 10 ns\\
+	\textbf{Tempo di accesso effettivo (EAT)} $$EAT = 0.80 \times 10 + 0.20 \times 20 = 12 \ ns$$
+	\end{mainframe}
+\subsection{Pagine condivise}
+\begin{mainframe}
+	\textbf{Codice condiviso}
+	\begin{itemize}
+		\item Una sola coia di codice \textit{read only} (rientrante) condiviso tra processi
+		\item Simile a thread multipli che condividono lo stesso spazio di indirizzamento del processo
+		\item Anche utile per la comunicazione tra processi se è consentita la condivisione di pagine \textit{read write}
+	\end{itemize}
+	\textbf{Codice e dati privati}
+	\begin{itemize}
+		\item Ogni processo mantiene una copia separata del codice e dei dati
+		\item  Le pagine per il codice e i dati privati possono apparire ovunque nello spazio di indirizzamento logico del processo
+	\end{itemize}
+\end{mainframe}
+\subsection{Struttura della tabella delle pagine}
+\begin{mainframe}
+	Le strutture di memoria per la paginazione possono diventare enormi se si usano metodi elementari
+	\begin{itemize}
+		\item Si consideri uno spazio di indirizzi logici a 32 bit
+		\item Dimensione della pagina di 4 Kb
+		\item Una soluzione semplice è quella di dividere la tabella delle pagine in unità più piccole
+		\begin{itemize}
+			\item Paginazione gerarchica
+			\item Tabelle di pagina Hashed
+			\item Tabelle di pagine invertite
+		\end{itemize}
+	\end{itemize}
+\end{mainframe}
+\subsection{Tabelle di pagine gerachiche}
+\begin{mainframe}
+	Suddivisione dello spazio degli indirizzi logici in più tabelle di pagina\\
+	Una tecnica semplice è una tabella di pagine a due livelli\\
+	Si ha quindi la paginazione della tabella delle pagine
+\end{mainframe}
+\subsection{Spazio degli indirizzi logici a 64-bit}
+\begin{mainframe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1 \linewidth]{../../../../../../OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Screen slide/Screenshot 2023-08-31 alle 19.53.33}
+	\end{figure}
 \end{mainframe}
 \end{document}
